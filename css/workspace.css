@@ -57,6 +57,8 @@
 .element-item:hover { color: var(--text); background: var(--border); }
 .element-item[aria-pressed="true"] { color: var(--text); background: var(--bg); box-shadow: inset 2px 0 0 var(--accent); }
 .element-item:focus-visible { outline-offset: -2px; }
+.fields details { width: 100%; }
+.fields summary { color: var(--muted); font-size: 12px; cursor: pointer; }
 .group-label { width: 100%; margin: 12px 0 0; color: var(--muted); font-size: 12px; }
 .console .btn { height: 28px; padding: 0 10px; }
 .btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
@@ -129,6 +131,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .panel--log { grid-area: log; margin-top: 0; }
   .canvas { padding: 16px; }
   .dropzone h2 { font-size: 18px; }
+  .fields summary { padding: 11px 0; } /* a tap area of at least 40px; keeps the open/close arrow */
   .console .btn, .strip .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
 }
 @media (max-width: 359px) {

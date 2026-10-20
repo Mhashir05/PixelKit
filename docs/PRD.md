@@ -26,14 +26,16 @@ A static, guest-only browser toolkit. Everything runs locally in the browser. Im
 |---|---|---|
 | Editor | Upload JPG/PNG/WebP by button or drag and drop, with validation | Built |
 | Editor | Brightness, contrast, blur, grayscale, invert, reset, export | Built |
-| Editor | Rotate, flip, crop, resize, text overlay | Not built |
+| Editor | Rotate left and right (90 degree steps), flip horizontal and vertical | Built |
+| Editor | Crop with four trim sliders (percent of each edge, measured on the picture as it looks) | Built |
+| Editor | Resize (shrink to 10-100% of the cropped size, applied on export) | Built |
+| Editor | Text overlay: one line (60 characters) with colour, size and position in percent | Built |
 | Compressor | Quality slider, JPG/PNG/WebP (only browser-supported), before/after size, download | Built |
 | Meme / Post | Top and bottom text, font, colour, size, Instagram post, portrait and WhatsApp Status presets, export | Built |
 | Logo Maker | Text, rectangle, circle, colour, size, select, drag, layer order, transparent or solid background, PNG export | Built |
 | Catalog | Picsum photos, lazy thumbnails, infinite scroll, error and retry, "Use this image" | Built |
 | Projects | Autosave, recents (newest 10), resume, rename (max 40 characters), delete with confirmation | Built |
-| Workspace | Undo | Not built |
-| Workspace | Landing page lists four tools (Logo Maker not shown) | Known gap |
+| Editor | Undo (all Editor edits and Reset; 50 steps), by button or Ctrl/Cmd+Z | Built |
 
 ## Constraints
 
@@ -57,5 +59,9 @@ A static, guest-only browser toolkit. Everything runs locally in the browser. Im
 - Recents keeps the newest 10 projects; older ones are deleted automatically.
 - A WebP photo is exported from the Editor as JPG.
 - The Meme preview shows transparent areas dark, but the JPG export fills them white.
-- Undo and the Editor's Rotate, flip, crop, resize and text overlay are in the brief but not built.
+- Undo works only in the Editor, has no Redo, and is not saved with the project.
+- Compressor and Meme use the original photo, without the Editor's filters, rotation, flips, crop, resize and text.
+- Crop uses four sliders (no drag handles). If you rotate after cropping, the same trims apply to the new edges.
+- Resize only shrinks, and only the exported file changes size; the preview keeps its size.
+- The text overlay is one line in a fixed font (Arial bold). It is placed with sliders, not by dragging, and it is not wrapped.
 - Tested in Chromium only. Safari, Firefox and real phones are not verified.

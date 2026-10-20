@@ -3,6 +3,7 @@ import { getState, setState, subscribe, logActivity } from "./core/state.js";
 import { initSidebar, renderSidebar } from "./ui/sidebar.js";
 import { initEditor, renderEditor } from "./tools/editor.js";
 import { loadImage } from "./core/image.js";
+import { undo } from "./core/history.js";
 import { initCompressor, renderCompressor } from "./tools/compressor.js";
 import { initMeme, renderMeme } from "./tools/meme.js";
 import { initCatalog, renderCatalog } from "./tools/catalog.js";
@@ -11,6 +12,10 @@ import { initProjects, resumeProject, renameProject, deleteProject } from "./cor
 
 const stages = document.querySelectorAll("[data-stage]");
 const projectName = document.querySelector("#project-name");
+const undoButton = document.querySelector("#undo");
+
+// Undo only works for the Editor, and only when there is a step to go back to.
+const canUndo = (state) => state.tool === "editor" && state.undoSteps.length > 0;
 
 // Draw everything from state.
 function render(state) {
@@ -22,6 +27,7 @@ function render(state) {
   renderLogo(state); // after renderEditor, because both decide whether the shared Export button is enabled
   for (const stage of stages) stage.hidden = stage.dataset.stage !== state.tool;
   projectName.disabled = !state.image;
+  undoButton.disabled = !canUndo(state);
   if (document.activeElement !== projectName) projectName.value = state.projectName; // do not overwrite while typing
   document.title = `${document.querySelector(`[data-tool="${state.tool}"]`).textContent.trim()} — PixelKit`;
 }
@@ -33,6 +39,18 @@ initSidebar((tool, name) => {
   setState({ tool });
   logActivity(`Switched to ${name}`);
 }, resumeProject, deleteProject);
+
+undoButton.addEventListener("click", () => {
+  undo();
+  if (undoButton.disabled) document.querySelector("#export").focus(); // a disabled button cannot keep keyboard focus
+});
+// Ctrl+Z (Cmd+Z on a Mac). Not while typing in a text box, where the browser has its own undo.
+document.addEventListener("keydown", (event) => {
+  const isUndoKey = (event.ctrlKey || event.metaKey) && !event.shiftKey && event.key.toLowerCase() === "z";
+  if (!isUndoKey || event.target.matches("input[type=text]") || !canUndo(getState())) return;
+  event.preventDefault();
+  undo();
+});
 
 // Rename: Enter saves, Escape cancels, leaving the field saves.
 projectName.addEventListener("change", () => {

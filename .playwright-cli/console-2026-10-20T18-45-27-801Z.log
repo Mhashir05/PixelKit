@@ -1,0 +1,602 @@
+[     820ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[     824ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[     825ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    1100ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    4184ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    4184ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    4184ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    4199ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    4500ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    4500ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    4500ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    4514ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    4658ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[    4686ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[    5427ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    5427ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    5427ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    5441ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    5912ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    5912ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    5912ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    5926ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    5996ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[    6004ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[    7118ms] [INFO] [PixelKit] project saved {id: 1792521933802-cm450p, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   15935ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   15936ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   15936ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   15952ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   16229ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   16229ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   16229ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   16241ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   17061ms] [INFO] [PixelKit] image selected {name: Holiday Photo (2).jpg, type: image/jpeg, bytes: 43229} @ http://localhost:8123/js/core/logger.js:4
+[   17071ms] [INFO] [PixelKit] Loaded Holiday Photo (2).jpg (1600×1200)  @ http://localhost:8123/js/core/logger.js:4
+[   18109ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   18713ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   18948ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[   19350ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   21121ms] [INFO] [PixelKit] project saved {id: 1792521944869-avmsi1, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   21277ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-edited.jpg (56 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   23375ms] [INFO] [PixelKit] Reset filters to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   23936ms] [INFO] [PixelKit] image selected {name: evil.svg, type: image/svg+xml, bytes: 135} @ http://localhost:8123/js/core/logger.js:4
+[   23937ms] [INFO] [PixelKit] upload rejected {name: evil.svg, reason: SVG files are not allowed. Use a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   24364ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[   24370ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   24791ms] [INFO] [PixelKit] image selected {name: svg-as.png, type: image/png, bytes: 99} @ http://localhost:8123/js/core/logger.js:4
+[   24795ms] [INFO] [PixelKit] upload rejected {name: svg-as.png, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   25225ms] [INFO] [PixelKit] image selected {name: empty.png, type: image/png, bytes: 0} @ http://localhost:8123/js/core/logger.js:4
+[   25225ms] [INFO] [PixelKit] upload rejected {name: empty.png, reason: The file is empty.} @ http://localhost:8123/js/core/logger.js:4
+[   25661ms] [INFO] [PixelKit] image selected {name: big-11mb.jpg, type: image/jpeg, bytes: 11534340} @ http://localhost:8123/js/core/logger.js:4
+[   25662ms] [INFO] [PixelKit] upload rejected {name: big-11mb.jpg, reason: The file is 11.0 MB. The limit is 10 MB.} @ http://localhost:8123/js/core/logger.js:4
+[   26102ms] [INFO] [PixelKit] image selected {name: truncated.jpg, type: image/jpeg, bytes: 61} @ http://localhost:8123/js/core/logger.js:4
+[   26114ms] [ERROR] [PixelKit] image decode failed Error: decode failed
+    at element.onerror (http://localhost:8123/js/core/image.js:40:64) @ http://localhost:8123/js/core/logger.js:9
+[   26116ms] [INFO] [PixelKit] upload rejected {name: truncated.jpg, reason: The image could not be read.} @ http://localhost:8123/js/core/logger.js:4
+[   26558ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[   26913ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 43229, afterBytes: 35693, ms: 46} @ http://localhost:8123/js/core/logger.js:4
+[   27474ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (34.9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   27724ms] [INFO] [PixelKit] compressor quality {quality: 40} @ http://localhost:8123/js/core/logger.js:4
+[   28145ms] [INFO] [PixelKit] compressed {format: JPG, quality: 40, beforeBytes: 43229, afterBytes: 21292, ms: 113} @ http://localhost:8123/js/core/logger.js:4
+[   28888ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (20.8 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   29089ms] [INFO] [PixelKit] Compressor format: WebP  @ http://localhost:8123/js/core/logger.js:4
+[   29735ms] [INFO] [PixelKit] compressed {format: WebP, quality: 40, beforeBytes: 43229, afterBytes: 12988, ms: 344} @ http://localhost:8123/js/core/logger.js:4
+[   30282ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.webp (12.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   30491ms] [INFO] [PixelKit] Compressor format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[   30924ms] [INFO] [PixelKit] compressed {format: PNG, quality: n/a, beforeBytes: 43229, afterBytes: 860835, ms: 128} @ http://localhost:8123/js/core/logger.js:4
+[   31475ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.png (840.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   32055ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[   32529ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 0, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[   33061ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[   33188ms] [INFO] [PixelKit] Meme preset: Instagram post (1080×1080)  @ http://localhost:8123/js/core/logger.js:4
+[   33841ms] [INFO] [PixelKit] Meme preset: Instagram portrait (1080×1350)  @ http://localhost:8123/js/core/logger.js:4
+[   34538ms] [INFO] [PixelKit] Meme preset: WhatsApp Status (1080×1920)  @ http://localhost:8123/js/core/logger.js:4
+[   35131ms] [INFO] [PixelKit] meme font {font: georgia} @ http://localhost:8123/js/core/logger.js:4
+[   36067ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #ffffff, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[   36595ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #222222, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[   36951ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.jpg (360 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   37154ms] [INFO] [PixelKit] Meme export format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[   37583ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.png (957 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   37958ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[   38085ms] [INFO] [PixelKit] Logo: added rectangle  @ http://localhost:8123/js/core/logger.js:4
+[   38541ms] [INFO] [PixelKit] logo element changed {id: logo-1, type: rect, size: 300, color: #ff0000, x: 300} @ http://localhost:8123/js/core/logger.js:4
+[   38742ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[   39226ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 390} @ http://localhost:8123/js/core/logger.js:4
+[   39353ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[   39806ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[   40350ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[   40863ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 120, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[   40991ms] [INFO] [PixelKit] logo select {id: logo-2, type: circle} @ http://localhost:8123/js/core/logger.js:4
+[   40993ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 390, y: 390} @ http://localhost:8123/js/core/logger.js:4
+[   41135ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[   41163ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[   41292ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 1000, y: 0} @ http://localhost:8123/js/core/logger.js:4
+[   41770ms] [INFO] [PixelKit] logo keyboard move {id: logo-2, x: 995, y: 55} @ http://localhost:8123/js/core/logger.js:4
+[   42413ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[   42951ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[   43106ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 1, to: 0} @ http://localhost:8123/js/core/logger.js:4
+[   43170ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 0, to: 1} @ http://localhost:8123/js/core/logger.js:4
+[   43220ms] [INFO] [PixelKit] Logo background: solid colour  @ http://localhost:8123/js/core/logger.js:4
+[   43656ms] [INFO] [PixelKit] logo background colour {color: #112233} @ http://localhost:8123/js/core/logger.js:4
+[   43972ms] [INFO] [PixelKit] Exported logo-1000x1000.png (44 KB, solid background)  @ http://localhost:8123/js/core/logger.js:4
+[   44122ms] [INFO] [PixelKit] Logo background: transparent  @ http://localhost:8123/js/core/logger.js:4
+[   44421ms] [INFO] [PixelKit] Exported logo-1000x1000.png (41 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[   44638ms] [INFO] [PixelKit] Logo: deleted circle  @ http://localhost:8123/js/core/logger.js:4
+[   45188ms] [INFO] [PixelKit] Switched to Catalog  @ http://localhost:8123/js/core/logger.js:4
+[   45204ms] [INFO] [PixelKit] catalog page requested {page: 1} @ http://localhost:8123/js/core/logger.js:4
+[   46227ms] [INFO] [PixelKit] project saved {id: 1792521944869-avmsi1, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   60211ms] [ERROR] [PixelKit] catalog page failed TimeoutError: signal timed out @ http://localhost:8123/js/core/logger.js:9
+[   81580ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   81580ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   81580ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   81598ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   81879ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   81879ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   81879ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   81894ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   82707ms] [INFO] [PixelKit] image selected {name: Holiday Photo (2).jpg, type: image/jpeg, bytes: 43229} @ http://localhost:8123/js/core/logger.js:4
+[   82715ms] [INFO] [PixelKit] Loaded Holiday Photo (2).jpg (1600×1200)  @ http://localhost:8123/js/core/logger.js:4
+[   83756ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   84280ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   84410ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[   84815ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   85060ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-edited.jpg (56 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   86105ms] [INFO] [PixelKit] project saved {id: 1792522010514-szqwpp, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   86824ms] [INFO] [PixelKit] Reset filters to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   87347ms] [INFO] [PixelKit] image selected {name: evil.svg, type: image/svg+xml, bytes: 135} @ http://localhost:8123/js/core/logger.js:4
+[   87347ms] [INFO] [PixelKit] upload rejected {name: evil.svg, reason: SVG files are not allowed. Use a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   87779ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[   87784ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   88215ms] [INFO] [PixelKit] image selected {name: svg-as.png, type: image/png, bytes: 99} @ http://localhost:8123/js/core/logger.js:4
+[   88219ms] [INFO] [PixelKit] upload rejected {name: svg-as.png, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[   88634ms] [INFO] [PixelKit] image selected {name: empty.png, type: image/png, bytes: 0} @ http://localhost:8123/js/core/logger.js:4
+[   88634ms] [INFO] [PixelKit] upload rejected {name: empty.png, reason: The file is empty.} @ http://localhost:8123/js/core/logger.js:4
+[   89065ms] [INFO] [PixelKit] image selected {name: big-11mb.jpg, type: image/jpeg, bytes: 11534340} @ http://localhost:8123/js/core/logger.js:4
+[   89066ms] [INFO] [PixelKit] upload rejected {name: big-11mb.jpg, reason: The file is 11.0 MB. The limit is 10 MB.} @ http://localhost:8123/js/core/logger.js:4
+[   89502ms] [INFO] [PixelKit] image selected {name: truncated.jpg, type: image/jpeg, bytes: 61} @ http://localhost:8123/js/core/logger.js:4
+[   89551ms] [ERROR] [PixelKit] image decode failed Error: decode failed
+    at element.onerror (http://localhost:8123/js/core/image.js:40:64) @ http://localhost:8123/js/core/logger.js:9
+[   89552ms] [INFO] [PixelKit] upload rejected {name: truncated.jpg, reason: The image could not be read.} @ http://localhost:8123/js/core/logger.js:4
+[   90076ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[   90435ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 43229, afterBytes: 35693, ms: 56} @ http://localhost:8123/js/core/logger.js:4
+[   90989ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (34.9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   91193ms] [INFO] [PixelKit] compressor quality {quality: 40} @ http://localhost:8123/js/core/logger.js:4
+[   91553ms] [INFO] [PixelKit] compressed {format: JPG, quality: 40, beforeBytes: 43229, afterBytes: 21292, ms: 53} @ http://localhost:8123/js/core/logger.js:4
+[   92338ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (20.8 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   92456ms] [INFO] [PixelKit] Compressor format: WebP  @ http://localhost:8123/js/core/logger.js:4
+[   93098ms] [INFO] [PixelKit] compressed {format: WebP, quality: 40, beforeBytes: 43229, afterBytes: 12988, ms: 338} @ http://localhost:8123/js/core/logger.js:4
+[   93654ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.webp (12.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   93790ms] [INFO] [PixelKit] Compressor format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[   94201ms] [INFO] [PixelKit] compressed {format: PNG, quality: n/a, beforeBytes: 43229, afterBytes: 860835, ms: 109} @ http://localhost:8123/js/core/logger.js:4
+[   94755ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.png (840.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   95105ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[   95546ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 0, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[   96080ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[   96209ms] [INFO] [PixelKit] Meme preset: Instagram post (1080×1080)  @ http://localhost:8123/js/core/logger.js:4
+[   96788ms] [INFO] [PixelKit] Meme preset: Instagram portrait (1080×1350)  @ http://localhost:8123/js/core/logger.js:4
+[   97388ms] [INFO] [PixelKit] Meme preset: WhatsApp Status (1080×1920)  @ http://localhost:8123/js/core/logger.js:4
+[   97952ms] [INFO] [PixelKit] meme font {font: georgia} @ http://localhost:8123/js/core/logger.js:4
+[   98911ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #ffffff, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[   99395ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #222222, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[   99729ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.jpg (360 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  100070ms] [INFO] [PixelKit] Meme export format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[  100476ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.png (957 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  100838ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  100906ms] [INFO] [PixelKit] Logo: added rectangle  @ http://localhost:8123/js/core/logger.js:4
+[  101358ms] [INFO] [PixelKit] logo element changed {id: logo-1, type: rect, size: 300, color: #ff0000, x: 300} @ http://localhost:8123/js/core/logger.js:4
+[  101488ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  101940ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 390} @ http://localhost:8123/js/core/logger.js:4
+[  102076ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  102541ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  103075ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  103595ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 120, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  103753ms] [INFO] [PixelKit] logo select {id: logo-2, type: circle} @ http://localhost:8123/js/core/logger.js:4
+[  103754ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 390, y: 390} @ http://localhost:8123/js/core/logger.js:4
+[  103946ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[  103963ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[  104091ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 1000, y: 0} @ http://localhost:8123/js/core/logger.js:4
+[  104552ms] [INFO] [PixelKit] logo keyboard move {id: logo-2, x: 995, y: 55} @ http://localhost:8123/js/core/logger.js:4
+[  105185ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  105703ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  105886ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 1, to: 0} @ http://localhost:8123/js/core/logger.js:4
+[  105958ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 0, to: 1} @ http://localhost:8123/js/core/logger.js:4
+[  106021ms] [INFO] [PixelKit] Logo background: solid colour  @ http://localhost:8123/js/core/logger.js:4
+[  106457ms] [INFO] [PixelKit] logo background colour {color: #112233} @ http://localhost:8123/js/core/logger.js:4
+[  106751ms] [INFO] [PixelKit] Exported logo-1000x1000.png (44 KB, solid background)  @ http://localhost:8123/js/core/logger.js:4
+[  106888ms] [INFO] [PixelKit] Logo background: transparent  @ http://localhost:8123/js/core/logger.js:4
+[  107157ms] [INFO] [PixelKit] Exported logo-1000x1000.png (41 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  107369ms] [INFO] [PixelKit] Logo: deleted circle  @ http://localhost:8123/js/core/logger.js:4
+[  107918ms] [INFO] [PixelKit] Switched to Catalog  @ http://localhost:8123/js/core/logger.js:4
+[  107933ms] [INFO] [PixelKit] catalog page requested {page: 1} @ http://localhost:8123/js/core/logger.js:4
+[  108091ms] [INFO] [PixelKit] catalog page loaded {page: 1, received: 20, total: 20} @ http://localhost:8123/js/core/logger.js:4
+[  109119ms] [INFO] [PixelKit] project saved {id: 1792522010514-szqwpp, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  111469ms] [INFO] [PixelKit] Catalog: using photo 0 by Alejandro Escamilla  @ http://localhost:8123/js/core/logger.js:4
+[  112847ms] [INFO] [PixelKit] catalog photo downloaded {id: 0, type: image/jpeg, bytes: 300878} @ http://localhost:8123/js/core/logger.js:4
+[  112851ms] [INFO] [PixelKit] image selected {name: picsum-0.jpg, type: image/jpeg, bytes: 300878} @ http://localhost:8123/js/core/logger.js:4
+[  112871ms] [INFO] [PixelKit] Loaded picsum-0.jpg (3000×2000)  @ http://localhost:8123/js/core/logger.js:4
+[  112883ms] [INFO] [PixelKit] Opened picsum-0.jpg in the Editor  @ http://localhost:8123/js/core/logger.js:4
+[  113991ms] [INFO] [PixelKit] project saved {id: 1792522040661-uiwzol, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  118071ms] [INFO] [PixelKit] Renamed project to "My Trip"  @ http://localhost:8123/js/core/logger.js:4
+[  119160ms] [INFO] [PixelKit] project saved {id: 1792522040661-uiwzol, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  119921ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  119922ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  119922ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  119936ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  120838ms] [INFO] [PixelKit] resume requested {id: 1792522010514-szqwpp} @ http://localhost:8123/js/core/logger.js:4
+[  120862ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[  121868ms] [INFO] [PixelKit] Deleted My Trip  @ http://localhost:8123/js/core/logger.js:4
+[  125670ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  125975ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  125975ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  125976ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  125995ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  126115ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  126281ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  126281ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  126281ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  126292ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  127597ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  128279ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  129011ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  129047ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  129051ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  130025ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  130040ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  131080ms] [INFO] [PixelKit] project saved {id: 1792522057836-02fqm0, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  133360ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  133679ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 6} @ http://localhost:8123/js/core/logger.js:4
+[  134244ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  135210ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  135279ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  135347ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  136349ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  136508ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  136508ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  136508ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  136521ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  136600ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  136732ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  136733ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  136733ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  136744ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  137978ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  138676ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  139411ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  139445ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  139448ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  140407ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  140417ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  141440ms] [INFO] [PixelKit] project saved {id: 1792522068215-eob0ff, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  143758ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  144081ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 11} @ http://localhost:8123/js/core/logger.js:4
+[  144641ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  145612ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  145680ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  145765ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  146794ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  146975ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  146975ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  146975ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  146991ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  147071ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  147226ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  147226ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  147226ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  147237ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  148493ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  149173ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  149858ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  149894ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  149901ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  150822ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  150834ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  151864ms] [INFO] [PixelKit] project saved {id: 1792522078630-sujiep, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  154171ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  154521ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 40} @ http://localhost:8123/js/core/logger.js:4
+[  155088ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  156054ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  156127ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  156189ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  157196ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  157378ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  157378ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  157378ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  157392ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  157467ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  157627ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  157627ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  157627ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  157641ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  158946ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  159687ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  160369ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  160397ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  160406ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  161381ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  161393ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  162415ms] [INFO] [PixelKit] project saved {id: 1792522089190-l7xt1h, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  164735ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  165048ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 8} @ http://localhost:8123/js/core/logger.js:4
+[  165602ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  166570ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  166638ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  166721ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  170072ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  170241ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  170242ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  170242ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  170256ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  170340ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  170508ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  170508ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  170508ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  170519ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  171735ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  172400ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  173067ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  173094ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  173098ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  174108ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  174120ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  175139ms] [INFO] [PixelKit] project saved {id: 1792522101917-jfd385, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  177466ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  177789ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 6} @ http://localhost:8123/js/core/logger.js:4
+[  178833ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  179802ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  179904ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  180006ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  181038ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  181190ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  181190ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  181190ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  181210ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  181413ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  181618ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  181618ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  181618ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  181630ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  182832ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  183481ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  184180ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  184204ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  184210ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  185328ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  185346ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  186378ms] [INFO] [PixelKit] project saved {id: 1792522113143-99qs7w, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  188697ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  189012ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 7} @ http://localhost:8123/js/core/logger.js:4
+[  189578ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  190545ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  190623ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  190721ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  191766ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  191934ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  191934ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  191935ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  191947ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  192049ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  192368ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  192369ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  192369ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  192427ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  193669ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  194328ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  195028ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  195052ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  195061ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  196017ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  196031ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  197057ms] [INFO] [PixelKit] project saved {id: 1792522123828-j7rjcs, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  199359ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  199675ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 6} @ http://localhost:8123/js/core/logger.js:4
+[  200243ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  201227ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  201295ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  201369ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  202454ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  202615ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  202616ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  202616ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  202631ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  202736ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  202942ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  202942ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  202942ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  202952ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  204160ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  204842ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  205524ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  205548ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  205556ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  206506ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  206515ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  207543ms] [INFO] [PixelKit] project saved {id: 1792522134313-k8jty2, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  209857ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  210172ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 5} @ http://localhost:8123/js/core/logger.js:4
+[  210740ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  211742ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  211813ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  211876ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  215515ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  215515ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  215515ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  215537ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  215757ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  215757ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  215757ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  215771ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  215876ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  215908ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  215911ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  216343ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  216376ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  216379ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  216822ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  216853ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  216859ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  217334ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  217346ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  217872ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  218298ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  218412ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  218877ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  218877ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  218885ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  219584ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  219584ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  219584ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  219594ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  219815ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  219816ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  219816ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  219826ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  219923ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  219954ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  219957ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  220407ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  220451ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  220454ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  220887ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  220913ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  220918ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  221371ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  221382ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  221904ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  222171ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  222240ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  222640ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  222640ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  222648ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  223214ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  223638ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  223638ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  223638ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  223652ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  223875ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  223875ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  223875ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  223888ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  224028ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  224218ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  224226ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  224674ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  224712ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  224727ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  225153ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  225184ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  225189ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  225658ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  225672ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  226202ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  226474ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  226574ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  226991ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  226991ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  226995ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  227002ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  227710ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  227711ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  227711ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  227733ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  227937ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  227937ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  227937ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  227954ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  228035ms] [INFO] [PixelKit] image selected {name: alpha.png, type: image/png, bytes: 4796} @ http://localhost:8123/js/core/logger.js:4
+[  228051ms] [INFO] [PixelKit] Loaded alpha.png (400×400)  @ http://localhost:8123/js/core/logger.js:4
+[  228627ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  229044ms] [INFO] [PixelKit] Exported alpha-meme-1080x1080.jpg (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  229184ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :0
+[  229270ms] [INFO] [PixelKit] Meme export format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[  229583ms] [INFO] [PixelKit] Exported alpha-meme-1080x1080.png (27 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  229750ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :0
+[  229972ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  229972ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  229972ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  229989ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  230221ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  230222ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  230222ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  230246ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  230312ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  230324ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  231344ms] [INFO] [PixelKit] project saved {id: 1792522158121-of8o1n, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  231835ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  231853ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  232864ms] [INFO] [PixelKit] project saved {id: 1792522159650-wdmn0o, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  233391ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  233421ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  234434ms] [INFO] [PixelKit] project saved {id: 1792522161217-uyzk6k, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  234937ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  234949ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  235970ms] [INFO] [PixelKit] project saved {id: 1792522162746-t8b8tn, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  236461ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  236473ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  237489ms] [INFO] [PixelKit] project saved {id: 1792522164270-7ki8le, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  237982ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  237997ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  239012ms] [INFO] [PixelKit] project saved {id: 1792522165794-9n5nif, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  239511ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  239529ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  240554ms] [INFO] [PixelKit] project saved {id: 1792522167320-40fd67, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  241035ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  241053ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  242067ms] [INFO] [PixelKit] project saved {id: 1792522168847-a69lz3, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  242567ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  242582ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  243604ms] [INFO] [PixelKit] project saved {id: 1792522170378-b8pmn0, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  244089ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  244105ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  245131ms] [INFO] [PixelKit] project saved {id: 1792522171901-y2b0vn, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  245625ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  245643ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  246664ms] [INFO] [PixelKit] project saved {id: 1792522173438-fv3pyw, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  246672ms] [INFO] [PixelKit] old project removed {id: 1792522158121-of8o1n} @ http://localhost:8123/js/core/logger.js:4
+[  247160ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  247178ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  248209ms] [INFO] [PixelKit] project saved {id: 1792522174970-qepv9x, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  248218ms] [INFO] [PixelKit] old project removed {id: 1792522159650-wdmn0o} @ http://localhost:8123/js/core/logger.js:4
+[  248898ms] [INFO] [PixelKit] recents loaded {count: 13} @ http://localhost:8123/js/core/logger.js:4
+[  248899ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  248900ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  248920ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  249007ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  249025ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  250056ms] [INFO] [PixelKit] project saved {id: 1792522176820-x9txs0, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  250066ms] [INFO] [PixelKit] old project removed {id: 1792522161217-uyzk6k} @ http://localhost:8123/js/core/logger.js:4
+[  250070ms] [INFO] [PixelKit] old project removed {id: old0} @ http://localhost:8123/js/core/logger.js:4
+[  250072ms] [INFO] [PixelKit] old project removed {id: old1} @ http://localhost:8123/js/core/logger.js:4
+[  250073ms] [INFO] [PixelKit] old project removed {id: old2} @ http://localhost:8123/js/core/logger.js:4
+[  252977ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  252977ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  252977ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  252991ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  253082ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  253173ms] [INFO] [PixelKit] Logo: added rectangle  @ http://localhost:8123/js/core/logger.js:4
+[  253319ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  253542ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 390, y: 390} @ http://localhost:8123/js/core/logger.js:4
+[  253770ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 240} @ http://localhost:8123/js/core/logger.js:4
+[  253792ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 210, y: 510} @ http://localhost:8123/js/core/logger.js:4
+[  254003ms] [INFO] [PixelKit] Exported logo-1000x1000.png (28 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  254190ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :4
+[  254276ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 1, to: 0} @ http://localhost:8123/js/core/logger.js:4
+[  254336ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  254563ms] [INFO] [PixelKit] Exported logo-1000x1000.png (25 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  254690ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :4
+[  257352ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  257352ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  257355ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  257366ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  259354ms] [INFO] [PixelKit] hero slider moved {value: 60} @ http://localhost:8123/js/core/logger.js:4
+[  260076ms] [INFO] [PixelKit] hero slider moved {value: 80} @ http://localhost:8123/js/core/logger.js:4
+[  260426ms] [INFO] [PixelKit] revealed Edit @ http://localhost:8123/js/core/logger.js:4
+[  260426ms] [INFO] [PixelKit] revealed Compress @ http://localhost:8123/js/core/logger.js:4
+[  260427ms] [INFO] [PixelKit] revealed Meme & Post @ http://localhost:8123/js/core/logger.js:4
+[  260427ms] [INFO] [PixelKit] revealed Discover @ http://localhost:8123/js/core/logger.js:4
+[  264036ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  264036ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  264036ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  264056ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  264274ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  264274ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  264274ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  264290ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  264553ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  264554ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  264554ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  264573ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  265296ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  265312ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4
+[  266295ms] [INFO] [PixelKit] resume requested {id: old-2} @ http://localhost:8123/js/core/logger.js:4
+[  266313ms] [INFO] [PixelKit] Resumed Tampered  @ http://localhost:8123/js/core/logger.js:4
+[  267342ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  267359ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4
+[  268469ms] [INFO] [PixelKit] filter changed {brightness: 160, contrast: 80, blur: 2, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[  269085ms] [INFO] [PixelKit] project saved {id: old-1, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  270042ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  270043ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  270043ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  270060ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  270744ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  270760ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4

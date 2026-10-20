@@ -48,7 +48,7 @@
 .compare.is-intro .compare__pixels { transition: clip-path 700ms cubic-bezier(0.22, 1, 0.36, 1); }
 .compare.is-intro .compare__divider { transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
 
-/* Features: one hairline table instead of four separate cards. */
+/* Features: one hairline table instead of separate cards. With an odd number of cards, the last one spans the whole row. */
 .features { padding-bottom: 112px; }
 .features__head { margin-bottom: 40px; }
 .eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -56,6 +56,7 @@
 
 .features__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
 .module { padding: 32px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background var(--t-base); }
+.module:last-child { grid-column: 1 / -1; }
 .module__visual { display: block; width: 100%; max-width: 240px; height: auto; margin-bottom: 32px; overflow: visible; }
 .module h3 { display: flex; align-items: baseline; gap: 12px; font-size: 28px; line-height: 1.1; }
 .module__n { color: var(--muted); font: 500 12px var(--font-ui); letter-spacing: 0; }

@@ -1,7 +1,7 @@
 import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
 import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
-import { FONTS } from "../core/fonts.js";
+import { FONTS, outlineColor } from "../core/fonts.js";
 
 // Common sizes: 1080 px wide is what Instagram and WhatsApp display; the heights give the usual ratios.
 const PRESETS = {
@@ -77,14 +77,6 @@ function wrapLines(ctx, text, maxWidth) {
   }
   if (line) lines.push(line);
   return lines;
-}
-
-// Dark text gets a light outline and light text gets a dark one, so it reads on any photo.
-function outlineColor(hex) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return 0.299 * r + 0.587 * g + 0.114 * b > 140 ? "#000" : "#fff";
 }
 
 // Draws one block of text at the top or bottom. The font shrinks until the block fits.

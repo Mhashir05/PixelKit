@@ -1,15 +1,15 @@
 import { logger } from "./logger.js";
+import { defaultEdits } from "./edits.js";
 
 const MAX_ACTIVITY = 20;
 
 // The single source of truth. The UI is drawn from this object.
-export const defaultFilters = () => ({ brightness: 100, contrast: 100, blur: 0, grayscale: false, invert: false });
-
 const state = {
   tool: "editor", // editor | compressor | meme | logo | catalog
   projectName: "Untitled design",
   image: null, // { name, type, width, height, element } once an image is loaded; the original is never changed
-  filters: defaultFilters(), // brightness/contrast in %, blur in px of the original image
+  edits: defaultEdits(), // the Editor settings: filters, rotation, flips, crop, resize, text (see edits.js); the original is never changed
+  undoSteps: [], // earlier edits, newest last; Undo takes the last one (see history.js)
   compressor: {
     quality: 75, // 1-100, used for JPG and WebP only
     format: "image/jpeg", // the MIME type to export
@@ -46,7 +46,7 @@ const state = {
     message: "", // shown under the canvas (limit reached, export failed)
   },
   projectId: null, // id of the saved project the current image belongs to
-  projects: [], // saved project metadata, newest first: { id, name, updatedAt, filters, thumbnail }
+  projects: [], // saved project metadata, newest first: { id, name, updatedAt, edits, thumbnail }
   saveStatus: { text: "", failed: false }, // shown under Recents
   loading: false,
   error: "", // message shown above the editor canvas

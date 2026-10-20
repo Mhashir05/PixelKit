@@ -1,6 +1,6 @@
 # PixelKit Architecture
 
-PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and JavaScript (ES modules), no backend, no build step, no external JS dependencies. It runs from any static host (GitHub Pages).
+PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and JavaScript (ES modules), no backend, no build step, no external JS dependencies. It runs from any static host (Vercel).
 
 ## Pages
 
@@ -11,18 +11,20 @@ PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and 
 
 ```
 js/
-  app.js            wires the workspace: init each part, subscribe render functions, rename field, file drop
+  app.js            wires the workspace: init each part, subscribe render functions, rename field, file drop, Undo button and Ctrl/Cmd+Z
   landing.js        landing page behaviour
   core/             shared, tool-independent code
-    state.js        the single state object: getState, setState, subscribe, logActivity, defaultFilters
+    state.js        the single state object (including undoSteps): getState, setState, subscribe, logActivity
     logger.js       info, group, error, logAfterPause (shared console logging)
-    image.js        file checks (type, size, magic bytes), decode, load, filter string, thumbnail
+    image.js        file checks (type, size, magic bytes), decode, load, thumbnail
+    history.js      Undo for the Editor: beginChange and endChange group one drag or click into one step, undo, clearHistory (50 steps, not saved)
+    edits.js        the edit settings (filters, rotation, flips, crop, resize, text overlay): defaults, check of stored settings, editedSize, exportSize, drawEdited (draws the photo for the preview, the export and the thumbnail)
     export.js       canvasToBlob, downloadBlob, cleanFileName
-    fonts.js        shared system-font stacks
+    fonts.js        shared system-font stacks and the outline colour for text
     db.js           IndexedDB (original image Blobs) and localStorage (project list)
     projects.js     autosave, recents, resume, rename, delete (max 10 projects)
   tools/            one file per tool, each owns its own section of state
-    editor.js       filters, reset, export; also owns the shared file input, the "Choose image" buttons and the upload error box
+    editor.js       the Editor: filters, rotate, flip, crop, resize, text overlay, reset, export; also owns the shared file input, the "Choose image" buttons and the upload error box
     compressor.js   quality, format, before/after size, download
     meme.js         captions, presets, export
     logo.js         elements, selection, dragging, layers, export
@@ -58,15 +60,21 @@ A change that breaks these arrows needs a reason and approval.
 
 The DOM is never the source of truth. Each tool reads and writes only its own section of state, plus shared fields such as the loaded image.
 
+## Edits and Undo
+
+- The Editor never changes the original photo. Its settings live in `state.edits` and are applied each time the picture is drawn, in this order: crop, rotate and flip, resize, colour filters, then the text overlay. `core/edits.js` draws all of it, for the preview, the export and the thumbnail.
+- Crop trims are measured on the picture as it looks; `sourceRect` turns them into the part of the original photo to draw.
+- `edits` is replaced, never changed in place, so an Undo step is just the previous `edits` object (`core/history.js`, up to 50 steps).
+
 ## Rendering
 
 - Canvas redraws are batched with `requestAnimationFrame` and skipped when nothing changed.
-- Previews use a capped size (editor about 1200px, meme about 900px). Exports always use the full original or preset size.
+- Previews use a capped size (editor about 1200px, meme about 900px). Exports use the full original size, after crop and resize (Meme and Logo use their preset size).
 - Heavy work does not run inside input handlers (compression waits for a pause; Meme and Logo export are deferred with `setTimeout`). The Editor export still draws directly in its click handler.
 
 ## Storage
 
-- localStorage key `pixelkit.projects`: lightweight metadata (id, name, updatedAt, filters, small JPEG thumbnail). Only the newest 10 projects are kept; older ones are deleted with their saved images on the next save.
+- localStorage key `pixelkit.projects`: lightweight metadata (id, name, updatedAt, edits (the Editor settings: filters, rotation, flips, crop, resize, text overlay), small JPEG thumbnail; projects saved by older versions used the name `filters` and are still read). Only the newest 10 projects are kept; older ones are deleted with their saved images on the next save.
 - IndexedDB database `pixelkit`: the original image Blob per project.
 - Stored data is validated on load. Storage failures show a message and never break editing.
 
@@ -75,7 +83,7 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 - Content Security Policy as a meta tag on both pages. Fonts come from `fonts.googleapis.com` (styles) and `fonts.gstatic.com` (files). `app.html` also allows `https://picsum.photos` and `https://fastly.picsum.photos` for images and downloads (Picsum redirects to fastly). `index.html` allows the same image hosts but only `picsum.photos` for `connect-src`. No inline scripts, no `unsafe-*`.
 - Uploads: JPG, PNG and WebP only, checked by MIME type and magic bytes, 10 MB and 40 megapixel limits. SVG is rejected.
 - Text from users or the network is set with `textContent`. Canvas text is drawn with `fillText`.
-- `frame-ancestors` cannot be set from a meta tag; a static host like GitHub Pages cannot add it.
+- `frame-ancestors` cannot be set from a meta tag; it would need a response header on the host. Vercel can send headers, but none are configured yet.
 
 ## Logging
 
@@ -85,7 +93,5 @@ All logs go through `core/logger.js` with the `[PixelKit]` prefix; `logActivity`
 
 - The draw-once-per-frame pattern is still copied in editor, meme and logo.
 - `#file-input`, `#export` and the error boxes are shared page elements used by several tools.
-- Undo (`history.js`) is not built; the Undo button is a disabled placeholder.
-- The Editor's Rotate and Crop buttons and their "not built yet" notes are disabled placeholders.
 - The Editor export runs its heavy drawing inside the click handler.
 - `.agents/skills` and `.claude/skills` hold duplicate copies of the design-engineer skill.

@@ -1,0 +1,74 @@
+- generic [active] [ref=e1]:
+  - heading "PixelKit workspace" [level=1] [ref=e2]
+  - complementary "Console" [ref=e3]:
+    - link "Back to PixelKit home" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+      - img "PixelKit" [ref=e5]
+    - navigation [ref=e6]:
+      - heading "Tools" [level=2] [ref=e7]
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - button "Editor" [ref=e10] [cursor=pointer]
+        - listitem [ref=e16]:
+          - button "Compressor" [ref=e17] [cursor=pointer]
+        - listitem [ref=e21]:
+          - button "Meme / Post" [ref=e22] [cursor=pointer]
+        - listitem [ref=e27]:
+          - button "Logo Maker" [ref=e28] [cursor=pointer]
+        - listitem [ref=e33]:
+          - button "Catalog" [ref=e34] [cursor=pointer]
+    - region [ref=e41]:
+      - heading "Controls" [level=2] [ref=e42]
+      - generic [ref=e43]:
+        - paragraph [ref=e44]: Choose an image to use these controls.
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - text: Brightness
+              - status "Brightness 100" [ref=e48]: 100%
+            - slider [disabled] [ref=e49]: "100"
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - text: Contrast
+              - status "Contrast 100" [ref=e52]: 100%
+            - slider [disabled] [ref=e53]: "100"
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - text: Blur
+              - status "Blur 0" [ref=e56]: 0px
+            - slider [disabled] [ref=e57]: "0"
+          - button "Grayscale" [disabled] [ref=e58]
+          - button "Invert" [disabled] [ref=e59]
+          - button "Rotate left" [disabled] [ref=e60]
+          - button "Rotate right" [disabled] [ref=e61]
+          - button "Flip horizontal" [disabled] [ref=e62]
+          - button "Flip vertical" [disabled] [ref=e63]
+          - group [ref=e64]:
+            - generic "Crop" [ref=e65] [cursor=pointer]
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - text: Resize
+              - status "Resize 100" [ref=e68]: 100%
+            - slider [disabled] [ref=e69]: "100"
+          - button "Reset" [disabled] [ref=e70]
+    - region [ref=e71]:
+      - heading "Recents" [level=2] [ref=e72]
+      - paragraph [ref=e73]: No saved projects yet. An image you load is saved automatically.
+      - list
+      - status
+    - region [ref=e74]:
+      - heading "Activity log" [level=2] [ref=e75]
+      - log "Activity log" [ref=e76]:
+        - listitem [ref=e77]:
+          - time [ref=e78]: 00:20:11
+          - text: Workspace opened
+  - banner [ref=e79]:
+    - textbox "Project name" [disabled] [ref=e80]: Untitled design
+    - button "Undo" [disabled] [ref=e81]
+    - button "Export" [disabled] [ref=e82]
+  - main [ref=e83]:
+    - region "Editor canvas" [ref=e84]:
+      - generic [ref=e85]:
+        - heading "Drag and drop an image here" [level=2] [ref=e89]
+        - paragraph [ref=e90]: JPG, PNG or WebP, up to 10 MB.
+        - button "Choose image" [ref=e91] [cursor=pointer]

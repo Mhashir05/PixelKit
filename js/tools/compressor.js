@@ -56,7 +56,7 @@ async function detectFormats() {
 async function runCompression(image, type, quality) {
   const label = FORMATS[type].label;
   try {
-    const canvas = document.createElement("canvas"); // the original image, not the filtered preview
+    const canvas = document.createElement("canvas"); // the original image, not the edited preview
     canvas.width = image.width;
     canvas.height = image.height;
     const ctx = canvas.getContext("2d");

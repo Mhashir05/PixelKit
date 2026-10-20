@@ -1,0 +1,1575 @@
+[     735ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[     735ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[     736ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[     980ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    3765ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    3765ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    3766ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    3794ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    4141ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    4141ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    4141ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    4166ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    4303ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[    4424ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[    5808ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[    5817ms] [INFO] [PixelKit] filter changed {brightness: 100, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[    6015ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[    6080ms] [INFO] [PixelKit] invert on  @ http://localhost:8123/js/core/logger.js:4
+[    6365ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[    6552ms] [INFO] [PixelKit] filter changed {brightness: 100, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[    6663ms] [INFO] [PixelKit] Undo (5 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[    6878ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[    6929ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[    7129ms] [INFO] [PixelKit] Undo (5 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[    7556ms] [INFO] [PixelKit] Undo (5 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[    7727ms] [INFO] [PixelKit] Undo (4 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[    7739ms] [INFO] [PixelKit] filter changed {brightness: 102, contrast: 100, blur: 0, grayscale: true, invert: true} @ http://localhost:8123/js/core/logger.js:4
+[    8333ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    8333ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    8333ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    8350ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    8823ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[    8823ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[    8823ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[    8843ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[    8936ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[    8955ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[    9884ms] [INFO] [PixelKit] filter changed {brightness: 101, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[    9942ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   10314ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   10315ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   10315ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   10332ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   10562ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   10563ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   10563ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   10577ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   10647ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[   10664ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[   11795ms] [INFO] [PixelKit] Undo (49 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   11845ms] [INFO] [PixelKit] Undo (48 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   11894ms] [INFO] [PixelKit] Undo (47 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   11944ms] [INFO] [PixelKit] Undo (46 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   11995ms] [INFO] [PixelKit] Undo (45 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12007ms] [INFO] [PixelKit] filter changed {brightness: 150, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   12059ms] [INFO] [PixelKit] Undo (44 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12109ms] [INFO] [PixelKit] Undo (43 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12158ms] [INFO] [PixelKit] Undo (42 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12209ms] [INFO] [PixelKit] Undo (41 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12258ms] [INFO] [PixelKit] Undo (40 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12310ms] [INFO] [PixelKit] Undo (39 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12359ms] [INFO] [PixelKit] Undo (38 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12411ms] [INFO] [PixelKit] Undo (37 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12476ms] [INFO] [PixelKit] Undo (36 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12526ms] [INFO] [PixelKit] Undo (35 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12576ms] [INFO] [PixelKit] Undo (34 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12626ms] [INFO] [PixelKit] Undo (33 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12678ms] [INFO] [PixelKit] Undo (32 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12747ms] [INFO] [PixelKit] Undo (31 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12812ms] [INFO] [PixelKit] Undo (30 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12879ms] [INFO] [PixelKit] Undo (29 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12926ms] [INFO] [PixelKit] Undo (28 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   12979ms] [INFO] [PixelKit] Undo (27 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13043ms] [INFO] [PixelKit] Undo (26 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13093ms] [INFO] [PixelKit] Undo (25 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13143ms] [INFO] [PixelKit] Undo (24 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13196ms] [INFO] [PixelKit] Undo (23 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13260ms] [INFO] [PixelKit] Undo (22 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13312ms] [INFO] [PixelKit] Undo (21 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13376ms] [INFO] [PixelKit] Undo (20 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13439ms] [INFO] [PixelKit] Undo (19 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13496ms] [INFO] [PixelKit] Undo (18 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13569ms] [INFO] [PixelKit] Undo (17 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13630ms] [INFO] [PixelKit] Undo (16 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13696ms] [INFO] [PixelKit] Undo (15 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13765ms] [INFO] [PixelKit] Undo (14 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13833ms] [INFO] [PixelKit] Undo (13 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13907ms] [INFO] [PixelKit] Undo (12 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   13999ms] [INFO] [PixelKit] Undo (11 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14067ms] [INFO] [PixelKit] Undo (10 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14168ms] [INFO] [PixelKit] Undo (9 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14227ms] [INFO] [PixelKit] Undo (8 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14276ms] [INFO] [PixelKit] Undo (7 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14332ms] [INFO] [PixelKit] Undo (6 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14392ms] [INFO] [PixelKit] Undo (5 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14453ms] [INFO] [PixelKit] Undo (4 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14628ms] [INFO] [PixelKit] Undo (3 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14741ms] [INFO] [PixelKit] Undo (2 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14811ms] [INFO] [PixelKit] Undo (1 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   14862ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   15273ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   15275ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   15275ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   15294ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   15645ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   15646ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   15646ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   15662ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   15744ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[   15760ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[   16294ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[   16516ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[   16697ms] [INFO] [PixelKit] filter changed {brightness: 100, contrast: 100, blur: 0, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   16742ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[   16839ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 17} @ http://localhost:8123/js/core/logger.js:4
+[   16958ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[   17194ms] [INFO] [PixelKit] Switched to Catalog  @ http://localhost:8123/js/core/logger.js:4
+[   17210ms] [INFO] [PixelKit] catalog page requested {page: 1} @ http://localhost:8123/js/core/logger.js:4
+[   17386ms] [INFO] [PixelKit] catalog page loaded {page: 1, received: 20, total: 20} @ http://localhost:8123/js/core/logger.js:4
+[   17609ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[   17814ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[   17834ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[   18556ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   18556ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   18556ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   18571ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   18838ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   18839ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   18839ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   18858ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   18971ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[   18986ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[   19845ms] [INFO] [PixelKit] Undo (1 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   19900ms] [INFO] [PixelKit] filter changed {brightness: 101, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   20967ms] [INFO] [PixelKit] project saved {id: 1792527115379-ngpacb, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   22063ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   22063ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   22063ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   22087ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   22792ms] [INFO] [PixelKit] resume requested {id: 1792527115379-ngpacb} @ http://localhost:8123/js/core/logger.js:4
+[   22812ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[   23808ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   23808ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   23808ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   23827ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   24056ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   24056ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   24056ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   24073ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   24132ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[   24144ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[   25172ms] [INFO] [PixelKit] project saved {id: 1792527120540-37mm80, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   26179ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[   26410ms] [INFO] [PixelKit] Deleted Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[   26581ms] [INFO] [PixelKit] filter changed {brightness: 100, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[   30079ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   30079ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   30079ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   30094ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   30316ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   30316ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   30316ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   30332ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   30461ms] [INFO] [PixelKit] image selected {name: orient.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[   30474ms] [INFO] [PixelKit] Loaded orient.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[   31142ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   31564ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   31624ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   31913ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   32644ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   33661ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   33692ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   33760ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   34270ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   34368ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   35286ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   36084ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   36120ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   36191ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   36667ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   36788ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   37683ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   38503ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   38537ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   38589ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   38659ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   39134ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   39232ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   40145ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   40959ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   40987ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   41040ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   41107ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   41583ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   41682ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   42601ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   43401ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   43441ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   43523ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   43591ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   43666ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   44165ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   44263ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   45185ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   45981ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   46020ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   46088ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   46156ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   46221ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[   46699ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   46846ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   47712ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   48563ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   48605ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   48673ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   48741ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   48804ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[   48870ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   49347ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   49447ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   50371ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   51162ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   51203ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   51272ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   51764ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   51888ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   52782ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   53599ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   53635ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   53704ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   53771ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   54262ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   54355ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   55287ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   56076ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   56118ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   56186ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   56253ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   56324ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   56812ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   56906ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   57828ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   58626ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   58669ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   58735ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   58804ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   58869ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[   58935ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   59412ms] [INFO] [PixelKit] Exported orient-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   59511ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   60441ms] [INFO] [PixelKit] project saved {id: 1792527126869-h1izce, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   61241ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   61283ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   61355ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[   61717ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   61794ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   61870ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   61934ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   62298ms] [INFO] [PixelKit] Undo (41 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   62562ms] [INFO] [PixelKit] Undo (40 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   62798ms] [INFO] [PixelKit] Undo (39 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   63067ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   63135ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   63386ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   63748ms] [INFO] [PixelKit] Undo (41 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[   64134ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   64203ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   64272ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[   64349ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[   64419ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[   66779ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   66779ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   66779ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   66796ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   67520ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   67598ms] [INFO] [PixelKit] resume requested {id: 1792527126869-h1izce} @ http://localhost:8123/js/core/logger.js:4
+[   67615ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[   68516ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   68709ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   68709ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   68709ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   68969ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   68970ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   68970ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   68990ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   69249ms] [INFO] [PixelKit] recents loaded {count: 3} @ http://localhost:8123/js/core/logger.js:4
+[   69249ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   69249ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   69270ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   69947ms] [INFO] [PixelKit] resume requested {id: p-old} @ http://localhost:8123/js/core/logger.js:4
+[   69963ms] [INFO] [PixelKit] Resumed old filters only  @ http://localhost:8123/js/core/logger.js:4
+[   70759ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   70826ms] [INFO] [PixelKit] resume requested {id: p-edits} @ http://localhost:8123/js/core/logger.js:4
+[   70844ms] [INFO] [PixelKit] Resumed edits without rotation  @ http://localhost:8123/js/core/logger.js:4
+[   71675ms] [INFO] [PixelKit] resume requested {id: p-bad} @ http://localhost:8123/js/core/logger.js:4
+[   71697ms] [INFO] [PixelKit] Resumed tampered rotation  @ http://localhost:8123/js/core/logger.js:4
+[   72689ms] [INFO] [PixelKit] recents loaded {count: 3} @ http://localhost:8123/js/core/logger.js:4
+[   72689ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   72690ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   72708ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   73025ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   73025ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   73025ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   73048ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   74532ms] [INFO] [PixelKit] image selected {name: big.jpg, type: image/jpeg, bytes: 123115} @ http://localhost:8123/js/core/logger.js:4
+[   74608ms] [INFO] [PixelKit] Loaded big.jpg (4000×4500)  @ http://localhost:8123/js/core/logger.js:4
+[   75217ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   75856ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   77982ms] [INFO] [PixelKit] project saved {id: 1792527171000-gdbvki, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   78787ms] [INFO] [PixelKit] Exported big-edited.jpg (125 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   81390ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   84005ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :1
+[   87027ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[   87028ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   87029ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   87079ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   87481ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[   87481ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[   87481ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[   87496ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[   87629ms] [INFO] [PixelKit] image selected {name: crop-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[   87650ms] [INFO] [PixelKit] Loaded crop-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[   88342ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   88740ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   88778ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   88805ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   88952ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   89006ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   89448ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   89489ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   89625ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   89675ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   90108ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   90137ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   90296ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   90342ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   90776ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[   90821ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   90968ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   91027ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   91529ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[   91550ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   91691ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   92579ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   93409ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   93444ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   93519ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   93958ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   93986ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   94115ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   94158ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   94227ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   94657ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   94685ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   94857ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   94959ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   95034ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   95484ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   95501ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   95625ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   95676ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   95802ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   96230ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[   96251ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   96442ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   96489ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   96560ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[   97063ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[   97068ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   97280ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   98084ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[   99007ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   99041ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   99116ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[   99555ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[   99584ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[   99703ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[   99758ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[   99826ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  100259ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  100283ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  100390ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  100450ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  100525ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  100979ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  100984ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  101108ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  101159ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  101234ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  101678ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  101701ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  101811ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  101879ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  101957ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  102478ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  102501ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  102669ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  103515ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  104422ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  104454ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  104526ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  104601ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  105044ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  105051ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  105153ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  105206ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  105279ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  105341ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  105794ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  105800ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  105903ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  105958ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  106028ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  106091ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  106523ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  106549ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  106648ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  106712ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  106774ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  106844ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  107279ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  107298ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  107405ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  107455ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  107527ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  107590ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  108106ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  108131ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  108230ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  109160ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  109951ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  110033ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  110114ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  110202ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  110642ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  110665ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  110820ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  110907ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  110982ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  111056ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  111507ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  111549ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  111673ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  111724ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  111789ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  111861ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  112309ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  112315ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  112439ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  112486ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  112557ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  112622ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  113064ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  113084ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  113206ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  113255ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  113329ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  113388ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  113904ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  113963ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  114109ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  114988ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  115832ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  115868ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  115938ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  116012ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  116095ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  116540ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  116566ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  116662ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  116721ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  116794ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  116870ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  116943ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  117382ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  117447ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  117539ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  117587ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  117655ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  117721ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  117793ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  118241ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  118247ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  118345ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  118404ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  118470ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  118536ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  118674ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  119123ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  119145ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  119239ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  119286ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  119354ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  119420ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  119489ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  119987ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  120009ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  120116ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  121041ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  121837ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  121868ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  121942ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  122019ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  122095ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  122540ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  122546ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  122657ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  122705ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  122769ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  122844ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  122902ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  123337ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  123360ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  123469ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  123527ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  123586ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  123660ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  123717ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  124155ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  124180ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  124369ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  124519ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  124616ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  124704ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  124776ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  125220ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  125243ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  125349ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  125401ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  125470ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  125539ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  125617ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  126113ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  126128ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  126230ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  127155ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  127958ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  128007ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  128180ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  128259ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  128357ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  128422ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  128876ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  128962ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  129101ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  129163ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  129244ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  129320ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  129401ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  129474ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  129920ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 30, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  129943ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  130044ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  130106ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  130185ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  130255ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  130315ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  130372ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  130806ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 30, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  130826ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  130921ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  130983ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  131056ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  131119ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  131198ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  131253ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  131684ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 30} @ http://localhost:8123/js/core/logger.js:4
+[  131710ms] [INFO] [PixelKit] Exported crop-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  131806ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  131871ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  131934ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  132000ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  132067ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  132134ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  132634ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 20, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  132658ms] [INFO] [PixelKit] Exported crop-test-edited.png (3 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  132760ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  133680ms] [INFO] [PixelKit] project saved {id: 1792527184045-a1dqdl, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  134490ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  134609ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  135042ms] [INFO] [PixelKit] Exported crop-test-edited.png (1 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  135088ms] [INFO] [PixelKit] crop changed {cropLeft: 45, cropTop: 0, cropRight: 45, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  135164ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  136004ms] [INFO] [PixelKit] Exported crop-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  136068ms] [INFO] [PixelKit] crop changed {cropLeft: 45, cropTop: 90, cropRight: 45, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  136106ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  136156ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  136584ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  136597ms] [INFO] [PixelKit] crop changed {cropLeft: 30, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  136961ms] [INFO] [PixelKit] Exported crop-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  137075ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  137330ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  137330ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  137330ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  137347ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  137600ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  137600ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  137600ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  137616ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  137690ms] [INFO] [PixelKit] image selected {name: crop-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  137699ms] [INFO] [PixelKit] Loaded crop-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  139072ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  139147ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  139425ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  139498ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  139768ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 20, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  139796ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  140144ms] [INFO] [PixelKit] Undo (3 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  140497ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  140570ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  140633ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[  141111ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  141736ms] [INFO] [PixelKit] project saved {id: 1792527234096-2jfbid, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  143090ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  143090ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  143090ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  143109ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  143827ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  143980ms] [INFO] [PixelKit] resume requested {id: 1792527234096-2jfbid} @ http://localhost:8123/js/core/logger.js:4
+[  144006ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[  144912ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  145356ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  145357ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  145357ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  145399ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  145602ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  145602ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  145603ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  145618ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  145932ms] [INFO] [PixelKit] recents loaded {count: 3} @ http://localhost:8123/js/core/logger.js:4
+[  145932ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  145933ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  145960ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  146645ms] [INFO] [PixelKit] resume requested {id: p-old} @ http://localhost:8123/js/core/logger.js:4
+[  146659ms] [INFO] [PixelKit] Resumed old filters only  @ http://localhost:8123/js/core/logger.js:4
+[  147490ms] [INFO] [PixelKit] resume requested {id: p-rot} @ http://localhost:8123/js/core/logger.js:4
+[  147507ms] [INFO] [PixelKit] Resumed step 2 project  @ http://localhost:8123/js/core/logger.js:4
+[  148323ms] [INFO] [PixelKit] resume requested {id: p-bad} @ http://localhost:8123/js/core/logger.js:4
+[  148341ms] [INFO] [PixelKit] Resumed tampered crop  @ http://localhost:8123/js/core/logger.js:4
+[  149332ms] [INFO] [PixelKit] recents loaded {count: 3} @ http://localhost:8123/js/core/logger.js:4
+[  149332ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  149332ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  149351ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  149752ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  149752ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  149752ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  149771ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  150485ms] [INFO] [PixelKit] image selected {name: big.png, type: image/png, bytes: 357048} @ http://localhost:8123/js/core/logger.js:4
+[  150508ms] [INFO] [PixelKit] Loaded big.png (4000×4500)  @ http://localhost:8123/js/core/logger.js:4
+[  151589ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 25, cropBottom: 25} @ http://localhost:8123/js/core/logger.js:4
+[  154105ms] [INFO] [PixelKit] project saved {id: 1792527246904-0vfdma, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  154417ms] [INFO] [PixelKit] Exported big-edited.png (201 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  154926ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  155780ms] [INFO] [PixelKit] crop changed {cropLeft: 45, cropTop: 45, cropRight: 45, cropBottom: 45} @ http://localhost:8123/js/core/logger.js:4
+[  156398ms] [INFO] [PixelKit] project saved {id: 1792527246904-0vfdma, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  165866ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  165866ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  165866ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  166142ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  166142ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  166142ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  166158ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  166283ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  166301ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  167268ms] [INFO] [PixelKit] Exported ok-small-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  167314ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  167830ms] [INFO] [PixelKit] Exported ok-small-edited.png (1 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  167891ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  168347ms] [INFO] [PixelKit] Exported ok-small-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  168407ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  168974ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  168974ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  168974ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  168991ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  169278ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  169279ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  169279ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  169292ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  169425ms] [INFO] [PixelKit] image selected {name: resize-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  169441ms] [INFO] [PixelKit] Loaded resize-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  170122ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  170593ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  170869ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  170933ms] [INFO] [PixelKit] Exported resize-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  170961ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  171058ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  171121ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  171584ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  171915ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  171960ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  172029ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  172071ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  172523ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  172877ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  172894ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  172990ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  173038ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  173087ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  173533ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  173895ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  173899ms] [INFO] [PixelKit] Exported resize-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  173999ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  174053ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  174122ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  174592ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  174961ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  174986ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  175077ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  175164ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  175223ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  175674ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  176010ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  176042ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  176107ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  176159ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  176222ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  176688ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  177032ms] [INFO] [PixelKit] Exported resize-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  177066ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  177145ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  177211ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  177279ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  177738ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  178095ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  178126ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  178217ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  178270ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  178338ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  178802ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  179127ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  179177ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  179307ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  179353ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  179427ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  179513ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  179989ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  180346ms] [INFO] [PixelKit] Exported resize-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  180359ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  180450ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  180507ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  180672ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  180737ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  181209ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  181544ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  181588ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  181638ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  181686ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  181758ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  181822ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  182276ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  182609ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  182656ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  182715ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  182783ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  182835ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  182902ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  183351ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  183720ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  183746ms] [INFO] [PixelKit] Exported resize-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  183860ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  183918ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  183986ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  184054ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  184509ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  184842ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  184883ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  184971ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  185019ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  185087ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  185155ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  185634ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  185991ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  186001ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  186099ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  186153ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  186221ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  186285ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  186353ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  186812ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  187161ms] [INFO] [PixelKit] Exported resize-test-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  187179ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  187282ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  187334ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  187404ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  187468ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  187534ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  187982ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  188324ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  188354ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  188428ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  188484ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  188551ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  188620ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  188691ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  189154ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  189475ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  189520ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  189577ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  189665ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  189745ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  189836ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  190052ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  190571ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  190927ms] [INFO] [PixelKit] Exported resize-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  190956ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  191057ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  191115ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  191189ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  191257ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  191334ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  191785ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  192124ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  192162ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  192237ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  192289ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  192352ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  192418ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  192482ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  192963ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  193308ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  193339ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  193411ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  193467ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  193536ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  193600ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  193665ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  193731ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  194196ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  194527ms] [INFO] [PixelKit] Exported resize-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  194569ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  194618ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  194665ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  194734ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  194800ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  194872ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  194949ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  195407ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  195756ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  195786ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  195859ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  195934ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  195999ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  196066ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  196130ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  196181ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  196643ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 20, cropBottom: 20} @ http://localhost:8123/js/core/logger.js:4
+[  197007ms] [INFO] [PixelKit] Exported resize-test-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  197022ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  197103ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  197147ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  197222ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  197283ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  197735ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  198576ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  198576ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  198577ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  198598ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  198853ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  198854ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  198854ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  198871ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  199029ms] [INFO] [PixelKit] image selected {name: tiny.png, type: image/png, bytes: 127} @ http://localhost:8123/js/core/logger.js:4
+[  199045ms] [INFO] [PixelKit] Loaded tiny.png (20×20)  @ http://localhost:8123/js/core/logger.js:4
+[  200174ms] [INFO] [PixelKit] Exported tiny-edited.png (0 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  200177ms] [INFO] [PixelKit] crop changed {cropLeft: 45, cropTop: 90, cropRight: 45, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  200188ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  201020ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  201020ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  201021ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  201039ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  201314ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  201315ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  201315ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  201344ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  201441ms] [INFO] [PixelKit] image selected {name: resize-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  201454ms] [INFO] [PixelKit] Loaded resize-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  202776ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  202879ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  203125ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  203509ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  203552ms] [INFO] [PixelKit] crop changed {cropLeft: 0, cropTop: 0, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  203577ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  203842ms] [INFO] [PixelKit] Undo (3 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  204192ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  204249ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  204315ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[  204760ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  205123ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  205743ms] [INFO] [PixelKit] project saved {id: 1792527297848-22imif, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  207023ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  207024ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  207024ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  207059ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  207762ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  207845ms] [INFO] [PixelKit] resume requested {id: 1792527297848-22imif} @ http://localhost:8123/js/core/logger.js:4
+[  207870ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[  208798ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  208888ms] [INFO] [PixelKit] Exported resize-test-edited.png (2 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  208977ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :23
+[  209186ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  209187ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  209187ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  209217ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  209488ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  209489ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  209489ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  209505ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  209771ms] [INFO] [PixelKit] recents loaded {count: 6} @ http://localhost:8123/js/core/logger.js:4
+[  209772ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  209772ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  209789ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  210444ms] [INFO] [PixelKit] resume requested {id: p-old} @ http://localhost:8123/js/core/logger.js:4
+[  210459ms] [INFO] [PixelKit] Resumed old filters only  @ http://localhost:8123/js/core/logger.js:4
+[  211324ms] [INFO] [PixelKit] resume requested {id: p-crop} @ http://localhost:8123/js/core/logger.js:4
+[  211343ms] [INFO] [PixelKit] Resumed step 3 project  @ http://localhost:8123/js/core/logger.js:4
+[  212172ms] [INFO] [PixelKit] resume requested {id: p-0} @ http://localhost:8123/js/core/logger.js:4
+[  212193ms] [INFO] [PixelKit] Resumed resize 0  @ http://localhost:8123/js/core/logger.js:4
+[  213005ms] [INFO] [PixelKit] resume requested {id: p-500} @ http://localhost:8123/js/core/logger.js:4
+[  213023ms] [INFO] [PixelKit] Resumed resize 500  @ http://localhost:8123/js/core/logger.js:4
+[  213838ms] [INFO] [PixelKit] resume requested {id: p-x} @ http://localhost:8123/js/core/logger.js:4
+[  213857ms] [INFO] [PixelKit] Resumed resize x  @ http://localhost:8123/js/core/logger.js:4
+[  214688ms] [INFO] [PixelKit] resume requested {id: p-neg} @ http://localhost:8123/js/core/logger.js:4
+[  214707ms] [INFO] [PixelKit] Resumed resize -40  @ http://localhost:8123/js/core/logger.js:4
+[  215689ms] [INFO] [PixelKit] recents loaded {count: 6} @ http://localhost:8123/js/core/logger.js:4
+[  215689ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  215690ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  215713ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  215921ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  215921ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  215921ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  215936ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  216431ms] [INFO] [PixelKit] image selected {name: big.png, type: image/png, bytes: 356987} @ http://localhost:8123/js/core/logger.js:4
+[  216441ms] [INFO] [PixelKit] Loaded big.png (4000×4500)  @ http://localhost:8123/js/core/logger.js:4
+[  219960ms] [INFO] [PixelKit] project saved {id: 1792527312838-s5eq5k, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  220497ms] [INFO] [PixelKit] Exported big-edited.png (349 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  221545ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  222170ms] [INFO] [PixelKit] project saved {id: 1792527312838-s5eq5k, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  222240ms] [INFO] [PixelKit] Exported big-edited.png (5 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  223025ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  223026ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  223026ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  223089ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  223416ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  223416ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  223416ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  223436ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  225164ms] [INFO] [PixelKit] image selected {name: toomany.png, type: image/png, bytes: 762368} @ http://localhost:8123/js/core/logger.js:4
+[  225633ms] [INFO] [PixelKit] upload rejected {name: toomany.png, reason: The image has too many pixels (limit is 40 megapixels).} @ http://localhost:8123/js/core/logger.js:4
+[  230456ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  230457ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  230457ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  230482ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  230695ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  230695ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  230695ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  230709ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  230805ms] [INFO] [PixelKit] image selected {name: text-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  230821ms] [INFO] [PixelKit] Loaded text-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  231572ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  232025ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  232387ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  232819ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  232851ms] [INFO] [PixelKit] Exported text-test-edited.png (10 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  233109ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  233984ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  234364ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :2
+[  234918ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  235381ms] [INFO] [PixelKit] project saved {id: 1792527327217-0zedq0, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  235416ms] [INFO] [PixelKit] Exported text-test-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  238136ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  238344ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  238897ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  239278ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  239692ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  239731ms] [INFO] [PixelKit] Exported text-test-edited.png (10 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  240502ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  240590ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  241386ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  241817ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  241844ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  242572ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  242677ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  243150ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  243524ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  243893ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  243931ms] [INFO] [PixelKit] Exported text-test-edited.png (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  244351ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  244422ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  245217ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  245657ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  245682ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  246137ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  246204ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  246278ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  246736ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  247118ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  247533ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  247562ms] [INFO] [PixelKit] Exported text-test-edited.png (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  247721ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  247803ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  247877ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  248656ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  249103ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  249128ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  249273ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  249353ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  249420ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  249872ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  250253ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  250667ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  250696ms] [INFO] [PixelKit] Exported text-test-edited.png (10 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  250853ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  250946ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  251020ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  251813ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  252208ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  252242ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  252402ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  252485ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  252556ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  252617ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  253088ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  253473ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  253871ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  253896ms] [INFO] [PixelKit] Exported text-test-edited.png (10 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  254066ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  254138ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  254202ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  254267ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  255064ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  255481ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  255508ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  255675ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  255763ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  255835ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  255902ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  256357ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  256732ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  257187ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  257209ms] [INFO] [PixelKit] Exported text-test-edited.png (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  257368ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  257434ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  257499ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  257565ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  258351ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  258770ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  258792ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  259017ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  259150ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  259284ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  259347ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  259406ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  259866ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  260231ms] [INFO] [PixelKit] resize changed {resize: 100} @ http://localhost:8123/js/core/logger.js:4
+[  260655ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  260661ms] [INFO] [PixelKit] Exported text-test-edited.png (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  260820ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  260885ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  260954ms] [INFO] [PixelKit] Rotated to 180°  @ http://localhost:8123/js/core/logger.js:4
+[  261016ms] [INFO] [PixelKit] Rotated to 270°  @ http://localhost:8123/js/core/logger.js:4
+[  261082ms] [INFO] [PixelKit] Horizontal flip on  @ http://localhost:8123/js/core/logger.js:4
+[  261880ms] [INFO] [PixelKit] resize changed {resize: 50} @ http://localhost:8123/js/core/logger.js:4
+[  262386ms] [INFO] [PixelKit] text overlay changed {textLength: 5, textColor: #ff00ff, textSize: 20, textX: 80, textY: 20} @ http://localhost:8123/js/core/logger.js:4
+[  262409ms] [INFO] [PixelKit] Exported text-test-edited.png (6 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  262568ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  262861ms] [INFO] [PixelKit] Exported text-test-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  263372ms] [INFO] [PixelKit] Exported text-test-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  263418ms] [INFO] [PixelKit] text overlay changed {textLength: 2, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  263893ms] [INFO] [PixelKit] Exported text-test-edited.png (7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  263935ms] [INFO] [PixelKit] text overlay changed {textLength: 0, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  264014ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[  264086ms] [INFO] [PixelKit] invert on  @ http://localhost:8123/js/core/logger.js:4
+[  264498ms] [INFO] [PixelKit] filter changed {brightness: 100, contrast: 100, blur: 0, grayscale: true, invert: true} @ http://localhost:8123/js/core/logger.js:4
+[  264508ms] [INFO] [PixelKit] Exported text-test-edited.png (11 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  264525ms] [INFO] [PixelKit] text overlay changed {textLength: 6, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  265149ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  265150ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  265150ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  265223ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  265520ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  265521ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  265521ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  265541ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  265632ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  265661ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  266772ms] [INFO] [PixelKit] Exported ok-small-edited.png (4 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  266779ms] [INFO] [PixelKit] text overlay changed {textLength: 3, textColor: #ffffff, textSize: 25, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  267518ms] [INFO] [PixelKit] text overlay changed {textLength: 3, textColor: #101010, textSize: 25, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  267521ms] [INFO] [PixelKit] Exported ok-small-edited.png (4 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  267920ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  267921ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  267921ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  267934ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  268228ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  268228ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  268228ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  268254ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  268356ms] [INFO] [PixelKit] image selected {name: text-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  268365ms] [INFO] [PixelKit] Loaded text-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  269465ms] [INFO] [PixelKit] text overlay changed {textLength: 60, textColor: #ff00ff, textSize: 3, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  269506ms] [INFO] [PixelKit] Exported text-test-edited.png (12 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  270371ms] [INFO] [PixelKit] Exported text-test-edited.png (15 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  270431ms] [INFO] [PixelKit] text overlay changed {textLength: 8, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  270871ms] [INFO] [PixelKit] Exported text-test-edited.png (25 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  270941ms] [INFO] [PixelKit] text overlay changed {textLength: 28, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  271372ms] [INFO] [PixelKit] Exported text-test-edited.png (20 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  271431ms] [INFO] [PixelKit] text overlay changed {textLength: 17, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  272004ms] [INFO] [PixelKit] Exported text-test-edited.png (17 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  272065ms] [INFO] [PixelKit] text overlay changed {textLength: 11, textColor: #ff00ff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  272496ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  272496ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  272496ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  272510ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  272878ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  272879ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  272879ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  272895ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  272977ms] [INFO] [PixelKit] image selected {name: text-test.png, type: image/png, bytes: 6952} @ http://localhost:8123/js/core/logger.js:4
+[  272992ms] [INFO] [PixelKit] Loaded text-test.png (600×400)  @ http://localhost:8123/js/core/logger.js:4
+[  274376ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  274396ms] [INFO] [PixelKit] text overlay changed {textLength: 0, textColor: #ffffff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  275356ms] [INFO] [PixelKit] Undo (0 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  275465ms] [INFO] [PixelKit] text overlay changed {textLength: 0, textColor: #ffffff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  275727ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  276023ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  276083ms] [INFO] [PixelKit] text overlay changed {textLength: 0, textColor: #ffffff, textSize: 8, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  276357ms] [INFO] [PixelKit] Undo (4 steps left)  @ http://localhost:8123/js/core/logger.js:4
+[  276725ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  276778ms] [INFO] [PixelKit] Rotated to 90°  @ http://localhost:8123/js/core/logger.js:4
+[  276848ms] [INFO] [PixelKit] Vertical flip on  @ http://localhost:8123/js/core/logger.js:4
+[  277312ms] [INFO] [PixelKit] crop changed {cropLeft: 20, cropTop: 10, cropRight: 0, cropBottom: 0} @ http://localhost:8123/js/core/logger.js:4
+[  277770ms] [INFO] [PixelKit] text overlay changed {textLength: 10, textColor: #ff00ff, textSize: 12, textX: 25, textY: 75} @ http://localhost:8123/js/core/logger.js:4
+[  278379ms] [INFO] [PixelKit] project saved {id: 1792527369388-vncgyo, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  279843ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  279843ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  279843ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  279861ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  280643ms] [INFO] [PixelKit] resume requested {id: 1792527369388-vncgyo} @ http://localhost:8123/js/core/logger.js:4
+[  280668ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[  281635ms] [INFO] [PixelKit] Exported text-test-edited.png (12 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  281969ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  281969ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  281969ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  281991ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  282198ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  282199ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  282199ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  282215ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  282500ms] [INFO] [PixelKit] recents loaded {count: 6} @ http://localhost:8123/js/core/logger.js:4
+[  282500ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  282500ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  282515ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  283210ms] [INFO] [PixelKit] resume requested {id: p-old} @ http://localhost:8123/js/core/logger.js:4
+[  283233ms] [INFO] [PixelKit] Resumed old filters only  @ http://localhost:8123/js/core/logger.js:4
+[  284102ms] [INFO] [PixelKit] resume requested {id: p-4} @ http://localhost:8123/js/core/logger.js:4
+[  284152ms] [INFO] [PixelKit] Resumed step 4 project  @ http://localhost:8123/js/core/logger.js:4
+[  284936ms] [INFO] [PixelKit] resume requested {id: p-long} @ http://localhost:8123/js/core/logger.js:4
+[  284957ms] [INFO] [PixelKit] Resumed text of 5000 characters  @ http://localhost:8123/js/core/logger.js:4
+[  285769ms] [INFO] [PixelKit] resume requested {id: p-bad} @ http://localhost:8123/js/core/logger.js:4
+[  285792ms] [INFO] [PixelKit] Resumed tampered colour and numbers  @ http://localhost:8123/js/core/logger.js:4
+[  286618ms] [INFO] [PixelKit] resume requested {id: p-emoji} @ http://localhost:8123/js/core/logger.js:4
+[  286638ms] [INFO] [PixelKit] Resumed emoji at the limit  @ http://localhost:8123/js/core/logger.js:4
+[  287452ms] [INFO] [PixelKit] resume requested {id: p-num} @ http://localhost:8123/js/core/logger.js:4
+[  287472ms] [INFO] [PixelKit] Resumed text is a number  @ http://localhost:8123/js/core/logger.js:4
+[  288477ms] [INFO] [PixelKit] recents loaded {count: 6} @ http://localhost:8123/js/core/logger.js:4
+[  288478ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  288479ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  288508ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  288850ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  288850ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  288851ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  288869ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  289746ms] [INFO] [PixelKit] image selected {name: big.png, type: image/png, bytes: 356987} @ http://localhost:8123/js/core/logger.js:4
+[  289766ms] [INFO] [PixelKit] Loaded big.png (4000×4500)  @ http://localhost:8123/js/core/logger.js:4
+[  292212ms] [INFO] [PixelKit] text overlay changed {textLength: 3, textColor: #ff00ff, textSize: 10, textX: 50, textY: 50} @ http://localhost:8123/js/core/logger.js:4
+[  293537ms] [INFO] [PixelKit] project saved {id: 1792527386161-gm8qgm, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  293866ms] [INFO] [PixelKit] Exported big-edited.png (371 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  298487ms] [INFO] [PixelKit] resize changed {resize: 10} @ http://localhost:8123/js/core/logger.js:4
+[  299496ms] [INFO] [PixelKit] project saved {id: 1792527386161-gm8qgm, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  300573ms] [INFO] [PixelKit] Exported big-edited.png (8 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  305218ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  305218ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  305219ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  305456ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  305457ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  305457ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  305476ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  306435ms] [INFO] [PixelKit] image selected {name: Holiday Photo (2).jpg, type: image/jpeg, bytes: 43229} @ http://localhost:8123/js/core/logger.js:4
+[  306452ms] [INFO] [PixelKit] Loaded Holiday Photo (2).jpg (1600×1200)  @ http://localhost:8123/js/core/logger.js:4
+[  307483ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 0, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[  308004ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: false, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[  308145ms] [INFO] [PixelKit] grayscale on  @ http://localhost:8123/js/core/logger.js:4
+[  308554ms] [INFO] [PixelKit] filter changed {brightness: 120, contrast: 100, blur: 3, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[  308809ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-edited.jpg (56 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  309881ms] [INFO] [PixelKit] project saved {id: 1792527402845-zd0cxh, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  310615ms] [INFO] [PixelKit] Reset all edits to the original image  @ http://localhost:8123/js/core/logger.js:4
+[  311149ms] [INFO] [PixelKit] image selected {name: evil.svg, type: image/svg+xml, bytes: 135} @ http://localhost:8123/js/core/logger.js:4
+[  311149ms] [INFO] [PixelKit] upload rejected {name: evil.svg, reason: SVG files are not allowed. Use a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  311580ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  311587ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  312026ms] [INFO] [PixelKit] image selected {name: svg-as.png, type: image/png, bytes: 99} @ http://localhost:8123/js/core/logger.js:4
+[  312034ms] [INFO] [PixelKit] upload rejected {name: svg-as.png, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  312468ms] [INFO] [PixelKit] image selected {name: empty.png, type: image/png, bytes: 0} @ http://localhost:8123/js/core/logger.js:4
+[  312468ms] [INFO] [PixelKit] upload rejected {name: empty.png, reason: The file is empty.} @ http://localhost:8123/js/core/logger.js:4
+[  312919ms] [INFO] [PixelKit] image selected {name: big-11mb.jpg, type: image/jpeg, bytes: 11534340} @ http://localhost:8123/js/core/logger.js:4
+[  312920ms] [INFO] [PixelKit] upload rejected {name: big-11mb.jpg, reason: The file is 11.0 MB. The limit is 10 MB.} @ http://localhost:8123/js/core/logger.js:4
+[  313357ms] [INFO] [PixelKit] image selected {name: truncated.jpg, type: image/jpeg, bytes: 61} @ http://localhost:8123/js/core/logger.js:4
+[  313367ms] [ERROR] [PixelKit] image decode failed Error: decode failed
+    at element.onerror (http://localhost:8123/js/core/image.js:40:64) @ http://localhost:8123/js/core/logger.js:9
+[  313368ms] [INFO] [PixelKit] upload rejected {name: truncated.jpg, reason: The image could not be read.} @ http://localhost:8123/js/core/logger.js:4
+[  313890ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  314241ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 43229, afterBytes: 35693, ms: 38} @ http://localhost:8123/js/core/logger.js:4
+[  314819ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (34.9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  315062ms] [INFO] [PixelKit] compressor quality {quality: 40} @ http://localhost:8123/js/core/logger.js:4
+[  315411ms] [INFO] [PixelKit] compressed {format: JPG, quality: 40, beforeBytes: 43229, afterBytes: 21292, ms: 45} @ http://localhost:8123/js/core/logger.js:4
+[  316194ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.jpg (20.8 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  316313ms] [INFO] [PixelKit] Compressor format: WebP  @ http://localhost:8123/js/core/logger.js:4
+[  316821ms] [INFO] [PixelKit] compressed {format: WebP, quality: 40, beforeBytes: 43229, afterBytes: 12988, ms: 201} @ http://localhost:8123/js/core/logger.js:4
+[  317361ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.webp (12.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  317499ms] [INFO] [PixelKit] Compressor format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[  317875ms] [INFO] [PixelKit] compressed {format: PNG, quality: n/a, beforeBytes: 43229, afterBytes: 860835, ms: 69} @ http://localhost:8123/js/core/logger.js:4
+[  318427ms] [INFO] [PixelKit] Downloaded Holiday_Photo_2_-compressed.png (840.7 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  318795ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  319261ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 0, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[  319785ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: impact, color: #ffffff, size: 10} @ http://localhost:8123/js/core/logger.js:4
+[  319912ms] [INFO] [PixelKit] Meme preset: Instagram post (1080×1080)  @ http://localhost:8123/js/core/logger.js:4
+[  320478ms] [INFO] [PixelKit] Meme preset: Instagram portrait (1080×1350)  @ http://localhost:8123/js/core/logger.js:4
+[  321081ms] [INFO] [PixelKit] Meme preset: WhatsApp Status (1080×1920)  @ http://localhost:8123/js/core/logger.js:4
+[  321663ms] [INFO] [PixelKit] meme font {font: georgia} @ http://localhost:8123/js/core/logger.js:4
+[  322585ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #ffffff, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[  323099ms] [INFO] [PixelKit] meme changed {topLength: 43, bottomLength: 100, font: georgia, color: #222222, size: 16} @ http://localhost:8123/js/core/logger.js:4
+[  323448ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.jpg (360 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  323645ms] [INFO] [PixelKit] Meme export format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[  324114ms] [INFO] [PixelKit] Exported Holiday_Photo_2_-meme-1080x1920.png (957 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  324631ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  324732ms] [INFO] [PixelKit] Logo: added rectangle  @ http://localhost:8123/js/core/logger.js:4
+[  325167ms] [INFO] [PixelKit] logo element changed {id: logo-1, type: rect, size: 300, color: #ff0000, x: 300} @ http://localhost:8123/js/core/logger.js:4
+[  325294ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  325739ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 390} @ http://localhost:8123/js/core/logger.js:4
+[  325844ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  326286ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  326801ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 160, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  327322ms] [INFO] [PixelKit] logo element changed {id: logo-3, type: text, size: 120, color: #ffffff, x: 480} @ http://localhost:8123/js/core/logger.js:4
+[  327447ms] [INFO] [PixelKit] logo select {id: logo-2, type: circle} @ http://localhost:8123/js/core/logger.js:4
+[  327447ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 390, y: 390} @ http://localhost:8123/js/core/logger.js:4
+[  327584ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[  327620ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 700, y: 600} @ http://localhost:8123/js/core/logger.js:4
+[  327749ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 1000, y: 0} @ http://localhost:8123/js/core/logger.js:4
+[  328227ms] [INFO] [PixelKit] logo keyboard move {id: logo-2, x: 995, y: 55} @ http://localhost:8123/js/core/logger.js:4
+[  328851ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  329363ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  329544ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 1, to: 0} @ http://localhost:8123/js/core/logger.js:4
+[  329595ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 0, to: 1} @ http://localhost:8123/js/core/logger.js:4
+[  329661ms] [INFO] [PixelKit] Logo background: solid colour  @ http://localhost:8123/js/core/logger.js:4
+[  330104ms] [INFO] [PixelKit] logo background colour {color: #112233} @ http://localhost:8123/js/core/logger.js:4
+[  330362ms] [INFO] [PixelKit] Exported logo-1000x1000.png (44 KB, solid background)  @ http://localhost:8123/js/core/logger.js:4
+[  330511ms] [INFO] [PixelKit] Logo background: transparent  @ http://localhost:8123/js/core/logger.js:4
+[  330840ms] [INFO] [PixelKit] Exported logo-1000x1000.png (41 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  331010ms] [INFO] [PixelKit] Logo: deleted circle  @ http://localhost:8123/js/core/logger.js:4
+[  331561ms] [INFO] [PixelKit] Switched to Catalog  @ http://localhost:8123/js/core/logger.js:4
+[  331583ms] [INFO] [PixelKit] catalog page requested {page: 1} @ http://localhost:8123/js/core/logger.js:4
+[  331895ms] [INFO] [PixelKit] catalog page loaded {page: 1, received: 20, total: 20} @ http://localhost:8123/js/core/logger.js:4
+[  332912ms] [INFO] [PixelKit] project saved {id: 1792527402845-zd0cxh, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  335144ms] [INFO] [PixelKit] Catalog: using photo 0 by Alejandro Escamilla  @ http://localhost:8123/js/core/logger.js:4
+[  336134ms] [INFO] [PixelKit] catalog photo downloaded {id: 0, type: image/jpeg, bytes: 300878} @ http://localhost:8123/js/core/logger.js:4
+[  336140ms] [INFO] [PixelKit] image selected {name: picsum-0.jpg, type: image/jpeg, bytes: 300878} @ http://localhost:8123/js/core/logger.js:4
+[  336163ms] [INFO] [PixelKit] Loaded picsum-0.jpg (3000×2000)  @ http://localhost:8123/js/core/logger.js:4
+[  336171ms] [INFO] [PixelKit] Opened picsum-0.jpg in the Editor  @ http://localhost:8123/js/core/logger.js:4
+[  337268ms] [INFO] [PixelKit] project saved {id: 1792527432553-ik4k4v, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  341731ms] [INFO] [PixelKit] Renamed project to "My Trip"  @ http://localhost:8123/js/core/logger.js:4
+[  342769ms] [INFO] [PixelKit] project saved {id: 1792527432553-ik4k4v, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  343560ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  343560ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  343560ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  343580ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  344457ms] [INFO] [PixelKit] resume requested {id: 1792527402845-zd0cxh} @ http://localhost:8123/js/core/logger.js:4
+[  344478ms] [INFO] [PixelKit] Resumed Untitled design  @ http://localhost:8123/js/core/logger.js:4
+[  345497ms] [INFO] [PixelKit] Deleted My Trip  @ http://localhost:8123/js/core/logger.js:4
+[  349226ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  349226ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  349230ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  349256ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  351227ms] [INFO] [PixelKit] hero slider moved {value: 60} @ http://localhost:8123/js/core/logger.js:4
+[  351943ms] [INFO] [PixelKit] hero slider moved {value: 80} @ http://localhost:8123/js/core/logger.js:4
+[  352297ms] [INFO] [PixelKit] revealed Edit @ http://localhost:8123/js/core/logger.js:4
+[  352297ms] [INFO] [PixelKit] revealed Compress @ http://localhost:8123/js/core/logger.js:4
+[  352297ms] [INFO] [PixelKit] revealed Meme & Post @ http://localhost:8123/js/core/logger.js:4
+[  352297ms] [INFO] [PixelKit] revealed Discover @ http://localhost:8123/js/core/logger.js:4
+[  356850ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  356850ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  356850ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  356872ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  357076ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  357077ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  357078ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  357096ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  357240ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  357290ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  357293ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  357735ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  357770ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  357773ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  358217ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  358249ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  358253ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  358712ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  358734ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  359250ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  359517ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  359586ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  360087ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  360087ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  360089ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  360913ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  360914ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  360914ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  360931ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  361161ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  361162ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  361162ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  361178ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  361288ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  361328ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  361333ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  361767ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  361799ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  361802ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  362249ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  362283ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  362287ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  362746ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  362765ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  363317ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  363582ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  363653ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  364088ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  364088ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  364089ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  364666ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  364839ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  364839ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  364839ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  364854ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  365137ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  365137ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  365137ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  365154ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  365253ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  365290ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  365294ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  365731ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  365771ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  365782ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  366246ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  366281ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  366284ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  366739ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  366754ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  367318ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  367582ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  367650ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  368079ms] [INFO] [PixelKit] page index.html @ http://localhost:8123/js/core/logger.js:4
+[  368079ms] [INFO] [PixelKit] prefers-reduced-motion off @ http://localhost:8123/js/core/logger.js:4
+[  368082ms] [INFO] [PixelKit] hero compare ready  @ http://localhost:8123/js/core/logger.js:4
+[  368096ms] [INFO] [PixelKit] revealed Tools, one workspace. @ http://localhost:8123/js/core/logger.js:4
+[  368830ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  368831ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  368831ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  368845ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  369072ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  369072ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  369072ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  369092ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  369182ms] [INFO] [PixelKit] image selected {name: alpha.png, type: image/png, bytes: 4796} @ http://localhost:8123/js/core/logger.js:4
+[  369201ms] [INFO] [PixelKit] Loaded alpha.png (400×400)  @ http://localhost:8123/js/core/logger.js:4
+[  369734ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  370139ms] [INFO] [PixelKit] Exported alpha-meme-1080x1080.jpg (9 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  370322ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :0
+[  370386ms] [INFO] [PixelKit] Meme export format: PNG  @ http://localhost:8123/js/core/logger.js:4
+[  370671ms] [INFO] [PixelKit] Exported alpha-meme-1080x1080.png (27 KB)  @ http://localhost:8123/js/core/logger.js:4
+[  370824ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :0
+[  371009ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  371009ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  371009ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  371022ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  371237ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  371238ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  371238ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  371259ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  371344ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  371359ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  372384ms] [INFO] [PixelKit] project saved {id: 1792527467753-ikqdi2, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  372869ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  372884ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  373910ms] [INFO] [PixelKit] project saved {id: 1792527469280-19m79c, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  374403ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  374420ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  375449ms] [INFO] [PixelKit] project saved {id: 1792527470816-j8ibku, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  375946ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  375965ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  376980ms] [INFO] [PixelKit] project saved {id: 1792527472358-okbpyt, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  377494ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  377510ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  378531ms] [INFO] [PixelKit] project saved {id: 1792527473904-m6e5km, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  379025ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  379040ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  380063ms] [INFO] [PixelKit] project saved {id: 1792527475435-kbiwy6, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  380559ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  380579ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  381603ms] [INFO] [PixelKit] project saved {id: 1792527476972-9bw8x6, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  382083ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  382099ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  383126ms] [INFO] [PixelKit] project saved {id: 1792527478494-wag3cu, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  383613ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  383635ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  384661ms] [INFO] [PixelKit] project saved {id: 1792527480026-6yx4uc, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  385154ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  385174ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  386197ms] [INFO] [PixelKit] project saved {id: 1792527481566-x6efz7, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  386683ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  386706ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  387728ms] [INFO] [PixelKit] project saved {id: 1792527483096-b25nj1, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  387740ms] [INFO] [PixelKit] old project removed {id: 1792527467753-ikqdi2} @ http://localhost:8123/js/core/logger.js:4
+[  388228ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  388264ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  389298ms] [INFO] [PixelKit] project saved {id: 1792527484648-toeu8c, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  389311ms] [INFO] [PixelKit] old project removed {id: 1792527469280-19m79c} @ http://localhost:8123/js/core/logger.js:4
+[  390114ms] [INFO] [PixelKit] recents loaded {count: 13} @ http://localhost:8123/js/core/logger.js:4
+[  390115ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  390115ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  390143ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  390232ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  390252ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  391279ms] [INFO] [PixelKit] project saved {id: 1792527486645-vqtmqm, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  391290ms] [INFO] [PixelKit] old project removed {id: 1792527470816-j8ibku} @ http://localhost:8123/js/core/logger.js:4
+[  391292ms] [INFO] [PixelKit] old project removed {id: old0} @ http://localhost:8123/js/core/logger.js:4
+[  391294ms] [INFO] [PixelKit] old project removed {id: old1} @ http://localhost:8123/js/core/logger.js:4
+[  391295ms] [INFO] [PixelKit] old project removed {id: old2} @ http://localhost:8123/js/core/logger.js:4
+[  394355ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  394355ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  394355ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  394439ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  394496ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  394566ms] [INFO] [PixelKit] Logo: added rectangle  @ http://localhost:8123/js/core/logger.js:4
+[  394832ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  395060ms] [INFO] [PixelKit] logo drag start {id: logo-2, x: 390, y: 390} @ http://localhost:8123/js/core/logger.js:4
+[  395257ms] [INFO] [PixelKit] logo drag end {id: logo-2, x: 210, y: 510} @ http://localhost:8123/js/core/logger.js:4
+[  395380ms] [INFO] [PixelKit] Exported logo-1000x1000.png (28 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  395521ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :4
+[  395580ms] [INFO] [PixelKit] logo layer move {id: logo-2, from: 1, to: 0} @ http://localhost:8123/js/core/logger.js:4
+[  395694ms] [INFO] [PixelKit] logo element changed {id: logo-2, type: circle, size: 240, color: #0000ff, x: 330} @ http://localhost:8123/js/core/logger.js:4
+[  395801ms] [INFO] [PixelKit] Exported logo-1000x1000.png (25 KB, transparent background)  @ http://localhost:8123/js/core/logger.js:4
+[  395927ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ :4
+[  398996ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  398996ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  398996ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  399013ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  399250ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  399251ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  399251ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  399270ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  399590ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  399590ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  399590ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  399612ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  400342ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  400363ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4
+[  401323ms] [INFO] [PixelKit] resume requested {id: old-2} @ http://localhost:8123/js/core/logger.js:4
+[  401338ms] [INFO] [PixelKit] Resumed Tampered  @ http://localhost:8123/js/core/logger.js:4
+[  402273ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  402297ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4
+[  403431ms] [INFO] [PixelKit] filter changed {brightness: 160, contrast: 80, blur: 2, grayscale: true, invert: false} @ http://localhost:8123/js/core/logger.js:4
+[  404047ms] [INFO] [PixelKit] project saved {id: old-1, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  405083ms] [INFO] [PixelKit] recents loaded {count: 2} @ http://localhost:8123/js/core/logger.js:4
+[  405084ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  405084ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  405108ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  405806ms] [INFO] [PixelKit] resume requested {id: old-1} @ http://localhost:8123/js/core/logger.js:4
+[  405824ms] [INFO] [PixelKit] Resumed Old format  @ http://localhost:8123/js/core/logger.js:4
+[  409350ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  409517ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  409517ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  409518ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  409544ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  409643ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  409785ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  409785ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  409785ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  409812ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  411122ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  411805ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  412486ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  412513ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  412520ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  413460ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  413478ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  414521ms] [INFO] [PixelKit] project saved {id: 1792527509871-4xsrzt, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  416819ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  417140ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 6} @ http://localhost:8123/js/core/logger.js:4
+[  417701ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  418651ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  418724ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  418807ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  419818ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  419959ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  419959ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  419959ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  419973ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  420064ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  420230ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  420230ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  420230ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  420245ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  421468ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  422151ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  422818ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  422849ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  422853ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  423857ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  423869ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  424887ms] [INFO] [PixelKit] project saved {id: 1792527520263-rxq21s, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  427272ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  427594ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 15} @ http://localhost:8123/js/core/logger.js:4
+[  428434ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  430168ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  430363ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  430547ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  431595ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  431738ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  431738ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  431738ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  431758ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  431858ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  432054ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  432055ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  432055ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  432077ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  433335ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  434014ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  434681ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  434718ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  434722ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  435724ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  435740ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  436769ms] [INFO] [PixelKit] project saved {id: 1792527532134-tzy2lx, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  439079ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  439407ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 17} @ http://localhost:8123/js/core/logger.js:4
+[  439964ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  440928ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  440998ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  441065ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4
+[  442085ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  442263ms] [INFO] [PixelKit] recents loaded {count: 1} @ http://localhost:8123/js/core/logger.js:4
+[  442264ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  442264ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  442290ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  442417ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap:0
+[  442590ms] [INFO] [PixelKit] recents loaded {count: 0} @ http://localhost:8123/js/core/logger.js:4
+[  442591ms] [INFO] [PixelKit] workspace loaded  @ http://localhost:8123/js/core/logger.js:4
+[  442591ms] [INFO] [PixelKit] Workspace opened  @ http://localhost:8123/js/core/logger.js:4
+[  442603ms] [INFO] [PixelKit] export formats supported [image/jpeg, image/png, image/webp] @ http://localhost:8123/js/core/logger.js:4
+[  443847ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  444529ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  445262ms] [INFO] [PixelKit] Switched to Editor  @ http://localhost:8123/js/core/logger.js:4
+[  445303ms] [INFO] [PixelKit] image selected {name: textfile.jpg, type: image/jpeg, bytes: 39} @ http://localhost:8123/js/core/logger.js:4
+[  445310ms] [INFO] [PixelKit] upload rejected {name: textfile.jpg, reason: The file contents do not match a JPG, PNG or WebP image.} @ http://localhost:8123/js/core/logger.js:4
+[  446266ms] [INFO] [PixelKit] image selected {name: ok-small.png, type: image/png, bytes: 735} @ http://localhost:8123/js/core/logger.js:4
+[  446278ms] [INFO] [PixelKit] Loaded ok-small.png (300×200)  @ http://localhost:8123/js/core/logger.js:4
+[  447311ms] [INFO] [PixelKit] project saved {id: 1792527542672-yx4un0, edits: Object} @ http://localhost:8123/js/core/logger.js:4
+[  449611ms] [INFO] [PixelKit] Switched to Compressor  @ http://localhost:8123/js/core/logger.js:4
+[  449931ms] [INFO] [PixelKit] compressed {format: JPG, quality: 75, beforeBytes: 735, afterBytes: 1132, ms: 10} @ http://localhost:8123/js/core/logger.js:4
+[  450513ms] [INFO] [PixelKit] Switched to Meme / Post  @ http://localhost:8123/js/core/logger.js:4
+[  451477ms] [INFO] [PixelKit] Switched to Logo Maker  @ http://localhost:8123/js/core/logger.js:4
+[  451545ms] [INFO] [PixelKit] Logo: added text  @ http://localhost:8123/js/core/logger.js:4
+[  451628ms] [INFO] [PixelKit] Logo: added circle  @ http://localhost:8123/js/core/logger.js:4

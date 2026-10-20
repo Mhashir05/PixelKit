@@ -1,5 +1,7 @@
 import { logger } from "./logger.js";
-import { getState, setState, subscribe, logActivity, defaultFilters } from "./state.js";
+import { getState, setState, subscribe, logActivity } from "./state.js";
+import { defaultEdits, cleanEdits } from "./edits.js";
+import { clearHistory } from "./history.js";
 import * as db from "./db.js";
 import { decodeImage, makeThumbnail } from "./image.js";
 
@@ -10,13 +12,13 @@ const THUMBNAIL_PREFIX = "data:image/jpeg;base64,";
 
 let saveTimer;
 let saving = false;
-let lastSavedKey = ""; // project id + filters of the last successful save
+let lastSavedKey = ""; // project id + edits of the last successful save
 let lastFailedKey = ""; // a failed save is retried only after something changes
 let blobSavedFor = ""; // project id whose original image is already in IndexedDB
 
 // ---------- Helpers ----------
 
-const keyFor = (state) => `${state.projectId}|${state.projectName}|${JSON.stringify(state.filters)}`;
+const keyFor = (state) => `${state.projectId}|${state.projectName}|${JSON.stringify(state.edits)}`;
 
 // The 40-character limit is enforced here, not only by the input's maxlength.
 function cleanName(raw) {
@@ -28,18 +30,6 @@ function describeError(err) {
   return "Saving is not available in this browser. Your work is not being saved.";
 }
 
-// Stored data can be edited by anyone with DevTools, so check it before use.
-function cleanFilters(filters = {}) {
-  const num = (value, min, max, fallback) => (Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : fallback);
-  return {
-    brightness: num(filters.brightness, 0, 200, 100),
-    contrast: num(filters.contrast, 0, 200, 100),
-    blur: num(filters.blur, 0, 20, 0),
-    grayscale: filters.grayscale === true,
-    invert: filters.invert === true,
-  };
-}
-
 function cleanProjects(list) {
   if (!Array.isArray(list)) return [];
   return list
@@ -48,7 +38,7 @@ function cleanProjects(list) {
       id: p.id,
       name: cleanName(p.name),
       updatedAt: p.updatedAt,
-      filters: cleanFilters(p.filters),
+      edits: cleanEdits(p.edits ?? p.filters), // projects saved by older versions used the name "filters"
       thumbnail: typeof p.thumbnail === "string" && p.thumbnail.startsWith(THUMBNAIL_PREFIX) ? p.thumbnail : "",
     }));
 }
@@ -86,8 +76,8 @@ async function saveProject() {
       id,
       name: state.projectName,
       updatedAt: Date.now(),
-      filters: { ...state.filters },
-      thumbnail: makeThumbnail(state.image, state.filters),
+      edits: { ...state.edits },
+      thumbnail: makeThumbnail(state.image, state.edits),
     };
     const newestFirst = [project, ...state.projects.filter((p) => p.id !== project.id)];
     const projects = newestFirst.slice(0, MAX_PROJECTS);
@@ -95,7 +85,8 @@ async function saveProject() {
     lastSavedKey = key;
     lastFailedKey = "";
     setState({ projects, saveStatus: { text: `Saved at ${new Date().toLocaleTimeString([], { hour12: false })}`, failed: false } });
-    logger.info("project saved", { id: project.id, filters: project.filters });
+    const { text, ...otherEdits } = project.edits; // the typed text is never logged, only its length
+    logger.info("project saved", { id: project.id, edits: { ...otherEdits, textLength: text.length } });
     await deleteImages(newestFirst.slice(MAX_PROJECTS));
   } catch (err) {
     logger.error("save failed", err);
@@ -128,10 +119,11 @@ export async function resumeProject(id) {
     const image = { name: file.name, type: file.type, width: element.naturalWidth, height: element.naturalHeight, element, file };
 
     // Mark as already saved first, so resuming does not trigger a save.
-    const filters = { ...defaultFilters(), ...project.filters };
-    lastSavedKey = keyFor({ projectId: id, projectName: project.name, filters });
+    const edits = { ...defaultEdits(), ...project.edits };
+    lastSavedKey = keyFor({ projectId: id, projectName: project.name, edits });
     blobSavedFor = id;
-    setState({ image, filters, projectId: id, projectName: project.name, tool: "editor", error: "" });
+    clearHistory();
+    setState({ image, edits, projectId: id, projectName: project.name, tool: "editor", error: "" });
     logActivity(`Resumed ${project.name}`);
   } catch (err) {
     logger.error("resume failed", err);
@@ -180,7 +172,8 @@ export async function deleteProject(id) {
     clearTimeout(saveTimer);
     lastSavedKey = "";
     lastFailedKey = "";
-    setState({ image: null, filters: defaultFilters(), projectId: null, projectName: DEFAULT_NAME, error: "" });
+    clearHistory();
+    setState({ image: null, edits: defaultEdits(), projectId: null, projectName: DEFAULT_NAME, error: "" });
   }
   setState({ projects });
   logActivity(`Deleted ${project.name}`);

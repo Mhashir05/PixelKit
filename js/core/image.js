@@ -1,5 +1,7 @@
 import { logger } from "./logger.js";
-import { setState, logActivity, defaultFilters } from "./state.js";
+import { setState, logActivity } from "./state.js";
+import { defaultEdits, editedSize, drawEdited } from "./edits.js";
+import { clearHistory } from "./history.js";
 
 const MAX_BYTES = 10 * 1024 * 1024;
 const MAX_PIXELS = 40_000_000; // keeps a small file with huge dimensions from exhausting memory
@@ -58,7 +60,8 @@ export async function loadImage(file) {
     const image = { name: file.name, type: file.type, width: element.naturalWidth, height: element.naturalHeight, element, file };
     // A new image starts a new project; autosave (projects.js) picks it up.
     const projectId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-    setState({ image, filters: defaultFilters(), projectId, projectName: "Untitled design", loading: false });
+    clearHistory();
+    setState({ image, edits: defaultEdits(), projectId, projectName: "Untitled design", loading: false });
     logActivity(`Loaded ${file.name} (${image.width}×${image.height})`);
   } catch (err) {
     logger.error("image decode failed", err);
@@ -66,24 +69,19 @@ export async function loadImage(file) {
   }
 }
 
-// ---------- Filters and thumbnail ----------
+// ---------- Thumbnail ----------
 
-// scale is 1 for export; a smaller picture (the preview or the thumbnail) passes its own scale, so the blur radius shrinks with it.
-export function filterString(filters, scale) {
-  return `brightness(${filters.brightness}%) contrast(${filters.contrast}%) grayscale(${filters.grayscale ? 100 : 0}%) invert(${filters.invert ? 100 : 0}%) blur(${filters.blur * scale}px)`;
-}
-
-// Small JPEG data URL of the image with its filters applied, for the Recents list.
-export function makeThumbnail(image, filters) {
-  const scale = THUMBNAIL_SIZE / Math.max(image.width, image.height);
+// Small JPEG data URL of the image with its edits applied, for the Recents list.
+export function makeThumbnail(image, edits) {
+  const size = editedSize(image, edits);
+  const scale = THUMBNAIL_SIZE / Math.max(size.width, size.height);
   const thumb = document.createElement("canvas");
-  thumb.width = Math.max(1, Math.round(image.width * scale));
-  thumb.height = Math.max(1, Math.round(image.height * scale));
+  thumb.width = Math.max(1, Math.round(size.width * scale));
+  thumb.height = Math.max(1, Math.round(size.height * scale));
   const ctx = thumb.getContext("2d");
   ctx.fillStyle = "#141414"; // JPEG has no transparency
   ctx.fillRect(0, 0, thumb.width, thumb.height);
   ctx.imageSmoothingQuality = "high"; // the photo is much bigger than the thumbnail
-  ctx.filter = filterString(filters, scale);
-  ctx.drawImage(image.element, 0, 0, thumb.width, thumb.height);
+  drawEdited(ctx, image, edits, scale);
   return thumb.toDataURL("image/jpeg", 0.6);
 }

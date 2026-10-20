@@ -41,13 +41,35 @@
     <div data-controls="editor">
       <p class="note" id="editor-note"></p>
       <div class="fields">
-        <label class="field"><span>Brightness <output id="out-brightness"></output></span><input type="range" id="brightness" min="0" max="200" value="100" disabled></label>
-        <label class="field"><span>Contrast <output id="out-contrast"></output></span><input type="range" id="contrast" min="0" max="200" value="100" disabled></label>
-        <label class="field"><span>Blur <output id="out-blur"></output></span><input type="range" id="blur" min="0" max="20" value="0" disabled></label>
+        <label class="field" for="brightness"><span>Brightness <output id="out-brightness"></output></span><input type="range" id="brightness" min="0" max="200" value="100" disabled></label>
+        <label class="field" for="contrast"><span>Contrast <output id="out-contrast"></output></span><input type="range" id="contrast" min="0" max="200" value="100" disabled></label>
+        <label class="field" for="blur"><span>Blur <output id="out-blur"></output></span><input type="range" id="blur" min="0" max="20" value="0" disabled></label>
         <button class="btn" type="button" id="grayscale" aria-pressed="false" disabled>Grayscale</button>
         <button class="btn" type="button" id="invert" aria-pressed="false" disabled>Invert</button>
-        <button class="btn" type="button" disabled title="Not built yet">Rotate</button>
-        <button class="btn" type="button" disabled title="Not built yet">Crop</button>
+        <button class="btn" type="button" id="rotate-left" disabled>Rotate left</button>
+        <button class="btn" type="button" id="rotate-right" disabled>Rotate right</button>
+        <button class="btn" type="button" id="flip-h" aria-pressed="false" disabled>Flip horizontal</button>
+        <button class="btn" type="button" id="flip-v" aria-pressed="false" disabled>Flip vertical</button>
+        <details>
+          <summary>Crop</summary>
+          <div class="fields">
+            <label class="field" for="crop-left"><span>Trim left <output id="out-crop-left"></output></span><input type="range" id="crop-left" min="0" max="90" value="0" disabled></label>
+            <label class="field" for="crop-top"><span>Trim top <output id="out-crop-top"></output></span><input type="range" id="crop-top" min="0" max="90" value="0" disabled></label>
+            <label class="field" for="crop-right"><span>Trim right <output id="out-crop-right"></output></span><input type="range" id="crop-right" min="0" max="90" value="0" disabled></label>
+            <label class="field" for="crop-bottom"><span>Trim bottom <output id="out-crop-bottom"></output></span><input type="range" id="crop-bottom" min="0" max="90" value="0" disabled></label>
+          </div>
+        </details>
+        <label class="field" for="resize"><span>Resize <output id="out-resize"></output></span><input type="range" id="resize" min="10" max="100" value="100" disabled></label>
+        <details>
+          <summary>Text</summary>
+          <div class="fields">
+            <label class="field" for="overlay-text"><span>Text <output id="out-overlay-text"></output></span><input type="text" id="overlay-text" maxlength="60" disabled></label>
+            <label class="field"><span>Text colour</span><input type="color" id="overlay-color" value="#ffffff" disabled></label>
+            <label class="field" for="overlay-size"><span>Text size <output id="out-overlay-size"></output></span><input type="range" id="overlay-size" min="2" max="30" value="8" disabled></label>
+            <label class="field" for="overlay-x"><span>Text position X <output id="out-overlay-x"></output></span><input type="range" id="overlay-x" min="0" max="100" value="50" disabled></label>
+            <label class="field" for="overlay-y"><span>Text position Y <output id="out-overlay-y"></output></span><input type="range" id="overlay-y" min="0" max="100" value="50" disabled></label>
+          </div>
+        </details>
         <button class="btn" type="button" id="reset" disabled>Reset</button>
       </div>
     </div>
@@ -55,7 +77,7 @@
     <div data-controls="compressor" hidden>
       <p class="note" id="compressor-note"></p>
       <div class="fields">
-        <label class="field"><span>Quality <output id="out-quality"></output></span><input type="range" id="c-quality" min="1" max="100" value="75" disabled></label>
+        <label class="field" for="c-quality"><span>Quality <output id="out-quality"></output></span><input type="range" id="c-quality" min="1" max="100" value="75" disabled></label>
         <button class="btn" type="button" data-format="image/jpeg" aria-pressed="true" disabled>JPG</button>
         <button class="btn" type="button" data-format="image/png" aria-pressed="false" disabled>PNG</button>
         <button class="btn" type="button" data-format="image/webp" aria-pressed="false" disabled>WebP</button>
@@ -76,7 +98,7 @@
           </select>
         </label>
         <label class="field"><span>Text colour</span><input type="color" id="meme-color" value="#ffffff" disabled></label>
-        <label class="field"><span>Text size <output id="out-meme-size"></output></span><input type="range" id="meme-size" min="4" max="20" value="10" disabled></label>
+        <label class="field" for="meme-size"><span>Text size <output id="out-meme-size"></output></span><input type="range" id="meme-size" min="4" max="20" value="10" disabled></label>
       </div>
       <p class="group-label">Size preset</p>
       <div class="fields">
@@ -105,7 +127,7 @@
 
       <p class="group-label">Selected element</p>
       <div class="fields">
-        <label class="field"><span>Text <output id="out-logo-text"></output></span><input type="text" id="logo-text" maxlength="40" disabled></label>
+        <label class="field" for="logo-text"><span>Text <output id="out-logo-text"></output></span><input type="text" id="logo-text" maxlength="40" disabled></label>
         <label class="field"><span>Font</span>
           <select id="logo-font" disabled>
             <option value="impact">Impact</option>
@@ -115,9 +137,9 @@
           </select>
         </label>
         <label class="field"><span>Colour</span><input type="color" id="logo-color" value="#ffffff" disabled></label>
-        <label class="field"><span>Size <output id="out-logo-size"></output></span><input type="range" id="logo-size" min="20" max="1000" value="160" disabled></label>
-        <label class="field"><span>Position X <output id="out-logo-x"></output></span><input type="range" id="logo-x" min="0" max="1000" value="500" disabled></label>
-        <label class="field"><span>Position Y <output id="out-logo-y"></output></span><input type="range" id="logo-y" min="0" max="1000" value="500" disabled></label>
+        <label class="field" for="logo-size"><span>Size <output id="out-logo-size"></output></span><input type="range" id="logo-size" min="20" max="1000" value="160" disabled></label>
+        <label class="field" for="logo-x"><span>Position X <output id="out-logo-x"></output></span><input type="range" id="logo-x" min="0" max="1000" value="500" disabled></label>
+        <label class="field" for="logo-y"><span>Position Y <output id="out-logo-y"></output></span><input type="range" id="logo-y" min="0" max="1000" value="500" disabled></label>
         <button class="btn" type="button" id="logo-delete" disabled>Delete element</button>
       </div>
 
@@ -154,7 +176,7 @@
 
 <header class="strip">
   <input class="project-name" id="project-name" type="text" maxlength="40" value="Untitled design" aria-label="Project name" disabled>
-  <button class="btn" type="button" disabled title="Undo is not built yet">Undo</button>
+  <button class="btn" type="button" id="undo" disabled>Undo</button>
   <button class="btn btn--primary" type="button" id="export" disabled>Export</button>
 </header>
 
