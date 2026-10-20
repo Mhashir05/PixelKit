@@ -76,13 +76,17 @@ document.addEventListener("dragover", (event) => {
 document.addEventListener("dragleave", (event) => {
   if (!event.relatedTarget) document.body.classList.remove("is-dragging");
 });
-document.addEventListener("drop", (event) => {
+document.addEventListener("drop", async (event) => {
   event.preventDefault();
   document.body.classList.remove("is-dragging");
-  const file = event.dataTransfer?.files[0];
-  if (!file) return;
-  if (acceptsImages()) loadImage(file);
-  else logActivity("File drop ignored: only the Editor, Compressor and Meme tools accept images");
+  const files = event.dataTransfer?.files;
+  if (!files?.length) return;
+  if (!acceptsImages()) return logActivity("File drop ignored: only the Editor, Compressor and Meme tools accept images");
+  await loadImage(files[0]);
+  if (files.length > 1 && !getState().error) { // a rejected first file already shows its own message
+    setState({ error: "Only the first file was used." });
+    logActivity(`${files.length} files dropped: only the first file was used`);
+  }
 });
 
 initEditor();

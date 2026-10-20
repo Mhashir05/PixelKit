@@ -80,10 +80,10 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 
 ## Security
 
-- Content Security Policy as a meta tag on both pages. Fonts come from `fonts.googleapis.com` (styles) and `fonts.gstatic.com` (files). `app.html` also allows `https://picsum.photos` and `https://fastly.picsum.photos` for images and downloads (Picsum redirects to fastly). `index.html` allows the same image hosts but only `picsum.photos` for `connect-src`. No inline scripts, no `unsafe-*`.
+- Content Security Policy as a meta tag on both pages. Fonts come from `fonts.googleapis.com` (styles) and `fonts.gstatic.com` (files). `app.html` also allows `https://picsum.photos` and `https://fastly.picsum.photos` for images and downloads (Picsum redirects to fastly). `index.html` allows no Picsum host, because the landing page loads nothing from Picsum. No inline scripts, no `unsafe-*`.
 - Uploads: JPG, PNG and WebP only, checked by MIME type and magic bytes, 10 MB and 40 megapixel limits. SVG is rejected.
 - Text from users or the network is set with `textContent`. Canvas text is drawn with `fillText`.
-- `frame-ancestors` cannot be set from a meta tag; it would need a response header on the host. Vercel can send headers, but none are configured yet.
+- `frame-ancestors` cannot be set from a meta tag, so `vercel.json` sends `Content-Security-Policy: frame-ancestors 'none'` as a response header. The same file adds `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` and a minimal `Permissions-Policy`. The full CSP stays in the meta tags.
 
 ## Logging
 
@@ -94,4 +94,4 @@ All logs go through `core/logger.js` with the `[PixelKit]` prefix; `logActivity`
 - The draw-once-per-frame pattern is still copied in editor, meme and logo.
 - `#file-input`, `#export` and the error boxes are shared page elements used by several tools.
 - The Editor export runs its heavy drawing inside the click handler.
-- `.agents/skills` and `.claude/skills` hold duplicate copies of the design-engineer skill.
+- `.agents/skills` and `.claude/skills` hold duplicate copies of the design-engineer skill. They are local only (ignored by git, together with `skills-lock.json` and `.playwright-cli/`).

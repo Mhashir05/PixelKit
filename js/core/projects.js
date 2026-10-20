@@ -3,7 +3,7 @@ import { getState, setState, subscribe, logActivity } from "./state.js";
 import { defaultEdits, cleanEdits } from "./edits.js";
 import { clearHistory } from "./history.js";
 import * as db from "./db.js";
-import { decodeImage, makeThumbnail } from "./image.js";
+import { checkFile, checkPixels, decodeImage, makeThumbnail } from "./image.js";
 
 const SAVE_DELAY = 1000;
 const MAX_PROJECTS = 10; // older projects are removed, with their saved images
@@ -115,7 +115,11 @@ export async function resumeProject(id) {
   try {
     const file = await db.loadImage(id);
     if (!file) throw new Error("image missing from IndexedDB");
+    const problem = await checkFile(file); // stored data can be tampered with, so it gets the same checks as an upload
+    if (problem) throw new Error(problem);
     const element = await decodeImage(file);
+    const tooBig = checkPixels(element);
+    if (tooBig) throw new Error(tooBig);
     const image = { name: file.name, type: file.type, width: element.naturalWidth, height: element.naturalHeight, element, file };
 
     // Mark as already saved first, so resuming does not trigger a save.
@@ -123,7 +127,7 @@ export async function resumeProject(id) {
     lastSavedKey = keyFor({ projectId: id, projectName: project.name, edits });
     blobSavedFor = id;
     clearHistory();
-    setState({ image, edits, projectId: id, projectName: project.name, tool: "editor", error: "" });
+    setState({ image, edits, projectId: id, projectName: project.name, tool: "editor", error: "", saveStatus: { text: "", failed: false } }); // clears an old "could not be opened" message
     logActivity(`Resumed ${project.name}`);
   } catch (err) {
     logger.error("resume failed", err);

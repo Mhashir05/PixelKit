@@ -20,14 +20,19 @@ async function sniffType(file) {
   return "";
 }
 
-// Returns a message if the file is not allowed, or "" if it is fine.
-async function checkFile(file) {
+// Returns a message if the file is not allowed, or "" if it is fine. Used for uploads and for stored images.
+export async function checkFile(file) {
   if (file.size === 0) return "The file is empty.";
   if (file.size > MAX_BYTES) return `The file is ${(file.size / 1024 / 1024).toFixed(1)} MB. The limit is 10 MB.`;
   if (file.type === "image/svg+xml" || file.name.toLowerCase().endsWith(".svg")) return "SVG files are not allowed. Use a JPG, PNG or WebP image.";
   if (!ALLOWED_TYPES.includes(file.type)) return "Only JPG, PNG or WebP images are allowed.";
   if ((await sniffType(file)) !== file.type) return "The file contents do not match a JPG, PNG or WebP image.";
   return "";
+}
+
+// Returns a message if the decoded image has too many pixels, or "" if it is fine.
+export function checkPixels(element) {
+  return element.naturalWidth * element.naturalHeight > MAX_PIXELS ? "The image has too many pixels (limit is 40 megapixels)." : "";
 }
 
 // ---------- Loading ----------
@@ -55,7 +60,8 @@ export async function loadImage(file) {
     if (problem) return rejectFile(file, problem);
 
     const element = await decodeImage(file);
-    if (element.naturalWidth * element.naturalHeight > MAX_PIXELS) return rejectFile(file, "The image has too many pixels (limit is 40 megapixels).");
+    const tooBig = checkPixels(element);
+    if (tooBig) return rejectFile(file, tooBig);
 
     const image = { name: file.name, type: file.type, width: element.naturalWidth, height: element.naturalHeight, element, file };
     // A new image starts a new project; autosave (projects.js) picks it up.

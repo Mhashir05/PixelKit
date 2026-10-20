@@ -108,9 +108,16 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
 .dropzone h2 { font-size: 22px; line-height: 1.2; }
 .dropzone p { margin: 0 0 8px; max-width: 40ch; color: var(--muted); }
 
+/* Touch screens (phones and tablets, whatever their width) need tap areas of at least 40px. */
+@media (max-width: 720px), (pointer: coarse) {
+  .recent-delete { width: 40px; height: 40px; }
+  .tool { min-height: 40px; }
+  .fields summary { padding: 11px 0; } /* keeps the open/close arrow */
+  .console .btn, .strip .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
+}
+
 /* Narrow screens: tools become a scrolling row, other panels move below the canvas. */
 @media (max-width: 720px) {
-  .recent-delete { width: 40px; height: 40px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .workspace {
     height: auto; min-height: 100vh;
@@ -131,8 +138,6 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .panel--log { grid-area: log; margin-top: 0; }
   .canvas { padding: 16px; }
   .dropzone h2 { font-size: 18px; }
-  .fields summary { padding: 11px 0; } /* a tap area of at least 40px; keeps the open/close arrow */
-  .console .btn, .strip .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
 }
 @media (max-width: 359px) {
   .tools ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }

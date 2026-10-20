@@ -52,7 +52,8 @@ function drawPreview({ image, edits }) {
 
 export function renderEditor(state) {
   const hasImage = Boolean(state.image);
-  const canEdit = hasImage && FILTER_SUPPORTED;
+  const canEdit = hasImage;
+  const canFilter = hasImage && FILTER_SUPPORTED; // only the five colour filters need canvas filters
 
   for (const id of ["editor-error", "compressor-error", "meme-error"]) { // the same upload error, shown in whichever tool is open
     $(id).hidden = !state.error;
@@ -64,7 +65,7 @@ export function renderEditor(state) {
   $("choose-image").textContent = state.loading ? "Loading…" : "Choose image";
 
   for (const name of Object.keys(sliders)) {
-    sliders[name].disabled = !canEdit;
+    sliders[name].disabled = !canFilter;
     sliders[name].value = state.edits[name];
     outputs[name].textContent = name === "blur" ? `${state.edits.blur}px` : `${state.edits[name]}%`;
   }
@@ -79,7 +80,7 @@ export function renderEditor(state) {
   $("overlay-color").disabled = !canEdit;
   $("overlay-color").value = state.edits.textColor;
   for (const name of Object.keys(toggles)) {
-    toggles[name].disabled = !canEdit;
+    toggles[name].disabled = !canFilter;
     toggles[name].setAttribute("aria-pressed", String(state.edits[name]));
   }
   for (const id of ["rotate-left", "rotate-right", "flip-h", "flip-v"]) $(id).disabled = !canEdit;

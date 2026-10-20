@@ -46,7 +46,7 @@ A static, guest-only browser toolkit. Everything runs locally in the browser. Im
 ## Quality bar
 
 - Keyboard usable, visible focus, labelled controls, text contrast at least 4.5:1, reduced motion respected.
-- No sideways scroll at 320px. On phones, the buttons, text fields and list items in the console and top strip are at least 40px tall. Known exceptions: sliders, colour pickers, the Download button, the Catalog buttons and the logo link.
+- No sideways scroll at 320px. On touch screens (phones and tablets), the buttons, text fields and list items in the console and top strip are at least 40px tall. Known exceptions: sliders, colour pickers, the Download button, the Catalog buttons and the logo link.
 - 0 console errors in normal use.
 - Code follows `docs/ENGINEERING_RULES.md`.
 
