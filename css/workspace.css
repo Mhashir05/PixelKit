@@ -17,7 +17,6 @@
 
 .panel h2 { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; font: 500 11px var(--font-ui); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .note { margin: 0; color: var(--muted); font-size: 12px; }
-.badge { display: inline-block; padding: 1px 6px; border: 1px solid var(--border); border-radius: 3px; color: var(--muted); font: 500 11px var(--font-ui); letter-spacing: 0; text-transform: none; white-space: nowrap; }
 
 /* Tools */
 .tools ul { margin: 0; padding: 0; list-style: none; }
@@ -77,10 +76,8 @@
 
 /* Canvas */
 .canvas { grid-area: canvas; display: grid; padding: 24px; min-height: 0; }
-.stage { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
-.dropzone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 760px; max-height: 520px; margin: auto; padding: 24px; text-align: center; border: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent); border-radius: var(--radius); }
-.stage { height: 100%; min-width: 0; }
-.dropzone { flex: 1 1 0; min-height: 0; }
+.stage { display: flex; flex-direction: column; gap: 12px; min-height: 0; height: 100%; min-width: 0; }
+.dropzone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 760px; max-height: 520px; margin: auto; padding: 24px; text-align: center; border: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent); border-radius: var(--radius); flex: 1 1 0; min-height: 0; }
 body.is-dragging .dropzone { border-color: var(--accent); }
 body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4px; }
 .error { margin: 0; padding: 8px 12px; border: 1px solid var(--danger); border-radius: var(--radius); color: var(--danger); font-size: 13px; }

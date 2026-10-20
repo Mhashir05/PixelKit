@@ -1,7 +1,8 @@
 import { logger } from "./core/logger.js";
 import { getState, setState, subscribe, logActivity } from "./core/state.js";
 import { initSidebar, renderSidebar } from "./ui/sidebar.js";
-import { initEditor, renderEditor, loadImage } from "./tools/editor.js";
+import { initEditor, renderEditor } from "./tools/editor.js";
+import { loadImage } from "./core/image.js";
 import { initCompressor, renderCompressor } from "./tools/compressor.js";
 import { initMeme, renderMeme } from "./tools/meme.js";
 import { initCatalog, renderCatalog } from "./tools/catalog.js";

@@ -1,10 +1,9 @@
-import { logger } from "./core/logger.js";
+import { logger, logAfterPause } from "./core/logger.js";
 import { revealOnScroll } from "./ui/animations.js";
 
 const PIXEL_COLS = 25; // 25x20 keeps the 5:4 shape of the sample image
 const PIXEL_ROWS = 20;
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-let sliderLogTimer;
 
 function makeTag(side, text) {
   const tag = document.createElement("span");
@@ -44,9 +43,7 @@ async function initCompare() {
     slider.addEventListener("input", () => {
       frame.classList.remove("is-intro");
       frame.style.setProperty("--split", `${slider.value}%`);
-      // Log once the user pauses, not on every pixel of a drag.
-      clearTimeout(sliderLogTimer);
-      sliderLogTimer = setTimeout(() => logger.info("hero slider moved", { value: Number(slider.value) }), 400);
+      logAfterPause("hero slider", "hero slider moved", () => ({ value: Number(slider.value) }));
     });
 
     // Intro: start fully pixelated, then sweep to the middle.

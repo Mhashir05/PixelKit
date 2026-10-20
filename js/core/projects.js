@@ -1,7 +1,7 @@
 import { logger } from "./logger.js";
 import { getState, setState, subscribe, logActivity, defaultFilters } from "./state.js";
 import * as db from "./db.js";
-import { decodeImage, makeThumbnail } from "../tools/editor.js";
+import { decodeImage, makeThumbnail } from "./image.js";
 
 const SAVE_DELAY = 1000;
 const MAX_PROJECTS = 10; // older projects are removed, with their saved images
@@ -87,7 +87,7 @@ async function saveProject() {
       name: state.projectName,
       updatedAt: Date.now(),
       filters: { ...state.filters },
-      thumbnail: makeThumbnail(),
+      thumbnail: makeThumbnail(state.image, state.filters),
     };
     const newestFirst = [project, ...state.projects.filter((p) => p.id !== project.id)];
     const projects = newestFirst.slice(0, MAX_PROJECTS);

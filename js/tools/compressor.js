@@ -1,5 +1,6 @@
 import { logger } from "../core/logger.js";
 import { getState, setState, subscribe, logActivity } from "../core/state.js";
+import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
 
 const FORMATS = {
   "image/jpeg": { label: "JPG", extension: "jpg" },
@@ -28,10 +29,6 @@ function update(patch) {
   setState({ compressor: { ...getState().compressor, ...patch } });
 }
 
-function toBlob(canvas, type, quality) {
-  return new Promise((resolve) => canvas.toBlob(resolve, type, quality));
-}
-
 function formatSize(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -45,7 +42,7 @@ async function detectFormats() {
   probe.height = 1;
   const supported = [];
   for (const type of Object.keys(FORMATS)) {
-    const blob = await toBlob(probe, type, 0.5);
+    const blob = await canvasToBlob(probe, type, 0.5);
     if (blob && blob.type === type) supported.push(type);
   }
   logger.info("export formats supported", supported);
@@ -70,7 +67,7 @@ async function runCompression(image, type, quality) {
     ctx.drawImage(image.element, 0, 0);
 
     const started = performance.now();
-    const blob = await toBlob(canvas, type, type === "image/png" ? undefined : quality / 100);
+    const blob = await canvasToBlob(canvas, type, type === "image/png" ? undefined : quality / 100);
     if (!blob) throw new Error("toBlob returned null");
     if (blob.type !== type) {
       logger.error("export format not supported", { wanted: type, got: blob.type });
@@ -90,6 +87,8 @@ async function runCompression(image, type, quality) {
   }
 }
 
+// Only one compression runs at a time. If the settings or the image change while it runs, "again" is set,
+// the outdated result is thrown away and the loop runs once more with the newest settings.
 async function compress() {
   if (running) {
     again = true;
@@ -106,7 +105,7 @@ async function compress() {
     update({ busy: true, error: "" });
     const outcome = await runCompression(image, compressor.format, compressor.quality);
     if (again) continue; // outdated: the settings or the image changed meanwhile, so run again
-    update({ busy: false, ...outcome });
+    update({ busy: false, result: outcome.result, error: outcome.error });
   } while (again);
   running = false;
 }
@@ -116,7 +115,8 @@ function scheduleCompress() {
   compressTimer = setTimeout(compress, COMPRESS_DELAY);
 }
 
-// Decides when a new compression is needed.
+// Decides when a new compression is needed. "key" sums up everything that matters for it:
+// if the key is the same as last time (for example only a filter changed), nothing is done.
 function onStateChange(state) {
   if (state.image !== lastImage) {
     lastImage = state.image;
@@ -171,7 +171,6 @@ export function renderCompressor(state) {
 
   $("compressor-empty").hidden = hasImage;
   $("compressor-result").hidden = !hasImage;
-  $("c-choose").disabled = state.loading;
 
   $("c-quality").disabled = !hasImage || isPng || !c.formats.length;
   if (document.activeElement !== $("c-quality")) { // while dragging, the slider shows its own newer value
@@ -213,21 +212,12 @@ function downloadResult() {
   const { image, compressor } = getState();
   const { result } = compressor;
   if (!result) return;
-  const base = image.name.replace(/\.[^.]+$/, "").replace(/[^\w-]+/g, "_").slice(0, 40) || "image";
-  const filename = `${base}-compressed.${FORMATS[result.type].extension}`;
-
-  const url = URL.createObjectURL(result.blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = filename;
-  link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  const filename = `${cleanFileName(image.name)}-compressed.${FORMATS[result.type].extension}`;
+  downloadBlob(result.blob, filename);
   logActivity(`Downloaded ${filename} (${formatSize(result.size)})`);
 }
 
 export function initCompressor() {
-  $("c-choose").addEventListener("click", () => $("file-input").click()); // same picker as the Editor
-
   // Keep this handler tiny: update the readout and start a timer. The state update (which redraws
   // the whole UI and schedules the compression) happens later, in the timer.
   $("c-quality").addEventListener("input", () => {

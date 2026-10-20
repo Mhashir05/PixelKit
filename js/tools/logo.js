@@ -1,17 +1,12 @@
-import { logger } from "../core/logger.js";
+import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
+import { canvasToBlob, downloadBlob } from "../core/export.js";
+import { FONTS } from "../core/fonts.js";
 
 const CANVAS_SIZE = 1000; // the logo is always 1000 x 1000 px
 const MAX_ELEMENTS = 30;
 const MAX_TEXT = 40;
 const LABELS = { text: "text", rect: "rectangle", circle: "circle" };
-// System fonts only (same stacks as the Meme tool), so nothing is downloaded.
-const FONTS = {
-  impact: 'Impact, "Arial Black", sans-serif',
-  arial: "Arial, Helvetica, sans-serif",
-  georgia: "Georgia, serif",
-  courier: '"Courier New", monospace',
-};
 // Starting values for each new element. For a rectangle, "size" is its width and the height is 60% of it.
 const DEFAULTS = {
   text: { size: 160, color: "#ffffff", text: "Logo" },
@@ -23,12 +18,10 @@ const $ = (id) => document.getElementById(id);
 const canvas = $("logo-canvas");
 const previewCtx = canvas.getContext("2d");
 const addButtons = document.querySelectorAll("[data-add]");
-const selectedControls = ["logo-text", "logo-font", "logo-color", "logo-size", "logo-x", "logo-y", "logo-delete"];
+const selectedControls = ["logo-color", "logo-size", "logo-x", "logo-y", "logo-delete"]; // enabled whenever an element is selected
 
 let drawPending = false;
-let logTimer;
 let drawnKey = "";
-let keyLogTimer;
 let drag = null; // { id, offsetX, offsetY } while an element is being dragged
 let listKey = "";
 
@@ -131,6 +124,14 @@ function scheduleDraw() {
 
 // ---------- Render from state ----------
 
+// The text of a list item: "Text: Hello" for text, "Rectangle 2" for shapes.
+function listLabel(element) {
+  if (element.type === "text") return `Text: ${element.text.slice(0, 24) || "(empty)"}`;
+  const name = LABELS[element.type];
+  const number = element.id.split("-")[1];
+  return `${name[0].toUpperCase()}${name.slice(1)} ${number}`;
+}
+
 function renderList(logo) {
   // Only rebuild when the list itself changes, not when an element just moves. This keeps keyboard focus on the item.
   const key = JSON.stringify([logo.elements.map((e) => [e.id, e.text]), logo.selectedId]);
@@ -144,9 +145,7 @@ function renderList(logo) {
     button.className = "element-item";
     button.dataset.id = element.id;
     button.setAttribute("aria-pressed", String(element.id === logo.selectedId));
-    const label = LABELS[element.type];
-    const number = element.id.split("-")[1];
-    button.textContent = element.type === "text" ? `Text: ${element.text.slice(0, 24) || "(empty)"}` : `${label[0].toUpperCase()}${label.slice(1)} ${number}`;
+    button.textContent = listLabel(element);
     const item = document.createElement("li");
     item.append(button);
     return item;
@@ -154,24 +153,15 @@ function renderList(logo) {
   if (focusedId) $("logo-list").querySelector(`[data-id="${focusedId}"]`)?.focus();
 }
 
-export function renderLogo(state) {
-  const logo = state.logo;
-  const selected = selectedElement(logo);
+// The controls for the selected element: which are enabled, and what they show.
+function renderSelectedControls(logo, selected) {
   const isText = selected?.type === "text";
-
-  renderList(logo);
-  $("logo-list-empty").hidden = logo.elements.length > 0;
-  $("logo-note").textContent = logo.elements.length
-    ? "Select an element in the list or click it on the canvas."
-    : "Add text, a rectangle or a circle to start.";
-  for (const button of addButtons) button.disabled = logo.elements.length >= MAX_ELEMENTS;
-
-  for (const id of selectedControls) $(id).disabled = !selected;
   const index = logo.elements.indexOf(selected);
-  $("logo-forward").disabled = !selected || index === logo.elements.length - 1;
-  $("logo-backward").disabled = !selected || index === 0;
+  for (const id of selectedControls) $(id).disabled = !selected;
   $("logo-text").disabled = !isText;
   $("logo-font").disabled = !isText;
+  $("logo-forward").disabled = !selected || index === logo.elements.length - 1;
+  $("logo-backward").disabled = !selected || index === 0;
   if (selected) {
     if (document.activeElement !== $("logo-text")) $("logo-text").value = selected.text; // do not overwrite while typing
     $("logo-font").value = selected.font;
@@ -184,6 +174,19 @@ export function renderLogo(state) {
   $("out-logo-size").textContent = selected ? String(selected.size) : "";
   $("out-logo-x").textContent = selected ? String(selected.x) : "";
   $("out-logo-y").textContent = selected ? String(selected.y) : "";
+}
+
+export function renderLogo(state) {
+  const logo = state.logo;
+
+  renderList(logo);
+  $("logo-list-empty").hidden = logo.elements.length > 0;
+  $("logo-note").textContent = logo.elements.length
+    ? "Select an element in the list or click it on the canvas."
+    : "Add text, a rectangle or a circle to start.";
+  for (const button of addButtons) button.disabled = logo.elements.length >= MAX_ELEMENTS;
+
+  renderSelectedControls(logo, selectedElement(logo));
 
   $("logo-bg-toggle").setAttribute("aria-pressed", String(logo.backgroundOn));
   $("logo-bg-color").disabled = !logo.backgroundOn;
@@ -201,14 +204,13 @@ export function renderLogo(state) {
 
 // ---------- Actions ----------
 
-// Logs after the user pauses. Never logs the logo text, only its length.
+// Never logs the logo text, only its length.
 function logLater() {
-  clearTimeout(logTimer);
-  logTimer = setTimeout(() => {
+  logAfterPause("logo element", "logo element changed", () => {
     const selected = selectedElement(getState().logo);
     if (!selected) return;
-    logger.info("logo element changed", { id: selected.id, type: selected.type, size: selected.size, color: selected.color, x: selected.x, y: selected.y, textLength: selected.text.length });
-  }, 400);
+    return { id: selected.id, type: selected.type, size: selected.size, color: selected.color, x: selected.x, y: selected.y, textLength: selected.text.length };
+  });
 }
 
 function addElement(type) {
@@ -230,10 +232,16 @@ function selectElement(id) {
   logger.info("logo select", { id: id || "none", type: element ? element.type : "none" });
 }
 
-function updateSelected(patch) {
+// Changes some fields of the selected element, for example { x: 10 }.
+function changeSelected(patch) {
   const logo = getState().logo;
-  if (!selectedElement(logo)) return;
   update({ elements: logo.elements.map((e) => (e.id === logo.selectedId ? { ...e, ...patch } : e)) });
+}
+
+// For the form controls: change the element, then log once the user pauses.
+function updateSelected(patch) {
+  if (!selectedElement(getState().logo)) return;
+  changeSelected(patch);
   logLater();
 }
 
@@ -246,6 +254,8 @@ function deleteSelected() {
 }
 
 // Turns a click on the canvas into canvas units. The canvas is shown with object-fit: contain, so it may have empty margins.
+// Example: the box is 800 wide and 600 high, so the drawing is 600 x 600 with a 100 px margin on the left.
+// A click 400 px from the left edge is (400 - 100) / 600 * 1000 = 500 canvas units from the left.
 function canvasPoint(event) {
   const box = canvas.getBoundingClientRect();
   const side = Math.min(box.width, box.height);
@@ -273,11 +283,6 @@ function clamp(value) {
   return Math.min(CANVAS_SIZE, Math.max(0, Math.round(value)));
 }
 
-function moveSelectedTo(x, y) {
-  const logo = getState().logo;
-  update({ elements: logo.elements.map((e) => (e.id === logo.selectedId ? { ...e, x: clamp(x), y: clamp(y) } : e)) });
-}
-
 function startDrag(event) {
   if (drag || event.button !== 0) return; // ignore a second finger or a right click
   const point = canvasPoint(event);
@@ -292,7 +297,7 @@ function startDrag(event) {
 function moveDrag(event) {
   if (!drag) return;
   const point = canvasPoint(event);
-  moveSelectedTo(point.x - drag.offsetX, point.y - drag.offsetY);
+  changeSelected({ x: clamp(point.x - drag.offsetX), y: clamp(point.y - drag.offsetY) });
 }
 
 function endDrag() {
@@ -304,18 +309,22 @@ function endDrag() {
 
 // Arrow keys move the selected element. Shift makes the step bigger.
 function moveWithKeys(event) {
-  const steps = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
-  const direction = steps[event.key];
   const selected = selectedElement(getState().logo);
-  if (!direction || !selected) return;
+  if (!selected) return;
+  let dx = 0;
+  let dy = 0;
+  if (event.key === "ArrowLeft") dx = -1;
+  else if (event.key === "ArrowRight") dx = 1;
+  else if (event.key === "ArrowUp") dy = -1;
+  else if (event.key === "ArrowDown") dy = 1;
+  else return;
   event.preventDefault(); // stop the page or the list from scrolling
   const step = event.shiftKey ? 50 : 5;
-  moveSelectedTo(selected.x + direction[0] * step, selected.y + direction[1] * step);
-  clearTimeout(keyLogTimer);
-  keyLogTimer = setTimeout(() => {
+  changeSelected({ x: clamp(selected.x + dx * step), y: clamp(selected.y + dy * step) });
+  logAfterPause("logo keys", "logo keyboard move", () => {
     const moved = selectedElement(getState().logo);
-    if (moved) logger.info("logo keyboard move", { id: moved.id, x: moved.x, y: moved.y });
-  }, 400);
+    if (moved) return { id: moved.id, x: moved.x, y: moved.y };
+  });
 }
 
 // The last element is drawn on top, so "forward" means one place later in the array.
@@ -325,7 +334,9 @@ function moveLayer(change) {
   const to = from + change;
   if (from < 0 || to < 0 || to >= logo.elements.length) return;
   const elements = [...logo.elements];
-  [elements[from], elements[to]] = [elements[to], elements[from]];
+  const moved = elements[from];
+  elements[from] = elements[to];
+  elements[to] = moved;
   update({ elements });
   logger.info("logo layer move", { id: logo.selectedId, from, to });
 }
@@ -340,16 +351,11 @@ async function exportLogo() {
     out.width = CANVAS_SIZE;
     out.height = CANVAS_SIZE;
     drawScene(out.getContext("2d"), logo, false);
-    const blob = await new Promise((resolve) => out.toBlob(resolve, "image/png"));
+    const blob = await canvasToBlob(out, "image/png");
     if (!blob || blob.type !== "image/png") throw new Error(`export gave ${blob ? blob.type : "null"}`);
 
     const filename = `logo-${CANVAS_SIZE}x${CANVAS_SIZE}.png`;
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    downloadBlob(blob, filename);
     logActivity(`Exported ${filename} (${Math.round(blob.size / 1024)} KB, ${logo.backgroundOn ? "solid" : "transparent"} background)`);
   } catch (err) {
     logger.error("logo export failed", err);
@@ -393,8 +399,7 @@ export function initLogo() {
   });
   $("logo-bg-color").addEventListener("input", () => {
     update({ backgroundColor: $("logo-bg-color").value });
-    clearTimeout(logTimer);
-    logTimer = setTimeout(() => logger.info("logo background colour", { color: getState().logo.backgroundColor }), 400);
+    logAfterPause("logo background", "logo background colour", () => ({ color: getState().logo.backgroundColor }));
   });
 
   $("export").addEventListener("click", () => {

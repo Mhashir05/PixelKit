@@ -1,6 +1,6 @@
 import { logger } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
-import { loadImage } from "./editor.js";
+import { loadImage } from "../core/image.js";
 
 const API = "https://picsum.photos";
 const PAGE_SIZE = 20;

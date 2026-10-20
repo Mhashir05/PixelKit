@@ -103,7 +103,7 @@
       <ul id="logo-list" class="element-list"></ul>
       <p class="note" id="logo-list-empty">No elements yet.</p>
 
-      <p class="group-label" id="logo-selected-label">Selected element</p>
+      <p class="group-label">Selected element</p>
       <div class="fields">
         <label class="field"><span>Text <output id="out-logo-text"></output></span><input type="text" id="logo-text" maxlength="40" disabled></label>
         <label class="field"><span>Font</span>
@@ -165,7 +165,7 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 22l8-7 6 5 4-3 8 6"/></svg>
       <h2>Drag and drop an image here</h2>
       <p>JPG, PNG or WebP, up to 10 MB.</p>
-      <button class="btn" type="button" id="choose-image">Choose image</button>
+      <button class="btn" type="button" id="choose-image" data-choose>Choose image</button>
     </div>
     <div class="preview" id="editor-preview" hidden>
       <canvas id="editor-canvas" role="img" aria-label="Preview of the edited image"></canvas>
@@ -180,7 +180,7 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 22l8-7 6 5 4-3 8 6"/></svg>
       <h2>Add an image to compress</h2>
       <p>The Compressor works on the image loaded in the Editor. An image you choose here opens in both.</p>
-      <button class="btn" type="button" id="c-choose">Choose image</button>
+      <button class="btn" type="button" data-choose>Choose image</button>
     </div>
     <div class="preview" id="compressor-result" hidden>
       <img id="compressor-preview" alt="Preview of the compressed image">
@@ -201,7 +201,7 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M9 11h14M9 21h14"/></svg>
       <h2>Add an image for your meme or post</h2>
       <p>Top and bottom text, with Instagram and WhatsApp Status sizes. The image is shared with the Editor and Compressor.</p>
-      <button class="btn" type="button" id="m-choose">Choose image</button>
+      <button class="btn" type="button" data-choose>Choose image</button>
     </div>
     <div class="preview" id="meme-result" hidden>
       <canvas id="meme-canvas" role="img" aria-label="Preview of the meme"></canvas>

@@ -1,5 +1,7 @@
-import { logger } from "../core/logger.js";
+import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
+import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
+import { FONTS } from "../core/fonts.js";
 
 // Common sizes: 1080 px wide is what Instagram and WhatsApp display; the heights give the usual ratios.
 const PRESETS = {
@@ -7,20 +9,17 @@ const PRESETS = {
   portrait: { label: "Instagram portrait", width: 1080, height: 1350, ratio: "4:5" },
   status: { label: "WhatsApp Status", width: 1080, height: 1920, ratio: "9:16" },
 };
-// System fonts only: nothing to download, so the Content Security Policy is not involved.
-// Each stack ends with a generic family, so a missing font falls back to something readable.
-const FONTS = {
-  impact: 'Impact, "Arial Black", sans-serif',
-  arial: "Arial, Helvetica, sans-serif",
-  georgia: "Georgia, serif",
-  courier: '"Courier New", monospace',
-};
-const EXPORT_TYPES = { "image/jpeg": { label: "JPG", extension: "jpg" }, "image/png": { label: "PNG", extension: "png" } };
+const EXPORT_TYPES = { "image/jpeg": { extension: "jpg" }, "image/png": { extension: "png" } };
 
 const MAX_TEXT = 100;
 const PREVIEW_MAX = 900; // longest side of the preview canvas; export uses the full preset size
 const SIDE_MARGIN = 0.05; // text may use 90% of the width
 const MAX_BLOCK = 0.4; // top or bottom text may use up to 40% of the height
+const TEXT_MARGIN = 0.04; // gap between the text and the canvas edge, as a share of the width
+const MIN_FONT = 0.02; // the font never shrinks below this share of the width
+const SHRINK_STEP = 0.9; // each round of shrinking makes the font 10% smaller
+const LINE_HEIGHT = 1.15; // line height as a multiple of the font size
+const OUTLINE_WIDTH = 0.14; // outline thickness as a share of the font size
 
 const $ = (id) => document.getElementById(id);
 const canvas = $("meme-canvas");
@@ -30,7 +29,6 @@ const typeButtons = document.querySelectorAll("[data-export-type]");
 let drawPending = false;
 let drawnImage = null;
 let drawnKey = "";
-let logTimer;
 
 function update(patch) {
   setState({ meme: { ...getState().meme, ...patch } });
@@ -48,6 +46,20 @@ function drawImageCover(ctx, width, height, element) {
   ctx.drawImage(element, sourceX, sourceY, sourceW, sourceH, 0, 0, width, height);
 }
 
+// Cuts a word that is too wide into pieces that fit maxWidth. A word that already fits comes back as one piece.
+function cutLongWord(ctx, word, maxWidth) {
+  const pieces = [];
+  let rest = word;
+  while (rest.length > 1 && ctx.measureText(rest).width > maxWidth) {
+    let cut = rest.length - 1;
+    while (cut > 1 && ctx.measureText(rest.slice(0, cut)).width > maxWidth) cut -= 1;
+    pieces.push(rest.slice(0, cut));
+    rest = rest.slice(cut);
+  }
+  pieces.push(rest);
+  return pieces;
+}
+
 // Splits text into lines that fit maxWidth. A single very long word is cut by characters.
 function wrapLines(ctx, text, maxWidth) {
   const lines = [];
@@ -59,13 +71,9 @@ function wrapLines(ctx, text, maxWidth) {
       continue;
     }
     if (line) lines.push(line);
-    line = word;
-    while (line.length > 1 && ctx.measureText(line).width > maxWidth) {
-      let cut = line.length - 1;
-      while (cut > 1 && ctx.measureText(line.slice(0, cut)).width > maxWidth) cut -= 1;
-      lines.push(line.slice(0, cut));
-      line = line.slice(cut);
-    }
+    const pieces = cutLongWord(ctx, word, maxWidth);
+    line = pieces.pop(); // the last piece stays open, so the next word can join it
+    lines.push(...pieces);
   }
   if (line) lines.push(line);
   return lines;
@@ -83,23 +91,23 @@ function outlineColor(hex) {
 function drawTextBlock(ctx, text, position, width, height, meme) {
   if (!text) return;
   const maxWidth = width * (1 - 2 * SIDE_MARGIN);
-  const margin = width * 0.04;
+  const margin = width * TEXT_MARGIN;
   let fontPx = (width * meme.size) / 100;
-  const minPx = width * 0.02;
+  const minPx = width * MIN_FONT;
   let lines;
   while (true) {
     ctx.font = `bold ${fontPx}px ${FONTS[meme.font]}`;
     lines = wrapLines(ctx, text, maxWidth);
-    if (lines.length * fontPx * 1.15 <= height * MAX_BLOCK || fontPx <= minPx) break;
-    fontPx *= 0.9;
+    if (lines.length * fontPx * LINE_HEIGHT <= height * MAX_BLOCK || fontPx <= minPx) break;
+    fontPx *= SHRINK_STEP;
   }
 
-  const lineHeight = fontPx * 1.15;
+  const lineHeight = fontPx * LINE_HEIGHT;
   const startY = position === "top" ? margin : height - margin - lines.length * lineHeight;
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
   ctx.lineJoin = "round";
-  ctx.lineWidth = fontPx * 0.14;
+  ctx.lineWidth = fontPx * OUTLINE_WIDTH;
   ctx.strokeStyle = outlineColor(meme.color);
   ctx.fillStyle = meme.color;
   lines.forEach((line, i) => {
@@ -149,7 +157,6 @@ export function renderMeme(state) {
 
   $("meme-empty").hidden = hasImage;
   $("meme-result").hidden = !hasImage;
-  $("m-choose").disabled = state.loading;
 
   for (const id of ["meme-top", "meme-bottom", "meme-font", "meme-color", "meme-size"]) $(id).disabled = !hasImage;
   if (document.activeElement !== $("meme-top")) $("meme-top").value = m.top; // do not overwrite while typing
@@ -180,10 +187,6 @@ export function renderMeme(state) {
 
 // ---------- Actions ----------
 
-function toBlob(canvasToSave, type, quality) {
-  return new Promise((resolve) => canvasToSave.toBlob(resolve, type, quality));
-}
-
 // Draws at the full preset size, from the original image (not the small preview).
 async function exportMeme() {
   const { image, meme } = getState();
@@ -201,17 +204,11 @@ async function exportMeme() {
       ctx.fillRect(0, 0, out.width, out.height);
     }
     drawMeme(ctx, out.width, out.height, image.element, meme);
-    const blob = await toBlob(out, type, 0.92);
+    const blob = await canvasToBlob(out, type, 0.92);
     if (!blob || blob.type !== type) throw new Error(`export gave ${blob ? blob.type : "null"}`);
 
-    const base = image.name.replace(/\.[^.]+$/, "").replace(/[^\w-]+/g, "_").slice(0, 40) || "image";
-    const filename = `${base}-meme-${preset.width}x${preset.height}.${EXPORT_TYPES[type].extension}`;
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const filename = `${cleanFileName(image.name)}-meme-${preset.width}x${preset.height}.${EXPORT_TYPES[type].extension}`;
+    downloadBlob(blob, filename);
     logActivity(`Exported ${filename} (${Math.round(blob.size / 1024)} KB)`);
   } catch (err) {
     logger.error("meme export failed", err);
@@ -219,27 +216,26 @@ async function exportMeme() {
   }
 }
 
-// Logs after the user pauses. Only lengths are logged, never the text itself.
+// Only lengths are logged, never the text itself.
 function logLater() {
-  clearTimeout(logTimer);
-  logTimer = setTimeout(() => {
+  logAfterPause("meme", "meme changed", () => {
     const { meme } = getState();
-    logger.info("meme changed", { topLength: meme.top.length, bottomLength: meme.bottom.length, font: meme.font, color: meme.color, size: meme.size });
-  }, 400);
+    return { topLength: meme.top.length, bottomLength: meme.bottom.length, font: meme.font, color: meme.color, size: meme.size };
+  });
+}
+
+// The top and bottom text work the same way; only the state key differs.
+function changeText(id, key) {
+  const text = $(id).value.slice(0, MAX_TEXT); // the limit is enforced here, not only by maxlength
+  if (text !== $(id).value) $(id).value = text;
+  update({ [key]: text });
+  logLater();
 }
 
 export function initMeme() {
-  $("m-choose").addEventListener("click", () => $("file-input").click()); // same picker as the Editor
-
   // These handlers only change state. The drawing happens later, in requestAnimationFrame.
-  for (const [id, key] of [["meme-top", "top"], ["meme-bottom", "bottom"]]) {
-    $(id).addEventListener("input", () => {
-      const text = $(id).value.slice(0, MAX_TEXT); // the limit is enforced here, not only by maxlength
-      if (text !== $(id).value) $(id).value = text;
-      update({ [key]: text });
-      logLater();
-    });
-  }
+  $("meme-top").addEventListener("input", () => changeText("meme-top", "top"));
+  $("meme-bottom").addEventListener("input", () => changeText("meme-bottom", "bottom"));
   $("meme-font").addEventListener("change", () => {
     update({ font: $("meme-font").value });
     logger.info("meme font", { font: $("meme-font").value });

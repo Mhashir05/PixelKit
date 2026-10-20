@@ -1,3 +1,5 @@
+> **Status: historical.** Section 2 (visual identity) and section 3 (creative direction) still apply. Sections 7 (folder tree), 10 (phases) and 12 (first task) are superseded by `CLAUDE.md` and `docs/ARCHITECTURE.md`.
+
 # PixelKit — Award-Level UI/UX & Frontend Implementation Brief
 
 Act as a senior award-winning digital product designer, creative director, design engineer, and vanilla JavaScript frontend architect.
