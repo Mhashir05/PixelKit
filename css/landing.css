@@ -1,0 +1,101 @@
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.text-link { color: var(--muted); text-decoration: none; font-size: 13px; transition: color var(--t-fast); }
+.text-link:hover { color: var(--text); }
+
+.landing .btn--lg { height: 48px; padding: 0 28px; font-size: 15px; }
+.landing .btn:active { transform: scale(0.97); transition-duration: 125ms; }
+
+/* Header */
+.site-header { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; padding-bottom: 24px; }
+.site-header .logo { width: 140px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 64px; align-items: center; padding-top: 48px; padding-bottom: 112px; overflow-x: clip; /* the shifted divider box is wider than the frame */ }
+.hero__copy { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.hero h1 { font-size: clamp(44px, 6.4vw, 96px); line-height: 0.98; }
+.hero h1 > span:first-child { display: block; }
+.hero .dot { color: var(--accent); }
+.hero p { margin: 0; max-width: 40ch; color: var(--muted); font-size: 18px; }
+
+.hero__copy > *, .hero__preview { animation: rise 500ms ease-out both; }
+.hero__copy > :nth-child(2) { animation-delay: 60ms; }
+.hero__copy > :nth-child(3) { animation-delay: 120ms; }
+.hero__preview { animation-delay: 180ms; margin: 0; }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+
+.hero__preview figcaption { margin-top: 20px; color: var(--muted); font-size: 12px; }
+
+/* Before/after compare. Left of --split is pixelated, right is the sharp <img>. */
+.compare { position: relative; --split: 50%; aspect-ratio: 5 / 4; background: var(--surface); }
+.compare img { width: 100%; height: 100%; object-fit: cover; }
+/* Corner brackets echo the logo. */
+.compare::before, .compare::after { content: ""; position: absolute; top: -10px; bottom: -10px; width: 14px; border: 2px solid var(--text); pointer-events: none; }
+.compare::before { left: -12px; border-right: 0; }
+.compare::after { right: -12px; border-left: 0; }
+
+.compare__pixels { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; clip-path: inset(0 calc(100% - var(--split)) 0 0); }
+.compare__divider { position: absolute; inset: 0; width: 100%; transform: translateX(var(--split)); pointer-events: none; }
+.compare__divider::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: var(--accent); }
+.compare__divider::after { content: ""; position: absolute; top: 50%; left: -9px; width: 18px; height: 18px; margin-top: -9px; background: var(--accent); border-radius: 2px; }
+.compare input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
+.compare input:focus-visible ~ .compare__divider::after { outline: 2px solid var(--text); outline-offset: 3px; }
+
+.compare__tag { position: absolute; bottom: 12px; padding: 2px 8px; background: var(--bg); color: var(--text); font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none; }
+.compare__tag--before { left: 12px; }
+.compare__tag--after { right: 12px; }
+
+.compare.is-intro .compare__pixels { transition: clip-path 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+.compare.is-intro .compare__divider { transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Features: one hairline table instead of four separate cards. */
+.features { padding-bottom: 112px; }
+.features__head { margin-bottom: 40px; }
+.eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.features h2 { font-size: clamp(32px, 4.5vw, 56px); line-height: 1.02; }
+
+.features__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.module { padding: 32px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background var(--t-base); }
+.module__visual { display: block; width: 100%; max-width: 240px; height: auto; margin-bottom: 32px; overflow: visible; }
+.module h3 { display: flex; align-items: baseline; gap: 12px; font-size: 28px; line-height: 1.1; }
+.module__n { color: var(--muted); font: 500 12px var(--font-ui); letter-spacing: 0; }
+.module p { margin: 12px 0 0; max-width: 38ch; color: var(--muted); font-size: 15px; }
+
+@media (hover: hover) { .module:hover { background: var(--surface); } }
+
+/* Feature visuals (inline SVG) */
+.v-line { stroke: var(--muted); stroke-opacity: 0.45; stroke-width: 1; }
+.v-fill { stroke: var(--text); stroke-width: 2; }
+.v-knob { fill: var(--text); }
+.v-lime { fill: var(--accent); }
+.v-box { fill: none; stroke: var(--muted); stroke-opacity: 0.6; }
+.v-box--on { stroke: var(--text); stroke-opacity: 1; }
+.v-text { fill: var(--muted); font: 500 11px var(--font-ui); }
+.v-text--on { fill: var(--text); }
+.v-tile { fill: var(--muted); }
+
+/* Scroll reveal; the hidden state only exists once animations.js has run. */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+.reveal.is-visible { opacity: 1; transform: none; }
+.module:nth-child(even).reveal { transition-delay: 80ms, 80ms; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+.site-footer__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 24px; padding-bottom: 32px; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-bottom: 80px; }
+  .hero__preview { max-width: 560px; }
+  .features { padding-bottom: 80px; }
+}
+@media (max-width: 640px) {
+  .features__grid { grid-template-columns: minmax(0, 1fr); }
+  .module { padding: 24px; }
+  .module__visual { margin-bottom: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__copy > *, .hero__preview { animation: none; }
+  .reveal { transform: none; }
+  .landing .btn:active { transform: none; }
+}

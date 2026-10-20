@@ -1,0 +1,16 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --border: #262626;
+  --text: #fafafa;
+  --muted: #8a8a8a;
+  --accent: #c6ff00;
+  --on-accent: #0a0a0a;
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-ui: "Inter", system-ui, sans-serif;
+
+  --radius: 6px;
+  --t-fast: 150ms;
+  --t-base: 250ms;
+}

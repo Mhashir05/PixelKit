@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://picsum.photos https://fastly.picsum.photos; connect-src 'self' https://picsum.photos https://fastly.picsum.photos; object-src 'none'; base-uri 'self'">
+<link rel="icon" type="image/png" href="assets/PixelKit_Icon_Transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<title>Editor — PixelKit</title>
+<link rel="stylesheet" href="css/workspace.css">
+</head>
+<body class="workspace">
+
+<aside class="console" aria-label="Console">
+  <a class="logo" href="index.html" aria-label="Back to PixelKit home"><img src="assets/PixelKit_Logo_Transparent.png" alt="PixelKit"></a>
+
+  <nav class="panel tools" aria-labelledby="tools-title">
+    <h2 id="tools-title">Tools</h2>
+    <ul>
+      <li><button class="tool" type="button" data-tool="editor" aria-current="true">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 5h12M2 11h12"/><rect x="9" y="3" width="3" height="4"/><rect x="4" y="9" width="3" height="4"/></svg><span>Editor</span></button></li>
+      <li><button class="tool" type="button" data-tool="compressor">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v3M6 3.5l2 1.5 2-1.5M8 14v-3M6 12.5L8 11l2 1.5"/></svg><span>Compressor</span></button></li>
+      <li><button class="tool" type="button" data-tool="meme">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="12" height="12"/><path d="M5 5h6M5 11h6"/></svg><span>Meme / Post</span></button></li>
+      <li><button class="tool" type="button" data-tool="logo">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6" cy="6" r="3.5"/><rect x="8" y="8" width="6" height="6"/></svg><span>Logo Maker</span></button></li>
+      <li><button class="tool" type="button" data-tool="catalog">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg><span>Catalog</span></button></li>
+    </ul>
+  </nav>
+
+  <section class="panel panel--controls" aria-labelledby="controls-title">
+    <h2 id="controls-title">Controls</h2>
+
+    <div data-controls="editor">
+      <p class="note" id="editor-note"></p>
+      <div class="fields">
+        <label class="field"><span>Brightness <output id="out-brightness"></output></span><input type="range" id="brightness" min="0" max="200" value="100" disabled></label>
+        <label class="field"><span>Contrast <output id="out-contrast"></output></span><input type="range" id="contrast" min="0" max="200" value="100" disabled></label>
+        <label class="field"><span>Blur <output id="out-blur"></output></span><input type="range" id="blur" min="0" max="20" value="0" disabled></label>
+        <button class="btn" type="button" id="grayscale" aria-pressed="false" disabled>Grayscale</button>
+        <button class="btn" type="button" id="invert" aria-pressed="false" disabled>Invert</button>
+        <button class="btn" type="button" disabled title="Not built yet">Rotate</button>
+        <button class="btn" type="button" disabled title="Not built yet">Crop</button>
+        <button class="btn" type="button" id="reset" disabled>Reset</button>
+      </div>
+    </div>
+
+    <div data-controls="compressor" hidden>
+      <p class="note" id="compressor-note"></p>
+      <div class="fields">
+        <label class="field"><span>Quality <output id="out-quality"></output></span><input type="range" id="c-quality" min="1" max="100" value="75" disabled></label>
+        <button class="btn" type="button" data-format="image/jpeg" aria-pressed="true" disabled>JPG</button>
+        <button class="btn" type="button" data-format="image/png" aria-pressed="false" disabled>PNG</button>
+        <button class="btn" type="button" data-format="image/webp" aria-pressed="false" disabled>WebP</button>
+      </div>
+    </div>
+
+    <div data-controls="meme" hidden>
+      <p class="note" id="meme-note"></p>
+      <div class="fields">
+        <label class="field"><span>Top text</span><input type="text" id="meme-top" maxlength="100" disabled></label>
+        <label class="field"><span>Bottom text</span><input type="text" id="meme-bottom" maxlength="100" disabled></label>
+        <label class="field"><span>Font</span>
+          <select id="meme-font" disabled>
+            <option value="impact">Impact</option>
+            <option value="arial">Arial</option>
+            <option value="georgia">Georgia</option>
+            <option value="courier">Courier New</option>
+          </select>
+        </label>
+        <label class="field"><span>Text colour</span><input type="color" id="meme-color" value="#ffffff" disabled></label>
+        <label class="field"><span>Text size <output id="out-meme-size"></output></span><input type="range" id="meme-size" min="4" max="20" value="10" disabled></label>
+      </div>
+      <p class="group-label">Size preset</p>
+      <div class="fields">
+        <button class="btn" type="button" data-preset="square" aria-pressed="true" disabled>Instagram post</button>
+        <button class="btn" type="button" data-preset="portrait" aria-pressed="false" disabled>Instagram portrait</button>
+        <button class="btn" type="button" data-preset="status" aria-pressed="false" disabled>WhatsApp Status</button>
+      </div>
+      <p class="group-label">Export format</p>
+      <div class="fields">
+        <button class="btn" type="button" data-export-type="image/jpeg" aria-pressed="true" disabled>JPG</button>
+        <button class="btn" type="button" data-export-type="image/png" aria-pressed="false" disabled>PNG</button>
+      </div>
+    </div>
+
+    <div data-controls="logo" hidden>
+      <p class="note" id="logo-note"></p>
+      <div class="fields">
+        <button class="btn" type="button" data-add="text">Add text</button>
+        <button class="btn" type="button" data-add="rect">Add rectangle</button>
+        <button class="btn" type="button" data-add="circle">Add circle</button>
+      </div>
+
+      <p class="group-label">Elements</p>
+      <ul id="logo-list" class="element-list"></ul>
+      <p class="note" id="logo-list-empty">No elements yet.</p>
+
+      <p class="group-label" id="logo-selected-label">Selected element</p>
+      <div class="fields">
+        <label class="field"><span>Text <output id="out-logo-text"></output></span><input type="text" id="logo-text" maxlength="40" disabled></label>
+        <label class="field"><span>Font</span>
+          <select id="logo-font" disabled>
+            <option value="impact">Impact</option>
+            <option value="arial">Arial</option>
+            <option value="georgia">Georgia</option>
+            <option value="courier">Courier New</option>
+          </select>
+        </label>
+        <label class="field"><span>Colour</span><input type="color" id="logo-color" value="#ffffff" disabled></label>
+        <label class="field"><span>Size <output id="out-logo-size"></output></span><input type="range" id="logo-size" min="20" max="1000" value="160" disabled></label>
+        <label class="field"><span>Position X <output id="out-logo-x"></output></span><input type="range" id="logo-x" min="0" max="1000" value="500" disabled></label>
+        <label class="field"><span>Position Y <output id="out-logo-y"></output></span><input type="range" id="logo-y" min="0" max="1000" value="500" disabled></label>
+        <button class="btn" type="button" id="logo-delete" disabled>Delete element</button>
+      </div>
+
+      <p class="group-label">Background</p>
+      <div class="fields">
+        <button class="btn" type="button" id="logo-bg-toggle" aria-pressed="false">Solid colour</button>
+        <label class="field"><span>Background colour</span><input type="color" id="logo-bg-color" value="#ffffff" disabled></label>
+      </div>
+
+      <p class="group-label">Coming next</p>
+      <div class="fields">
+        <button class="btn" type="button" disabled title="Not built yet">Drag to move</button>
+        <button class="btn" type="button" disabled title="Not built yet">Bring forward</button>
+        <button class="btn" type="button" disabled title="Not built yet">Send backward</button>
+      </div>
+    </div>
+
+    <div data-controls="catalog" hidden>
+      <p class="note" id="catalog-note"></p>
+    </div>
+  </section>
+
+  <section class="panel panel--recents" aria-labelledby="recents-title">
+    <h2 id="recents-title">Recents</h2>
+    <p class="note" id="recents-empty">No saved projects yet. An image you load is saved automatically.</p>
+    <ul id="recents-list"></ul>
+    <p class="note" id="save-status" role="status"></p>
+  </section>
+
+  <section class="panel panel--log" aria-labelledby="log-title">
+    <h2 id="log-title">Activity log</h2>
+    <ol id="activity-log" role="log" aria-label="Activity log"></ol>
+  </section>
+</aside>
+
+<header class="strip">
+  <input class="project-name" id="project-name" type="text" maxlength="40" value="Untitled design" aria-label="Project name" disabled>
+  <button class="btn" type="button" disabled title="Undo is not built yet">Undo</button>
+  <button class="btn btn--primary" type="button" id="export" disabled>Export</button>
+</header>
+
+<main class="canvas">
+  <section class="stage" data-stage="editor" aria-label="Editor canvas">
+    <p class="error" id="editor-error" role="alert" hidden></p>
+    <div class="dropzone" id="editor-dropzone">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 22l8-7 6 5 4-3 8 6"/></svg>
+      <h2>Drag and drop an image here</h2>
+      <p>JPG, PNG or WebP, up to 10 MB.</p>
+      <button class="btn" type="button" id="choose-image">Choose image</button>
+    </div>
+    <div class="preview" id="editor-preview" hidden>
+      <canvas id="editor-canvas" role="img" aria-label="Preview of the edited image"></canvas>
+      <p class="meta"><span id="file-name"></span> · <span id="file-dims"></span></p>
+    </div>
+    <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" hidden>
+  </section>
+
+  <section class="stage" data-stage="compressor" aria-label="Compressor canvas" hidden>
+    <div class="dropzone" id="compressor-empty">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 22l8-7 6 5 4-3 8 6"/></svg>
+      <h2>Add an image to compress</h2>
+      <p>The Compressor works on the image loaded in the Editor. An image you choose here opens in both.</p>
+      <button class="btn" type="button" id="c-choose">Choose image</button>
+    </div>
+    <div class="preview" id="compressor-result" hidden>
+      <img id="compressor-preview" alt="Preview of the compressed image">
+      <dl class="stats">
+        <div><dt>Before</dt><dd id="size-before"></dd></div>
+        <div><dt>After</dt><dd id="size-after"></dd></div>
+        <div><dt>Change</dt><dd id="size-change"></dd></div>
+        <div><dt>Output format</dt><dd id="out-format"></dd></div>
+      </dl>
+      <p class="note" id="compressor-message" role="status"></p>
+      <div><button class="btn btn--primary" type="button" id="c-download" disabled>Download</button></div>
+    </div>
+  </section>
+
+  <section class="stage" data-stage="meme" aria-label="Meme and post canvas" hidden>
+    <div class="dropzone" id="meme-empty">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M9 11h14M9 21h14"/></svg>
+      <h2>Add an image for your meme or post</h2>
+      <p>Top and bottom text, with Instagram and WhatsApp Status sizes. The image is shared with the Editor and Compressor.</p>
+      <button class="btn" type="button" id="m-choose">Choose image</button>
+    </div>
+    <div class="preview" id="meme-result" hidden>
+      <canvas id="meme-canvas" role="img" aria-label="Preview of the meme"></canvas>
+      <p class="meta" id="meme-meta"></p>
+      <p class="note" id="meme-message" role="status"></p>
+    </div>
+  </section>
+
+  <section class="stage" data-stage="logo" aria-label="Logo Maker canvas" hidden>
+    <div class="preview">
+      <canvas id="logo-canvas" width="1000" height="1000" role="img" aria-label="Logo canvas"></canvas>
+      <p class="meta" id="logo-meta"></p>
+      <p class="note" id="logo-message" role="status"></p>
+    </div>
+  </section>
+
+  <section class="stage" data-stage="catalog" aria-label="Catalog canvas" hidden>
+    <p class="error" id="catalog-use-error" role="alert" hidden></p>
+    <div class="catalog" id="catalog-scroll">
+      <p class="meta">Free photos from Picsum (picsum.photos). Choose one to open it in the Editor.</p>
+      <ul class="catalog-grid" id="catalog-grid"></ul>
+      <div id="catalog-sentinel" aria-hidden="true"></div>
+      <div class="catalog-status" role="status">
+        <span id="catalog-status-text"></span>
+        <button class="btn" type="button" id="catalog-retry" hidden>Retry</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

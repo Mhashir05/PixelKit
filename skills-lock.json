@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "design-engineer": {
+      "source": "dannyjpwilliams/design-engineer-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "fe3f2e8668517132f25c881b06eef943e7e1399bd301d64e68ace7fbb75bc0c4"
+    }
+  }
+}
