@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - complementary "Console" [ref=e2]:
+    - link "Back to PixelKit home" [ref=e3] [cursor=pointer]:
+      - /url: index.html
+      - img "PixelKit" [ref=e4]
+    - navigation [ref=e5]:
+      - heading "Tools" [level=2] [ref=e6]
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - button "Editor" [ref=e9] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "Compressor" [ref=e16] [cursor=pointer]
+        - listitem [ref=e20]:
+          - button "Meme / Post" [ref=e21] [cursor=pointer]
+        - listitem [ref=e26]:
+          - button "Logo Maker" [ref=e27] [cursor=pointer]
+        - listitem [ref=e32]:
+          - button "Catalog" [ref=e33] [cursor=pointer]
+    - region [ref=e40]:
+      - heading "Controls" [level=2] [ref=e41]
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: Choose an image to use these controls. Rotate and Crop are not built yet.
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - text: Brightness
+              - status "Brightness 100" [ref=e47]: 100%
+            - slider [disabled] [ref=e48]: "100"
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - text: Contrast
+              - status "Contrast 100" [ref=e51]: 100%
+            - slider [disabled] [ref=e52]: "100"
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - text: Blur
+              - status "Blur 0" [ref=e55]: 0px
+            - slider [disabled] [ref=e56]: "0"
+          - button "Grayscale" [disabled] [ref=e57]
+          - button "Invert" [disabled] [ref=e58]
+          - button "Rotate" [disabled] [ref=e59]
+          - button "Crop" [disabled] [ref=e60]
+          - button "Reset" [disabled] [ref=e61]
+    - region [ref=e62]:
+      - heading "Recents" [level=2] [ref=e63]
+      - paragraph [ref=e64]: No saved projects yet. An image you load is saved automatically.
+      - list
+      - status
+    - region [ref=e65]:
+      - heading "Activity log" [level=2] [ref=e66]
+      - log "Activity log" [ref=e67]:
+        - listitem [ref=e68]:
+          - time [ref=e69]: 19:26:32
+          - text: Workspace opened
+  - banner [ref=e70]:
+    - textbox "Project name" [disabled] [ref=e71]: Untitled design
+    - button "Undo" [disabled] [ref=e72]
+    - button "Export" [disabled] [ref=e73]
+  - main [ref=e74]:
+    - region "Editor canvas" [ref=e75]:
+      - generic [ref=e76]:
+        - heading "Drag and drop an image here" [level=2] [ref=e80]
+        - paragraph [ref=e81]: JPG, PNG or WebP, up to 10 MB.
+        - button "Choose image" [ref=e82] [cursor=pointer]

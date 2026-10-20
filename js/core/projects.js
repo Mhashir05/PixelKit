@@ -4,6 +4,7 @@ import * as db from "./db.js";
 import { decodeImage, makeThumbnail } from "../tools/editor.js";
 
 const SAVE_DELAY = 1000;
+const MAX_PROJECTS = 10; // older projects are removed, with their saved images
 const DEFAULT_NAME = "Untitled design";
 const THUMBNAIL_PREFIX = "data:image/jpeg;base64,";
 
@@ -54,6 +55,18 @@ function cleanProjects(list) {
 
 // ---------- Autosave ----------
 
+// Failing to free space must not turn a successful save into a failed one, so errors are only logged.
+async function deleteImages(oldProjects) {
+  for (const old of oldProjects) {
+    try {
+      await db.deleteImage(old.id);
+      logger.info("old project removed", { id: old.id });
+    } catch (err) {
+      logger.error("could not remove an old project's image", err);
+    }
+  }
+}
+
 async function saveProject() {
   const state = getState();
   if (saving || !state.image || !state.projectId) return;
@@ -76,12 +89,14 @@ async function saveProject() {
       filters: { ...state.filters },
       thumbnail: makeThumbnail(),
     };
-    const projects = [project, ...state.projects.filter((p) => p.id !== project.id)];
+    const newestFirst = [project, ...state.projects.filter((p) => p.id !== project.id)];
+    const projects = newestFirst.slice(0, MAX_PROJECTS);
     db.saveProjects(projects);
     lastSavedKey = key;
     lastFailedKey = "";
     setState({ projects, saveStatus: { text: `Saved at ${new Date().toLocaleTimeString([], { hour12: false })}`, failed: false } });
     logger.info("project saved", { id: project.id, filters: project.filters });
+    await deleteImages(newestFirst.slice(MAX_PROJECTS));
   } catch (err) {
     logger.error("save failed", err);
     lastFailedKey = key;

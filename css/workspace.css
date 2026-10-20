@@ -85,6 +85,8 @@ body.is-dragging .dropzone { border-color: var(--accent); }
 body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4px; }
 .error { margin: 0; padding: 8px 12px; border: 1px solid var(--danger); border-radius: var(--radius); color: var(--danger); font-size: 13px; }
 .preview { display: flex; flex: 1 1 0; flex-direction: column; gap: 8px; min-height: 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#logo-canvas { touch-action: none; } /* dragging on the canvas must not scroll the page */
 .preview canvas, .preview img { flex: 1 1 0; min-height: 0; width: 100%; object-fit: contain; }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; padding-top: 12px; border-top: 1px solid var(--border); }
 .stats dt { color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -130,4 +132,8 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .panel--log { grid-area: log; margin-top: 0; }
   .canvas { padding: 16px; }
   .dropzone h2 { font-size: 18px; }
+  .console .btn, .strip .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
+}
+@media (max-width: 359px) {
+  .tools ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

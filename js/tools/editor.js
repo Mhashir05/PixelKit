@@ -49,7 +49,7 @@ export function decodeImage(file) {
 }
 
 function rejectFile(file, reason) {
-  logger.error("upload rejected", { name: file.name, reason });
+  logger.info("upload rejected", { name: file.name, reason });
   setState({ error: `${file.name.slice(0, 60)}: ${reason}`, loading: false });
 }
 
@@ -129,8 +129,10 @@ export function renderEditor(state) {
   const hasImage = Boolean(state.image);
   const canEdit = hasImage && FILTER_SUPPORTED;
 
-  $("editor-error").hidden = !state.error;
-  $("editor-error").textContent = state.error;
+  for (const id of ["editor-error", "compressor-error", "meme-error"]) { // the same upload error, shown in whichever tool is open
+    $(id).hidden = !state.error;
+    $(id).textContent = state.error;
+  }
   $("editor-dropzone").hidden = hasImage;
   $("editor-preview").hidden = !hasImage;
   $("choose-image").disabled = state.loading;

@@ -195,7 +195,12 @@ async function exportMeme() {
     const out = document.createElement("canvas");
     out.width = preset.width;
     out.height = preset.height;
-    drawMeme(out.getContext("2d"), out.width, out.height, image.element, meme);
+    const ctx = out.getContext("2d");
+    if (type === "image/jpeg") {
+      ctx.fillStyle = "#fff"; // JPG has no transparency; without this, transparent areas turn black
+      ctx.fillRect(0, 0, out.width, out.height);
+    }
+    drawMeme(ctx, out.width, out.height, image.element, meme);
     const blob = await toBlob(out, type, 0.92);
     if (!blob || blob.type !== type) throw new Error(`export gave ${blob ? blob.type : "null"}`);
 

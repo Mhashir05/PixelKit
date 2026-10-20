@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/workspace.css">
 </head>
 <body class="workspace">
+<h1 class="visually-hidden">PixelKit workspace</h1>
 
 <aside class="console" aria-label="Console">
   <a class="logo" href="index.html" aria-label="Back to PixelKit home"><img src="assets/PixelKit_Logo_Transparent.png" alt="PixelKit"></a>
@@ -126,11 +127,10 @@
         <label class="field"><span>Background colour</span><input type="color" id="logo-bg-color" value="#ffffff" disabled></label>
       </div>
 
-      <p class="group-label">Coming next</p>
+      <p class="group-label">Layers</p>
       <div class="fields">
-        <button class="btn" type="button" disabled title="Not built yet">Drag to move</button>
-        <button class="btn" type="button" disabled title="Not built yet">Bring forward</button>
-        <button class="btn" type="button" disabled title="Not built yet">Send backward</button>
+        <button class="btn" type="button" id="logo-forward" disabled>Bring forward</button>
+        <button class="btn" type="button" id="logo-backward" disabled>Send backward</button>
       </div>
     </div>
 
@@ -175,6 +175,7 @@
   </section>
 
   <section class="stage" data-stage="compressor" aria-label="Compressor canvas" hidden>
+    <p class="error" id="compressor-error" role="alert" hidden></p>
     <div class="dropzone" id="compressor-empty">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M3 22l8-7 6 5 4-3 8 6"/></svg>
       <h2>Add an image to compress</h2>
@@ -195,6 +196,7 @@
   </section>
 
   <section class="stage" data-stage="meme" aria-label="Meme and post canvas" hidden>
+    <p class="error" id="meme-error" role="alert" hidden></p>
     <div class="dropzone" id="meme-empty">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22"/><path d="M9 11h14M9 21h14"/></svg>
       <h2>Add an image for your meme or post</h2>
@@ -210,7 +212,7 @@
 
   <section class="stage" data-stage="logo" aria-label="Logo Maker canvas" hidden>
     <div class="preview">
-      <canvas id="logo-canvas" width="1000" height="1000" role="img" aria-label="Logo canvas"></canvas>
+      <canvas id="logo-canvas" width="1000" height="1000" role="group" tabindex="0" aria-label="Logo canvas. Drag an element to move it, or select it and use the arrow keys. Hold Shift for bigger steps."></canvas>
       <p class="meta" id="logo-meta"></p>
       <p class="note" id="logo-message" role="status"></p>
     </div>

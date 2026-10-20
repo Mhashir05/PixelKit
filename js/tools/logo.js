@@ -28,8 +28,9 @@ const selectedControls = ["logo-text", "logo-font", "logo-color", "logo-size", "
 let drawPending = false;
 let logTimer;
 let drawnKey = "";
-let listElements = null;
-let listSelectedId = null;
+let keyLogTimer;
+let drag = null; // { id, offsetX, offsetY } while an element is being dragged
+let listKey = "";
 
 function update(patch) {
   setState({ logo: { ...getState().logo, ...patch } });
@@ -131,10 +132,13 @@ function scheduleDraw() {
 // ---------- Render from state ----------
 
 function renderList(logo) {
-  if (logo.elements === listElements && logo.selectedId === listSelectedId) return;
-  listElements = logo.elements;
-  listSelectedId = logo.selectedId;
-  $("logo-list").replaceChildren(...logo.elements.map((element) => {
+  // Only rebuild when the list itself changes, not when an element just moves. This keeps keyboard focus on the item.
+  const key = JSON.stringify([logo.elements.map((e) => [e.id, e.text]), logo.selectedId]);
+  if (key === listKey) return;
+  listKey = key;
+  const focusedId = $("logo-list").contains(document.activeElement) ? document.activeElement.dataset.id : null;
+  const topFirst = [...logo.elements].reverse(); // the top layer is the last element, so it is listed first
+  $("logo-list").replaceChildren(...topFirst.map((element) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "element-item";
@@ -147,6 +151,7 @@ function renderList(logo) {
     item.append(button);
     return item;
   }));
+  if (focusedId) $("logo-list").querySelector(`[data-id="${focusedId}"]`)?.focus();
 }
 
 export function renderLogo(state) {
@@ -162,6 +167,9 @@ export function renderLogo(state) {
   for (const button of addButtons) button.disabled = logo.elements.length >= MAX_ELEMENTS;
 
   for (const id of selectedControls) $(id).disabled = !selected;
+  const index = logo.elements.indexOf(selected);
+  $("logo-forward").disabled = !selected || index === logo.elements.length - 1;
+  $("logo-backward").disabled = !selected || index === 0;
   $("logo-text").disabled = !isText;
   $("logo-font").disabled = !isText;
   if (selected) {
@@ -261,6 +269,67 @@ function elementAt(point) {
   return null;
 }
 
+function clamp(value) {
+  return Math.min(CANVAS_SIZE, Math.max(0, Math.round(value)));
+}
+
+function moveSelectedTo(x, y) {
+  const logo = getState().logo;
+  update({ elements: logo.elements.map((e) => (e.id === logo.selectedId ? { ...e, x: clamp(x), y: clamp(y) } : e)) });
+}
+
+function startDrag(event) {
+  if (drag || event.button !== 0) return; // ignore a second finger or a right click
+  const point = canvasPoint(event);
+  const hit = elementAt(point);
+  selectElement(hit ? hit.id : ""); // pressing empty space clears the selection
+  if (!hit) return;
+  drag = { id: hit.id, offsetX: point.x - hit.x, offsetY: point.y - hit.y };
+  canvas.setPointerCapture(event.pointerId);
+  logger.info("logo drag start", { id: hit.id, x: hit.x, y: hit.y });
+}
+
+function moveDrag(event) {
+  if (!drag) return;
+  const point = canvasPoint(event);
+  moveSelectedTo(point.x - drag.offsetX, point.y - drag.offsetY);
+}
+
+function endDrag() {
+  if (!drag) return;
+  const element = selectedElement(getState().logo);
+  logger.info("logo drag end", { id: drag.id, x: element.x, y: element.y });
+  drag = null;
+}
+
+// Arrow keys move the selected element. Shift makes the step bigger.
+function moveWithKeys(event) {
+  const steps = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
+  const direction = steps[event.key];
+  const selected = selectedElement(getState().logo);
+  if (!direction || !selected) return;
+  event.preventDefault(); // stop the page or the list from scrolling
+  const step = event.shiftKey ? 50 : 5;
+  moveSelectedTo(selected.x + direction[0] * step, selected.y + direction[1] * step);
+  clearTimeout(keyLogTimer);
+  keyLogTimer = setTimeout(() => {
+    const moved = selectedElement(getState().logo);
+    if (moved) logger.info("logo keyboard move", { id: moved.id, x: moved.x, y: moved.y });
+  }, 400);
+}
+
+// The last element is drawn on top, so "forward" means one place later in the array.
+function moveLayer(change) {
+  const logo = getState().logo;
+  const from = logo.elements.findIndex((e) => e.id === logo.selectedId);
+  const to = from + change;
+  if (from < 0 || to < 0 || to >= logo.elements.length) return;
+  const elements = [...logo.elements];
+  [elements[from], elements[to]] = [elements[to], elements[from]];
+  update({ elements });
+  logger.info("logo layer move", { id: logo.selectedId, from, to });
+}
+
 // Draws again on a fresh canvas without the preview extras, at the full size.
 async function exportLogo() {
   const { logo } = getState();
@@ -295,10 +364,14 @@ export function initLogo() {
     const button = event.target.closest("[data-id]");
     if (button) selectElement(button.dataset.id);
   });
-  canvas.addEventListener("click", (event) => {
-    const hit = elementAt(canvasPoint(event));
-    selectElement(hit ? hit.id : ""); // clicking empty space clears the selection
-  });
+  $("logo-list").addEventListener("keydown", moveWithKeys);
+  canvas.addEventListener("keydown", moveWithKeys);
+  canvas.addEventListener("pointerdown", startDrag);
+  canvas.addEventListener("pointermove", moveDrag);
+  canvas.addEventListener("pointerup", endDrag);
+  canvas.addEventListener("pointercancel", endDrag);
+  $("logo-forward").addEventListener("click", () => moveLayer(1));
+  $("logo-backward").addEventListener("click", () => moveLayer(-1));
 
   // These handlers only change state; the drawing happens later in requestAnimationFrame.
   $("logo-text").addEventListener("input", () => {
