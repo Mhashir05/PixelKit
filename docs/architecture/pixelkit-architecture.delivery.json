@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a6f6f06f-670d-4fa0-92ac-087968292f0e",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+  "output": "C:\\Users\\Hashir\\Desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
+  "specification": {
+    "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
+    "bytes": 7699
+  },
+  "artifact": {
+    "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
+    "bytes": 851572
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+    "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
+    "bytes": 7699
+  },
+  "artifact": {
+    "path": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
+    "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
+    "bytes": 851572
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Hashir\\Desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.finalize.json",
+    "summaryReceipt": "C:\\Users\\Hashir\\Desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-21T13:36:08.369Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 25189,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 30,
+      "routesOverSuggestedBends": 9,
+      "routesOverSuggestedStretch": 4
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "app-to-sidebar",
+            "from": "app",
+            "to": "sidebar",
+            "label": "",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "app-to-history",
+            "from": "app",
+            "to": "history",
+            "label": "",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "point": [
+            288,
+            184
+          ],
+          "sharedNode": "app"
+        },
+        {
+          "left": {
+            "id": "app-to-compressor",
+            "from": "app",
+            "to": "compressor",
+            "label": "",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "editor-to-image",
+            "from": "editor",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "point": [
+            437,
+            304
+          ]
+        },
+        {
+          "left": {
+            "id": "app-to-meme",
+            "from": "app",
+            "to": "meme",
+            "label": "",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "app-to-image",
+            "from": "app",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            400,
+            364
+          ],
+          "sharedNode": "app"
+        },
+        {
+          "left": {
+            "id": "app-to-meme",
+            "from": "app",
+            "to": "meme",
+            "label": "",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "editor-to-image",
+            "from": "editor",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "point": [
+            437,
+            375
+          ]
+        },
+        {
+          "left": {
+            "id": "app-to-logo",
+            "from": "app",
+            "to": "logo",
+            "label": "",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "app-to-image",
+            "from": "app",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            429,
+            464
+          ],
+          "sharedNode": "app"
+        },
+        {
+          "left": {
+            "id": "app-to-logo",
+            "from": "app",
+            "to": "logo",
+            "label": "",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "editor-to-image",
+            "from": "editor",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "point": [
+            437,
+            464
+          ]
+        },
+        {
+          "left": {
+            "id": "app-to-catalog",
+            "from": "app",
+            "to": "catalog",
+            "label": "",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "app-to-image",
+            "from": "app",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            429,
+            535
+          ],
+          "sharedNode": "app"
+        },
+        {
+          "left": {
+            "id": "app-to-projects",
+            "from": "app",
+            "to": "projects",
+            "label": "",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "right": {
+            "id": "editor-to-image",
+            "from": "editor",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "point": [
+            437,
+            336
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "app-to-image",
+            "from": "app",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "bends": 3,
+          "stretch": 1.363
+        },
+        {
+          "relationship": {
+            "id": "app-to-history",
+            "from": "app",
+            "to": "history",
+            "label": "",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "bends": 3,
+          "stretch": 1.074
+        },
+        {
+          "relationship": {
+            "id": "editor-to-image",
+            "from": "editor",
+            "to": "image",
+            "label": "",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "bends": 4,
+          "stretch": 1.409
+        },
+        {
+          "relationship": {
+            "id": "compressor-to-export",
+            "from": "compressor",
+            "to": "export",
+            "label": "",
+            "collectionIndex": 16,
+            "artifactIndex": 17
+          },
+          "bends": 3,
+          "stretch": 1.282
+        },
+        {
+          "relationship": {
+            "id": "meme-to-fonts",
+            "from": "meme",
+            "to": "fonts",
+            "label": "",
+            "collectionIndex": 18,
+            "artifactIndex": 19
+          },
+          "bends": 4,
+          "stretch": 1.34
+        },
+        {
+          "relationship": {
+            "id": "edits-to-fonts",
+            "from": "edits",
+            "to": "fonts",
+            "label": "",
+            "collectionIndex": 22,
+            "artifactIndex": 23
+          },
+          "bends": 4,
+          "stretch": 2.043,
+          "directCorridorBlockers": [
+            {
+              "id": "export",
+              "label": "export.js",
+              "box": [
+                650,
+                270,
+                130,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "image-to-edits",
+            "from": "image",
+            "to": "edits",
+            "label": "",
+            "collectionIndex": 23,
+            "artifactIndex": 24
+          },
+          "bends": 4,
+          "stretch": 2.371,
+          "directCorridorBlockers": [
+            {
+              "id": "export",
+              "label": "export.js",
+              "box": [
+                650,
+                270,
+                130,
+                50
+              ]
+            },
+            {
+              "id": "fonts",
+              "label": "fonts.js",
+              "box": [
+                650,
+                350,
+                130,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "image-to-history",
+            "from": "image",
+            "to": "history",
+            "label": "",
+            "collectionIndex": 24,
+            "artifactIndex": 25
+          },
+          "bends": 3,
+          "stretch": 1.139,
+          "directCorridorBlockers": [
+            {
+              "id": "edits",
+              "label": "edits.js",
+              "box": [
+                650,
+                190,
+                130,
+                50
+              ]
+            },
+            {
+              "id": "export",
+              "label": "export.js",
+              "box": [
+                650,
+                270,
+                130,
+                50
+              ]
+            },
+            {
+              "id": "fonts",
+              "label": "fonts.js",
+              "box": [
+                650,
+                350,
+                130,
+                50
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": true
+    },
+    "hints": [
+      "projects has 3 relationships facing its left side, which fits 2 ports: make that side at least 60px, or move some of those neighbours so they face another side of projects.",
+      "editor has 3 relationships facing its right side, which fits 2 ports: make that side at least 60px, or move some of those neighbours so they face another side of editor.",
+      "export has 4 relationships facing its left side, which fits 2 ports: make that side at least 74px, or move some of those neighbours so they face another side of export.",
+      "app → sidebar and app → history cross next to app: move node sidebar or history so the two reach app from different sides (for example one level with it, one directly above or below it).",
+      "app → compressor crosses editor → image: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "app → meme and app → image cross next to app: move node meme or image so the two reach app from different sides (for example one level with it, one directly above or below it).",
+      "app → meme crosses editor → image: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "app → logo and app → image cross next to app: move node logo or image so the two reach app from different sides (for example one level with it, one directly above or below it)."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}
