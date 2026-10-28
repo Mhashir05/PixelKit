@@ -2,5 +2,7 @@
   "name": "pixelkit-ai",
   "main": "src/index.js",
   "compatibility_date": "2026-10-28",
-  "ai": { "binding": "AI" }
+  "ai": { "binding": "AI" },
+  "durable_objects": { "bindings": [{ "name": "LIMITER", "class_name": "RateLimiter" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RateLimiter"] }]
 }

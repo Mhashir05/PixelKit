@@ -75,7 +75,9 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 
 ## AI Worker
 
-`worker/` is a separate Cloudflare Worker (own `wrangler.jsonc`, no build step, nothing installed at the repo root). `POST /generate` takes `{ prompt }` (1 to 300 characters) and nothing else; the server sets the model (`@cf/black-forest-labs/flux-1-schnell`) and `steps` (4). It calls Workers AI through the `AI` binding, so no key exists anywhere, then sniffs the real image type from the first bytes (JPEG or PNG) and returns the image. Errors are JSON: 400 bad input, 403 origin not allowed, 502 upstream failure. CORS allows only `https://pixelkit-wheat.vercel.app` and `http://localhost:8000`. The free allowance is 10,000 neurons per day (resets 00:00 UTC). Deploy from `worker/` with `npx wrangler deploy`; watch real errors with `npx wrangler tail`.
+`worker/` is a separate Cloudflare Worker (own `wrangler.jsonc`, no build step, nothing installed at the repo root). `POST /generate` takes `{ prompt }` (1 to 300 characters) and nothing else; the server sets the model (`@cf/black-forest-labs/flux-1-schnell`) and `steps` (4). It calls Workers AI through the `AI` binding, so no key exists anywhere, then sniffs the real image type from the first bytes (JPEG or PNG) and returns the image. Errors are JSON: 400 bad input, 403 origin not allowed, 429 daily limit reached, 502 upstream failure. CORS allows only `https://pixelkit-wheat.vercel.app` and `http://localhost:8000`. The free allowance is 10,000 neurons per day (resets 00:00 UTC). Deploy from `worker/` with `npx wrangler deploy`; watch real errors with `npx wrangler tail`.
+
+Daily limit: each IP may generate `DAILY_LIMIT` images (8) per UTC day. A SQLite-backed Durable Object (`RateLimiter`, binding `LIMITER`) checks and counts in one synchronous step, before the model is called, so two simultaneous requests cannot both take the last slot. If the model call fails (502), the slot is given back. The IP from `CF-Connecting-IP` is never stored: only its SHA-256 hash and the UTC date are, and rows of earlier days are deleted on each check. The hash is not salted, so it protects against casual reading of the data, not against a determined guess of an IPv4 address. If the Durable Object fails (or the header is missing), the request goes through and the error is logged with `console.error`. This is a deliberate choice of availability over protection. The 429 answer reuses the frontend's existing "limit reached" message.
 
 ## Storage
 
@@ -93,6 +95,11 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 ## Logging
 
 All logs go through `core/logger.js` with the `[PixelKit]` prefix; `logActivity` (in `state.js`) logs and also shows the message in the Activity Log. Frequent events (sliders, typing, keyboard moves) use `logAfterPause`; the Compressor quality slider has its own timer because it also delays the state update. Logs stay in the code permanently. Never log image data or base64. Never log what the user types into Meme or Logo text (log its length only). File names and project names may be logged.
+
+## Known limitations
+
+- Autosave waits 1 second after the last change (`SAVE_DELAY` in `core/projects.js`). If a new image loads less than 1 second after an edit, that last edit is lost. The project and its image survive; only the final edit is missing. Closing or hiding the tab is not affected, because `visibilitychange` saves at once.
+- Proposed fix (not built, because it changes how `saveProject` works): remember the previous project's state when `projectId` changes, pass that state to `saveProject` instead of reading `getState()`, and relax the `projectId` check that skips a save when the project was replaced.
 
 ## Known structural debt
 
