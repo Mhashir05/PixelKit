@@ -50,6 +50,7 @@
 .field > span { display: flex; justify-content: space-between; }
 .field output { color: var(--text); font-variant-numeric: tabular-nums; }
 .field input[type="text"], .field select { height: 28px; padding: 0 8px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text); font: 13px var(--font-ui); }
+.field textarea { padding: 6px 8px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text); font: 13px var(--font-ui); resize: vertical; }
 .field input[type="color"] { height: 28px; padding: 2px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); cursor: pointer; }
 .field input:disabled, .field select:disabled { opacity: 0.4; cursor: not-allowed; }
 .element-list { width: 100%; margin: 4px 0 0; padding: 0; list-style: none; }
@@ -113,7 +114,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .recent-delete { width: 40px; height: 40px; }
   .tool { min-height: 40px; }
   .fields summary { padding: 11px 0; } /* keeps the open/close arrow */
-  .console .btn, .strip .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
+  .console .btn, .strip .btn, #ai-generate, #ai-download, [data-ai-open], .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
 }
 
 /* Narrow screens: tools become a scrolling row, other panels move below the canvas. */

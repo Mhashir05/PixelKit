@@ -5,7 +5,7 @@ const MAX_ACTIVITY = 20;
 
 // The single source of truth. The UI is drawn from this object.
 const state = {
-  tool: "editor", // editor | compressor | meme | logo | catalog
+  tool: "editor", // editor | compressor | meme | logo | catalog | ai
   projectName: "Untitled design",
   image: null, // { name, type, width, height, element } once an image is loaded; the original is never changed
   edits: defaultEdits(), // the Editor settings: filters, rotation, flips, crop, resize, text (see edits.js); the original is never changed
@@ -36,6 +36,12 @@ const state = {
     error: "", // message when the last page request failed
     usingId: "", // id of the photo being downloaded for "Use this image"
     useError: "",
+  },
+  ai: {
+    result: null, // the generated image as a File
+    busy: false, // a request is running
+    cooling: false, // short wait after a request, so the button cannot be spammed
+    error: "",
   },
   logo: {
     elements: [], // { id, type: "text" | "rect" | "circle", x, y, size, color, text, font } in canvas units (1000 x 1000)

@@ -29,6 +29,7 @@ js/
     meme.js         captions, presets, export
     logo.js         elements, selection, dragging, layers, export
     catalog.js      Picsum list, infinite scroll, "Use this image"
+    ai.js           AI Studio: prompt to image via our Cloudflare Worker (no key in the browser), download, "Open in" Editor, Compressor or Meme
   ui/
     sidebar.js      tools list, recents list, activity log
     animations.js   landing reveal on scroll
@@ -72,6 +73,10 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 - Previews use a capped size (editor about 1200px, meme about 900px). Exports use the full original size, after crop and resize (Meme and Logo use their preset size).
 - Heavy work does not run inside input handlers (compression waits for a pause; Meme and Logo export are deferred with `setTimeout`). The Editor export still draws directly in its click handler.
 
+## AI Worker
+
+`worker/` is a separate Cloudflare Worker (own `wrangler.jsonc`, no build step, nothing installed at the repo root). `POST /generate` takes `{ prompt }` (1 to 300 characters) and nothing else; the server sets the model (`@cf/black-forest-labs/flux-1-schnell`) and `steps` (4). It calls Workers AI through the `AI` binding, so no key exists anywhere, then sniffs the real image type from the first bytes (JPEG or PNG) and returns the image. Errors are JSON: 400 bad input, 403 origin not allowed, 502 upstream failure. CORS allows only `https://pixelkit-wheat.vercel.app` and `http://localhost:8000`. The free allowance is 10,000 neurons per day (resets 00:00 UTC). Deploy from `worker/` with `npx wrangler deploy`; watch real errors with `npx wrangler tail`.
+
 ## Storage
 
 - localStorage key `pixelkit.projects`: lightweight metadata (id, name, updatedAt, edits (the Editor settings: filters, rotation, flips, crop, resize, text overlay), small JPEG thumbnail; projects saved by older versions used the name `filters` and are still read). Only the newest 10 projects are kept; older ones are deleted with their saved images on the next save.
@@ -80,7 +85,7 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 
 ## Security
 
-- Content Security Policy as a meta tag on both pages. Fonts come from `fonts.googleapis.com` (styles) and `fonts.gstatic.com` (files). `app.html` also allows `https://picsum.photos` and `https://fastly.picsum.photos` for images and downloads (Picsum redirects to fastly). `index.html` allows no Picsum host, because the landing page loads nothing from Picsum. No inline scripts, no `unsafe-*`.
+- Content Security Policy as a meta tag on both pages. Fonts come from `fonts.googleapis.com` (styles) and `fonts.gstatic.com` (files). `app.html` also allows `https://picsum.photos` and `https://fastly.picsum.photos` for images and downloads (Picsum redirects to fastly). `app.html` also allows the Worker host `https://pixelkit-ai.hashir-dev.workers.dev` in `connect-src` only (AI Studio fetches the image as a Blob and shows it from a `blob:` URL). `index.html` allows no Picsum host, because the landing page loads nothing from Picsum. No inline scripts, no `unsafe-*`.
 - Uploads: JPG, PNG and WebP only, checked by MIME type and magic bytes, 10 MB and 40 megapixel limits. SVG is rejected.
 - Text from users or the network is set with `textContent`. Canvas text is drawn with `fillText`.
 - `frame-ancestors` cannot be set from a meta tag, so `vercel.json` sends `Content-Security-Policy: frame-ancestors 'none'` as a response header. The same file adds `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` and a minimal `Permissions-Policy`. The full CSP stays in the meta tags.

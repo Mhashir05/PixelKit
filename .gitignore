@@ -4,3 +4,5 @@ Thumbs.db
 .agents/
 .claude/skills/
 skills-lock.json
+.wrangler/
+.dev.vars

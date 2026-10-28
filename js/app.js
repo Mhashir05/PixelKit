@@ -8,6 +8,7 @@ import { initCompressor, renderCompressor } from "./tools/compressor.js";
 import { initMeme, renderMeme } from "./tools/meme.js";
 import { initCatalog, renderCatalog } from "./tools/catalog.js";
 import { initLogo, renderLogo } from "./tools/logo.js";
+import { initAi, renderAi } from "./tools/ai.js";
 import { initProjects, resumeProject, renameProject, deleteProject } from "./core/projects.js";
 
 const stages = document.querySelectorAll("[data-stage]");
@@ -24,6 +25,7 @@ function render(state) {
   renderCompressor(state);
   renderMeme(state);
   renderCatalog(state);
+  renderAi(state);
   renderLogo(state); // after renderEditor, because both decide whether the shared Export button is enabled
   for (const stage of stages) stage.hidden = stage.dataset.stage !== state.tool;
   projectName.disabled = !state.image;
@@ -94,6 +96,7 @@ initCompressor();
 initMeme();
 initCatalog();
 initLogo();
+initAi();
 initProjects();
 logger.info("workspace loaded");
 logActivity("Workspace opened");
