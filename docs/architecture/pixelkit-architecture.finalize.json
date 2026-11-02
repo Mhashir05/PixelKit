@@ -5,16 +5,16 @@
   "status": "pass",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-21T13:36:07.734Z",
+  "startedAt": "2026-11-02T16:58:10.151Z",
   "specification": {
-    "path": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
-    "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
-    "bytes": 7699
+    "path": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\dceb6b52e63f50da\\4c613fc1-60f2-462e-aa74-35356a5d0002\\scratchpad\\archify\\candidate.json",
+    "sha256": "9f44a624645aa2ada94fd13c941ef511d3f7dbbcdb64f8558abf064340dbcb6c",
+    "bytes": 9441
   },
   "artifact": {
     "path": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
-    "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
-    "bytes": 851572
+    "sha256": "5bc01b441018997963c3892256345692fa2d4def70c8f5689a3d80df3f5880b9",
+    "bytes": 853308
   },
   "stages": {
     "validate": {
@@ -27,10 +27,12 @@
         "C:\\Users\\Hashir\\desktop\\PixelKit\\.claude\\skills\\archify\\bin\\archify.mjs",
         "deliver",
         "architecture",
-        "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+        "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\dceb6b52e63f50da\\4c613fc1-60f2-462e-aa74-35356a5d0002\\scratchpad\\archify\\candidate.json",
         "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
         "--quality",
         "showcase",
+        "--repo-root",
+        "C:\\Users\\Hashir\\desktop\\PixelKit",
         "--json"
       ],
       "receipt": {
@@ -38,8 +40,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
-          "bytes": 7699
+          "sha256": "9f44a624645aa2ada94fd13c941ef511d3f7dbbcdb64f8558abf064340dbcb6c",
+          "bytes": 9441
         },
         "validation": {
           "checksPassed": 9,
@@ -54,33 +56,35 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 4127,
+      "durationMs": 2434,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Hashir\\desktop\\PixelKit\\.claude\\skills\\archify\\bin\\archify.mjs",
         "deliver",
         "architecture",
-        "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+        "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\dceb6b52e63f50da\\4c613fc1-60f2-462e-aa74-35356a5d0002\\scratchpad\\archify\\candidate.json",
         "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
         "--quality",
         "showcase",
+        "--repo-root",
+        "C:\\Users\\Hashir\\desktop\\PixelKit",
         "--json"
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "a6f6f06f-670d-4fa0-92ac-087968292f0e",
+        "receiptId": "70fb9201-a4aa-4600-8e4f-09504c7f2cf8",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
-        "input": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+        "input": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\dceb6b52e63f50da\\4c613fc1-60f2-462e-aa74-35356a5d0002\\scratchpad\\archify\\candidate.json",
         "output": "C:\\Users\\Hashir\\Desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
         "specification": {
-          "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
-          "bytes": 7699
+          "sha256": "9f44a624645aa2ada94fd13c941ef511d3f7dbbcdb64f8558abf064340dbcb6c",
+          "bytes": 9441
         },
         "artifact": {
-          "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
-          "bytes": 851572
+          "sha256": "5bc01b441018997963c3892256345692fa2d4def70c8f5689a3d80df3f5880b9",
+          "bytes": 853308
         },
         "validation": {
           "checksPassed": 9,
@@ -89,6 +93,12 @@
           "compositionStatus": "pass",
           "errors": 0,
           "warnings": 0
+        },
+        "evidence": {
+          "verified": true,
+          "repository": "https://github.com/Mhashir05/PixelKit",
+          "revision": "f3fe96ead75f0232268574fe19f4e815dd34f06d",
+          "references": 32
         },
         "update": {
           "status": "unavailable",
@@ -106,7 +116,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 780,
+      "durationMs": 822,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Hashir\\desktop\\PixelKit\\.claude\\skills\\archify\\bin\\archify.mjs",
@@ -118,8 +128,8 @@
         "ok": true,
         "file": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
         "artifact": {
-          "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
-          "bytes": 851572
+          "sha256": "5bc01b441018997963c3892256345692fa2d4def70c8f5689a3d80df3f5880b9",
+          "bytes": 853308
         },
         "checks": [
           {
@@ -180,24 +190,24 @@
           },
           "metrics": {
             "properCrossings": 0,
-            "resolvedCrossovers": 30,
+            "resolvedCrossovers": 0,
             "ambiguousCorridors": 0,
             "arrowheadCollisions": 0,
             "containerBorderRuns": 0,
             "labelRouteClearanceIssues": 0,
             "labelCanvasOverflowIssues": 0,
-            "minLabelRouteClearance": null,
+            "minLabelRouteClearance": 24.1,
             "desktopReadabilityIssues": 0,
             "viewportHeightIssues": 0,
-            "minProjectedNodeTextPx": 7.5,
-            "maxBends": 4,
-            "routesOverSuggestedBends": 9,
-            "maxStretch": 2.371,
-            "routesOverSuggestedStretch": 4,
-            "minSegmentPx": 14,
-            "minInteriorSegmentPx": 16,
-            "shortSegmentCount": 3,
-            "shortEndpointSegmentCount": 3,
+            "minProjectedNodeTextPx": 6.56175,
+            "maxBends": 2,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 38,
+            "minInteriorSegmentPx": 59,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
             "shortInteriorSegmentCount": 0,
             "microSegmentCount": 0
           },
@@ -208,924 +218,50 @@
             "microSegmentPx": 8
           },
           "routeReview": {
-            "crossings": [
-              {
-                "left": {
-                  "id": "app-to-sidebar",
-                  "from": "app",
-                  "to": "sidebar",
-                  "label": "",
-                  "collectionIndex": 3,
-                  "artifactIndex": 4
-                },
-                "right": {
-                  "id": "app-to-history",
-                  "from": "app",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 11,
-                  "artifactIndex": 12
-                },
-                "point": [
-                  288,
-                  184
-                ],
-                "sharedNode": "app"
-              },
-              {
-                "left": {
-                  "id": "app-to-compressor",
-                  "from": "app",
-                  "to": "compressor",
-                  "label": "",
-                  "collectionIndex": 5,
-                  "artifactIndex": 6
-                },
-                "right": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "point": [
-                  437,
-                  304
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-meme",
-                  "from": "app",
-                  "to": "meme",
-                  "label": "",
-                  "collectionIndex": 6,
-                  "artifactIndex": 7
-                },
-                "right": {
-                  "id": "app-to-image",
-                  "from": "app",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 10,
-                  "artifactIndex": 11
-                },
-                "point": [
-                  400,
-                  364
-                ],
-                "sharedNode": "app"
-              },
-              {
-                "left": {
-                  "id": "app-to-meme",
-                  "from": "app",
-                  "to": "meme",
-                  "label": "",
-                  "collectionIndex": 6,
-                  "artifactIndex": 7
-                },
-                "right": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "point": [
-                  437,
-                  375
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-logo",
-                  "from": "app",
-                  "to": "logo",
-                  "label": "",
-                  "collectionIndex": 7,
-                  "artifactIndex": 8
-                },
-                "right": {
-                  "id": "app-to-image",
-                  "from": "app",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 10,
-                  "artifactIndex": 11
-                },
-                "point": [
-                  429,
-                  464
-                ],
-                "sharedNode": "app"
-              },
-              {
-                "left": {
-                  "id": "app-to-logo",
-                  "from": "app",
-                  "to": "logo",
-                  "label": "",
-                  "collectionIndex": 7,
-                  "artifactIndex": 8
-                },
-                "right": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "point": [
-                  437,
-                  464
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-catalog",
-                  "from": "app",
-                  "to": "catalog",
-                  "label": "",
-                  "collectionIndex": 8,
-                  "artifactIndex": 9
-                },
-                "right": {
-                  "id": "app-to-image",
-                  "from": "app",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 10,
-                  "artifactIndex": 11
-                },
-                "point": [
-                  429,
-                  535
-                ],
-                "sharedNode": "app"
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "point": [
-                  437,
-                  336
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "meme-to-export",
-                  "from": "meme",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 17,
-                  "artifactIndex": 18
-                },
-                "point": [
-                  626,
-                  336
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "logo-to-export",
-                  "from": "logo",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 19,
-                  "artifactIndex": 20
-                },
-                "point": [
-                  610,
-                  336
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "point": [
-                  715,
-                  336
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "image-to-edits",
-                  "from": "image",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 23,
-                  "artifactIndex": 24
-                },
-                "point": [
-                  857,
-                  360
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "image-to-history",
-                  "from": "image",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 24,
-                  "artifactIndex": 25
-                },
-                "point": [
-                  804,
-                  336
-                ]
-              },
-              {
-                "left": {
-                  "id": "app-to-projects",
-                  "from": "app",
-                  "to": "projects",
-                  "label": "",
-                  "collectionIndex": 9,
-                  "artifactIndex": 10
-                },
-                "right": {
-                  "id": "projects-to-edits",
-                  "from": "projects",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 26,
-                  "artifactIndex": 27
-                },
-                "point": [
-                  820,
-                  336
-                ],
-                "sharedNode": "projects"
-              },
-              {
-                "left": {
-                  "id": "app-to-image",
-                  "from": "app",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 10,
-                  "artifactIndex": 11
-                },
-                "right": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "point": [
-                  701,
-                  504
-                ],
-                "sharedNode": "image"
-              },
-              {
-                "left": {
-                  "id": "app-to-history",
-                  "from": "app",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 11,
-                  "artifactIndex": 12
-                },
-                "right": {
-                  "id": "editor-to-history",
-                  "from": "editor",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 13,
-                  "artifactIndex": 14
-                },
-                "point": [
-                  610,
-                  184
-                ],
-                "sharedNode": "history"
-              },
-              {
-                "left": {
-                  "id": "editor-to-export",
-                  "from": "editor",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 14,
-                  "artifactIndex": 15
-                },
-                "right": {
-                  "id": "compressor-to-export",
-                  "from": "compressor",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 16,
-                  "artifactIndex": 17
-                },
-                "point": [
-                  594,
-                  255
-                ],
-                "sharedNode": "export"
-              },
-              {
-                "left": {
-                  "id": "editor-to-export",
-                  "from": "editor",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 14,
-                  "artifactIndex": 15
-                },
-                "right": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "point": [
-                  701,
-                  263.93333333333334
-                ]
-              },
-              {
-                "left": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "right": {
-                  "id": "catalog-to-image",
-                  "from": "catalog",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 21,
-                  "artifactIndex": 22
-                },
-                "point": [
-                  666,
-                  504
-                ],
-                "sharedNode": "image"
-              },
-              {
-                "left": {
-                  "id": "compressor-to-export",
-                  "from": "compressor",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 16,
-                  "artifactIndex": 17
-                },
-                "right": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "point": [
-                  708,
-                  246.06666666666666
-                ]
-              },
-              {
-                "left": {
-                  "id": "meme-to-export",
-                  "from": "meme",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 17,
-                  "artifactIndex": 18
-                },
-                "right": {
-                  "id": "logo-to-export",
-                  "from": "logo",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 19,
-                  "artifactIndex": 20
-                },
-                "point": [
-                  610,
-                  368
-                ],
-                "sharedNode": "export"
-              },
-              {
-                "left": {
-                  "id": "meme-to-export",
-                  "from": "meme",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 17,
-                  "artifactIndex": 18
-                },
-                "right": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "point": [
-                  647,
-                  290
-                ]
-              },
-              {
-                "left": {
-                  "id": "meme-to-fonts",
-                  "from": "meme",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 18,
-                  "artifactIndex": 19
-                },
-                "right": {
-                  "id": "logo-to-export",
-                  "from": "logo",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 19,
-                  "artifactIndex": 20
-                },
-                "point": [
-                  610,
-                  398
-                ]
-              },
-              {
-                "left": {
-                  "id": "logo-to-export",
-                  "from": "logo",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 19,
-                  "artifactIndex": 20
-                },
-                "right": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "point": [
-                  647,
-                  304
-                ]
-              },
-              {
-                "left": {
-                  "id": "image-to-edits",
-                  "from": "image",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 23,
-                  "artifactIndex": 24
-                },
-                "right": {
-                  "id": "image-to-history",
-                  "from": "image",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 24,
-                  "artifactIndex": 25
-                },
-                "point": [
-                  802.7777777777778,
-                  403
-                ],
-                "sharedNode": "image"
-              },
-              {
-                "left": {
-                  "id": "image-to-edits",
-                  "from": "image",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 23,
-                  "artifactIndex": 24
-                },
-                "right": {
-                  "id": "projects-to-edits",
-                  "from": "projects",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 26,
-                  "artifactIndex": 27
-                },
-                "point": [
-                  857,
-                  346
-                ],
-                "sharedNode": "edits"
-              },
-              {
-                "left": {
-                  "id": "image-to-edits",
-                  "from": "image",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 23,
-                  "artifactIndex": 24
-                },
-                "right": {
-                  "id": "projects-to-history",
-                  "from": "projects",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 27,
-                  "artifactIndex": 28
-                },
-                "point": [
-                  855.7777777777778,
-                  267
-                ]
-              },
-              {
-                "left": {
-                  "id": "image-to-history",
-                  "from": "image",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 24,
-                  "artifactIndex": 25
-                },
-                "right": {
-                  "id": "state-to-edits",
-                  "from": "state",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 25,
-                  "artifactIndex": 26
-                },
-                "point": [
-                  804,
-                  208
-                ]
-              },
-              {
-                "left": {
-                  "id": "image-to-history",
-                  "from": "image",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 24,
-                  "artifactIndex": 25
-                },
-                "right": {
-                  "id": "projects-to-edits",
-                  "from": "projects",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 26,
-                  "artifactIndex": 27
-                },
-                "point": [
-                  804,
-                  222
-                ]
-              },
-              {
-                "left": {
-                  "id": "state-to-edits",
-                  "from": "state",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 25,
-                  "artifactIndex": 26
-                },
-                "right": {
-                  "id": "projects-to-history",
-                  "from": "projects",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 27,
-                  "artifactIndex": 28
-                },
-                "point": [
-                  812,
-                  208
-                ]
-              }
-            ],
-            "crowdedSides": [
-              {
-                "node": "projects",
-                "label": "projects.js",
-                "side": "left",
-                "relationships": 3,
-                "sidePx": 50,
-                "neededPx": 60
-              },
-              {
-                "node": "editor",
-                "label": "editor.js",
-                "side": "right",
-                "relationships": 3,
-                "sidePx": 50,
-                "neededPx": 60
-              },
-              {
-                "node": "export",
-                "label": "export.js",
-                "side": "left",
-                "relationships": 4,
-                "sidePx": 50,
-                "neededPx": 74
-              }
-            ],
-            "detours": [
-              {
-                "relationship": {
-                  "id": "app-to-image",
-                  "from": "app",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 10,
-                  "artifactIndex": 11
-                },
-                "bends": 3,
-                "stretch": 1.363
-              },
-              {
-                "relationship": {
-                  "id": "app-to-history",
-                  "from": "app",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 11,
-                  "artifactIndex": 12
-                },
-                "bends": 3,
-                "stretch": 1.074
-              },
-              {
-                "relationship": {
-                  "id": "editor-to-image",
-                  "from": "editor",
-                  "to": "image",
-                  "label": "",
-                  "collectionIndex": 15,
-                  "artifactIndex": 16
-                },
-                "bends": 4,
-                "stretch": 1.409
-              },
-              {
-                "relationship": {
-                  "id": "compressor-to-export",
-                  "from": "compressor",
-                  "to": "export",
-                  "label": "",
-                  "collectionIndex": 16,
-                  "artifactIndex": 17
-                },
-                "bends": 3,
-                "stretch": 1.282
-              },
-              {
-                "relationship": {
-                  "id": "meme-to-fonts",
-                  "from": "meme",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 18,
-                  "artifactIndex": 19
-                },
-                "bends": 4,
-                "stretch": 1.34
-              },
-              {
-                "relationship": {
-                  "id": "edits-to-fonts",
-                  "from": "edits",
-                  "to": "fonts",
-                  "label": "",
-                  "collectionIndex": 22,
-                  "artifactIndex": 23
-                },
-                "bends": 4,
-                "stretch": 2.043,
-                "directCorridorBlockers": [
-                  {
-                    "id": "export",
-                    "label": "export.js",
-                    "box": [
-                      650,
-                      270,
-                      130,
-                      50
-                    ]
-                  }
-                ]
-              },
-              {
-                "relationship": {
-                  "id": "image-to-edits",
-                  "from": "image",
-                  "to": "edits",
-                  "label": "",
-                  "collectionIndex": 23,
-                  "artifactIndex": 24
-                },
-                "bends": 4,
-                "stretch": 2.371,
-                "directCorridorBlockers": [
-                  {
-                    "id": "export",
-                    "label": "export.js",
-                    "box": [
-                      650,
-                      270,
-                      130,
-                      50
-                    ]
-                  },
-                  {
-                    "id": "fonts",
-                    "label": "fonts.js",
-                    "box": [
-                      650,
-                      350,
-                      130,
-                      50
-                    ]
-                  }
-                ]
-              },
-              {
-                "relationship": {
-                  "id": "image-to-history",
-                  "from": "image",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 24,
-                  "artifactIndex": 25
-                },
-                "bends": 3,
-                "stretch": 1.139,
-                "directCorridorBlockers": [
-                  {
-                    "id": "edits",
-                    "label": "edits.js",
-                    "box": [
-                      650,
-                      190,
-                      130,
-                      50
-                    ]
-                  },
-                  {
-                    "id": "export",
-                    "label": "export.js",
-                    "box": [
-                      650,
-                      270,
-                      130,
-                      50
-                    ]
-                  },
-                  {
-                    "id": "fonts",
-                    "label": "fonts.js",
-                    "box": [
-                      650,
-                      350,
-                      130,
-                      50
-                    ]
-                  }
-                ]
-              },
-              {
-                "relationship": {
-                  "id": "projects-to-history",
-                  "from": "projects",
-                  "to": "history",
-                  "label": "",
-                  "collectionIndex": 27,
-                  "artifactIndex": 28
-                },
-                "bends": 4,
-                "stretch": 1
-              }
-            ]
+            "crossings": [],
+            "detours": []
           },
           "leadingSpace": {
             "measured": true,
             "emptyTopPx": 40,
-            "emptyTopRatio": 0.063,
+            "emptyTopRatio": 0.046,
             "occupiedTop": 40,
             "viewBoxTop": 0,
-            "canvasHeight": 631,
-            "typicalNodeHeight": 50,
+            "canvasHeight": 872,
+            "typicalNodeHeight": 64,
             "reviewSuggested": false
           },
           "desktopReadability": {
             "budgetBasis": "recognized-declared-wide",
             "readerContract": "declared-wide-v1",
-            "availableDiagramWidth": 1041.6666666666667,
-            "actualBudgetPx": 1041.6666666666667,
-            "actualReaderWidth": 1071.6666666666667,
-            "desiredReaderWidth": 1071.6666666666667,
+            "availableDiagramWidth": 1346,
+            "actualBudgetPx": 1346,
+            "actualReaderWidth": 1376,
+            "desiredReaderWidth": 1568.4615384615386,
             "viewportCap": 1376,
-            "limit": "source-size",
+            "limit": "viewport-cap",
             "requestedTargetPx": 7.5,
-            "requestedTargetMet": true,
+            "requestedTargetMet": false,
             "hardFloorPx": 6,
             "hardFloorMet": true,
             "minimumOwner": {
               "kind": "node",
-              "id": "index"
+              "id": "limiter"
             },
-            "minimumSourceTextPx": 9,
-            "minimumProjectedTextPx": 7.5,
-            "semanticTextCount": 40
+            "minimumSourceTextPx": 7.8,
+            "minimumProjectedTextPx": 6.56175,
+            "semanticTextCount": 46
           },
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "a6f6f06f-670d-4fa0-92ac-087968292f0e"
+        "deliveryReceiptId": "70fb9201-a4aa-4600-8e4f-09504c7f2cf8"
       }
     },
     "browser-check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 18258,
+      "durationMs": 6546,
       "command": [
         "C:\\Program Files\\nodejs\\node.exe",
         "C:\\Users\\Hashir\\desktop\\PixelKit\\.claude\\skills\\archify\\bin\\archify.mjs",
@@ -1143,11 +279,11 @@
         "status": "pass",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "a6f6f06f-670d-4fa0-92ac-087968292f0e",
+        "deliveryReceiptId": "70fb9201-a4aa-4600-8e4f-09504c7f2cf8",
         "artifact": {
           "path": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
-          "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
-          "bytes": 851572
+          "sha256": "5bc01b441018997963c3892256345692fa2d4def70c8f5689a3d80df3f5880b9",
+          "bytes": 853308
         },
         "state": {
           "detail": "read",
@@ -1184,19 +320,19 @@
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
                 "diagramChromePx": 78,
-                "svgPx": 679,
+                "svgPx": 734,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 6.56175,
+              "minimumProjectedNonEdgeTextPx": 6.56175,
+              "minimumProjectedEdgeTextPx": 6.73,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1219,13 +355,13 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1029,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1536,
@@ -1234,19 +370,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
-                "svgPx": 760,
+                "svgPx": 821,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.34175,
+              "minimumProjectedNonEdgeTextPx": 7.34175,
+              "minimumProjectedEdgeTextPx": 7.53,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1278,25 +414,25 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1734,
-              "diagramWidth": 1704,
+              "readerWidth": 1608,
+              "diagramWidth": 1578,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
                 "svgPx": 860,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.692749999999999,
+              "minimumProjectedNonEdgeTextPx": 7.692749999999999,
+              "minimumProjectedEdgeTextPx": 7.89,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1334,19 +470,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
-                "svgPx": 944,
+                "svgPx": 1019,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.8,
+              "minimumProjectedNonEdgeTextPx": 7.8,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1437,19 +573,19 @@
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
                 "diagramChromePx": 78,
-                "svgPx": 679,
+                "svgPx": 734,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 6.56175,
+              "minimumProjectedNonEdgeTextPx": 6.56175,
+              "minimumProjectedEdgeTextPx": 6.73,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1472,13 +608,13 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1029,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1536,
@@ -1487,19 +623,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
-                "svgPx": 760,
+                "svgPx": 821,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.34175,
+              "minimumProjectedNonEdgeTextPx": 7.34175,
+              "minimumProjectedEdgeTextPx": 7.53,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1531,25 +667,25 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1734,
-              "diagramWidth": 1704,
+              "readerWidth": 1608,
+              "diagramWidth": 1578,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
                 "svgPx": 860,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.692749999999999,
+              "minimumProjectedNonEdgeTextPx": 7.692749999999999,
+              "minimumProjectedEdgeTextPx": 7.89,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1587,19 +723,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
-                "svgPx": 944,
+                "svgPx": 1019,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.8,
+              "minimumProjectedNonEdgeTextPx": 7.8,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1642,19 +778,19 @@
                 "bodyPaddingPx": 12,
                 "headerPx": 52,
                 "diagramChromePx": 78,
-                "svgPx": 679,
+                "svgPx": 734,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 6.56175,
+              "minimumProjectedNonEdgeTextPx": 6.56175,
+              "minimumProjectedEdgeTextPx": 6.73,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1677,13 +813,13 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1029,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
               "readerWidth": 1536,
@@ -1692,19 +828,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
-                "svgPx": 760,
+                "svgPx": 821,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.34175,
+              "minimumProjectedNonEdgeTextPx": 7.34175,
+              "minimumProjectedEdgeTextPx": 7.53,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1736,25 +872,25 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1734,
-              "diagramWidth": 1704,
+              "readerWidth": 1608,
+              "diagramWidth": 1578,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 60,
                 "diagramChromePx": 84,
                 "svgPx": 860,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.692749999999999,
+              "minimumProjectedNonEdgeTextPx": 7.692749999999999,
+              "minimumProjectedEdgeTextPx": 7.89,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1792,19 +928,19 @@
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
-                "svgPx": 944,
+                "svgPx": 1019,
                 "cardsPx": 0,
-                "viewBoxHeight": 631
+                "viewBoxHeight": 872
               },
-              "viewBoxWidth": 1250,
-              "minimumProjectedNodeTextPx": 9,
-              "minimumProjectedNonEdgeTextPx": 9,
-              "minimumProjectedEdgeTextPx": null,
-              "minimumProjectedNodeText": "landing page",
+              "viewBoxWidth": 1600,
+              "minimumProjectedNodeTextPx": 7.8,
+              "minimumProjectedNonEdgeTextPx": 7.8,
+              "minimumProjectedEdgeTextPx": 8,
+              "minimumProjectedNodeText": "RateLimiter (SQLite), 8 images per IP per UTC day",
               "minimumProjectedNodeTextDetail": "context",
               "minimumProjectedNodeTextOwner": {
                 "kind": "node",
-                "id": "index"
+                "id": "limiter"
               },
               "minimumRequiredNodeTextPx": 6,
               "readabilityOk": true,
@@ -1845,15 +981,15 @@
     "browserCheckReceipt": "C:\\Users\\Hashir\\desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.browser-check.json"
   },
   "visualReview": "not-requested",
-  "finishedAt": "2026-10-21T13:36:32.923Z",
-  "durationMs": 25189,
+  "finishedAt": "2026-11-02T16:58:21.644Z",
+  "durationMs": 11493,
   "update": {
     "status": "current",
     "installedVersion": "3.2.0",
     "availableVersion": "3.2.0",
     "releaseNotes": null,
-    "checkedAt": "2026-10-21T13:36:08.369Z",
-    "source": "network",
+    "checkedAt": "2026-11-02T16:57:47.151Z",
+    "source": "cache",
     "noticeRequired": false,
     "noticeText": null
   }

@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "a6f6f06f-670d-4fa0-92ac-087968292f0e",
+  "receiptId": "70fb9201-a4aa-4600-8e4f-09504c7f2cf8",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\C--Users-Hashir-desktop-PixelKit\\1876adc0-5901-4884-8d59-2383b90bdea8\\scratchpad\\candidate.json",
+  "input": "C:\\Users\\Hashir\\AppData\\Local\\Temp\\claude\\dceb6b52e63f50da\\4c613fc1-60f2-462e-aa74-35356a5d0002\\scratchpad\\archify\\candidate.json",
   "output": "C:\\Users\\Hashir\\Desktop\\PixelKit\\docs\\architecture\\pixelkit-architecture.html",
   "specification": {
-    "sha256": "49b069c2e822bc43bb5a9aa8244b45c7878c9855fb322767fade5d84ec2fb031",
-    "bytes": 7699
+    "sha256": "9f44a624645aa2ada94fd13c941ef511d3f7dbbcdb64f8558abf064340dbcb6c",
+    "bytes": 9441
   },
   "artifact": {
-    "sha256": "8c9ed3b48ab91b6d07868df7f5bbddbd13e0fd743c66ea7c3a730cc4b7403788",
-    "bytes": 851572
+    "sha256": "5bc01b441018997963c3892256345692fa2d4def70c8f5689a3d80df3f5880b9",
+    "bytes": 853308
   }
 }
