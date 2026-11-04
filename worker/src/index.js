@@ -6,6 +6,7 @@ const MAX_PROMPT = 300; // stricter than the model's own 2048
 const MAX_BODY = 4096; // bytes; a valid request is far smaller
 const STEPS = 4; // the documented default; never taken from the client
 const DAILY_LIMIT = 8; // images per IP per UTC day
+const LIMIT_ENABLED = false; // the per-IP daily limit is switched off for now; set to true and redeploy to re-enable it
 const EDIT_MODEL = "@cf/black-forest-labs/flux-2-klein-4b"; // takes a reference image; flux-1-schnell cannot
 const EDIT_SIZE = "1024"; // output width and height, as tested in the spike
 const MAX_EDIT_IMAGE = 256 * 1024; // bytes; the browser sends a JPEG of at most 512x512, usually under 150 KB
@@ -140,6 +141,7 @@ async function edit(request, env, origin) {
 
 // Shared by every route: takes one daily slot, runs the model, and gives the slot back if it failed.
 async function runLimited(request, env, origin, model, inputs) {
+  if (!LIMIT_ENABLED) return createImage(env, model, inputs, origin); // no claim, no release: the limiter is not called
   let slot = null;
   try {
     slot = await claimSlot(env, request.headers.get("CF-Connecting-IP"));

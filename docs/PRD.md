@@ -34,7 +34,7 @@ A static, guest-only browser toolkit. Your images stay on the device and are nev
 | Meme / Post | Top and bottom text, font, colour, size, Instagram post, portrait and WhatsApp Status presets, export | Built |
 | Logo Maker | Text, rectangle, circle, colour, size, select, drag, layer order, transparent or solid background, PNG export | Built |
 | Catalog | Picsum photos, lazy thumbnails, infinite scroll, error and retry, "Use this image" | Built |
-| AI Studio | Prompt of up to 300 characters, one generated image at the model's default size (1024x1024 in tests), edits described in words (up to 300 characters together) that always start from the generated original, with Reset to original, download or open in the Editor, Compressor or Meme, a per-IP daily limit with a friendly message when it is reached; needs a network | Built |
+| AI Studio | Prompt of up to 300 characters, one generated image at the model's default size (1024x1024 in tests), one prompt box that generates when there is no image and edits once one exists (edits in words, up to 300 characters together, always start from the generated original), Reset to original and New image, download or open in the Editor, Compressor or Meme, a per-IP daily limit with a friendly message when it is reached (implemented but currently switched off: `LIMIT_ENABLED = false` in `worker/src/index.js`; flip it and redeploy to re-enable); needs a network | Built |
 | Projects | Autosave, recents (newest 10), resume, rename (max 40 characters), delete with confirmation | Built |
 | Editor | Undo (all Editor edits and Reset; 50 steps), by button or Ctrl/Cmd+Z | Built |
 
@@ -54,8 +54,9 @@ A static, guest-only browser toolkit. Your images stay on the device and are nev
 ## Known limitations
 
 - The Worker's free daily AI quota is shared by all visitors. When it is used up, generation fails until 00:00 UTC.
-- The Worker's origin check can be spoofed by scripts, so the per-IP limit only reduces abuse.
-- Users behind a shared IP address share the 8 images per day.
+- The Worker's origin check can be spoofed by scripts, so the per-IP limit (when switched on) only reduces abuse.
+- When the limit is switched on, users behind a shared IP address share the 8 images per day.
+- The per-IP limit is currently switched off. With the limit off, any visitor or script can use up the shared free daily AI quota, and everyone then sees an error until 00:00 UTC.
 - An AI edit uses roughly twice as much free quota as a generation (an estimate from the Workers AI pricing page), and the edited background is similar but redrawn, not pixel-identical.
 - Meme settings and logos are not saved with a project.
 - Compress and export are slow on very large photos (4000px and above).

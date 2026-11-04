@@ -165,19 +165,14 @@
     <div data-controls="ai" hidden>
       <p class="note">Describe an image and AI draws it for free. Your prompt is sent to our free image service (Cloudflare Workers AI). To edit, a small copy of the generated image is sent too; nothing else is uploaded.</p>
       <div class="fields">
-        <label class="field"><span>Prompt</span><textarea id="ai-prompt" rows="5" maxlength="300"></textarea></label>
+        <label class="field"><span id="ai-prompt-label">Describe an image</span><textarea id="ai-prompt" rows="5" maxlength="300"></textarea></label>
       </div>
       <div class="fields">
         <button class="btn btn--primary" type="button" id="ai-generate">Generate</button>
       </div>
-      <div id="ai-editing" hidden>
-        <div class="fields">
-          <label class="field"><span>Change this image, for example "make the shirt red"</span><textarea id="ai-edit" rows="2" maxlength="300"></textarea></label>
-        </div>
-        <div class="fields">
-          <button class="btn" type="button" id="ai-apply">Apply edit</button>
-          <button class="btn" type="button" id="ai-reset" disabled>Reset to original</button>
-        </div>
+      <div class="fields" id="ai-editing" hidden>
+        <button class="btn" type="button" id="ai-reset" disabled>Reset to original</button>
+        <button class="btn" type="button" id="ai-new">New image</button>
       </div>
     </div>
   </section>

@@ -11,7 +11,7 @@ Live: https://pixelkit-wheat.vercel.app
 - **Meme / Post**: top and bottom text, font, colour and size, with Instagram post, Instagram portrait and WhatsApp Status sizes.
 - **Logo Maker**: text, rectangles and circles that you drag, order in layers and export as a 1000 x 1000 PNG, with a transparent or solid background.
 - **Catalog**: free photos from Picsum with infinite scroll; "Use this image" opens one in the Editor.
-- **AI Studio**: describe an image (up to 300 characters) and a Cloudflare Worker generates it with Workers AI (FLUX.1 schnell, route `/generate`). Then describe changes in words ("make the shirt red") and the Worker edits it with FLUX.2 klein 4B (route `/edit`), always starting from the original, with Reset to original. Both routes share one daily limit of 8 images per IP. Download the result or open it in the Editor, Compressor or Meme.
+- **AI Studio**: describe an image (up to 300 characters) and a Cloudflare Worker generates it with Workers AI (FLUX.1 schnell, route `/generate`). AI Studio has one prompt box: once an image exists, the same box takes a change in words ("make the shirt red") and the Worker edits the image with FLUX.2 klein 4B (route `/edit`), always starting from the original. Reset to original undoes the edits, and New image starts over. Both routes share one daily limit of 8 images per IP, which is implemented but currently switched off (`LIMIT_ENABLED = false` in `worker/src/index.js`); flip that constant and redeploy to re-enable it. Download the result or open it in the Editor, Compressor or Meme.
 
 There is no login and no backend for your photos. Image processing runs in the browser, and photos you upload never leave your device. The exceptions are Catalog photos, which are downloaded from Picsum, and AI Studio, which sends your prompt text to the Worker. For an AI edit, a downscaled copy (at most 512x512) of the image AI Studio generated is also sent to the Worker and Workers AI; your own photos are never sent. Your work is saved automatically in the browser. Recents lists your newest 10 projects, and you can resume, rename or delete them.
 
@@ -20,7 +20,7 @@ There is no login and no backend for your photos. Image processing runs in the b
 - Vanilla HTML, CSS and JavaScript (ES modules). No framework, no build step and no external JavaScript dependencies. Only the fonts come from Google Fonts.
 - Canvas for drawing and export; IndexedDB for original images and localStorage for project metadata (Recents).
 - Hosting: Vercel (static files).
-- AI feature: a Cloudflare Worker (`worker/`) that calls Workers AI (FLUX.1 schnell for `/generate`, FLUX.2 klein 4B for `/edit`) and uses a Durable Object for a per-IP daily limit.
+- AI feature: a Cloudflare Worker (`worker/`) that calls Workers AI (FLUX.1 schnell for `/generate`, FLUX.2 klein 4B for `/edit`) and uses a Durable Object for a per-IP daily limit (currently switched off, see `LIMIT_ENABLED`).
 
 ## AI Studio architecture
 
@@ -32,7 +32,7 @@ sequenceDiagram
     participant A as Workers AI (FLUX.1 schnell, FLUX.2 klein 4B)
     B->>W: POST /generate with the prompt, or POST /edit with the edit text and a copy of the original (at most 512x512)
     W->>W: check the Origin allow-list and validate the prompt (and the image for /edit)
-    W->>D: claim one slot for the hashed IP and UTC day (one limit of 8 shared by both routes)
+    W->>D: claim one slot for the hashed IP and UTC day (one limit of 8 shared by both routes, skipped while LIMIT_ENABLED is false, as it is now)
     D-->>W: allowed, or 429 when the limit is reached
     W->>A: run FLUX.1 schnell for /generate, or FLUX.2 klein 4B for /edit
     A-->>W: image as base64
@@ -49,7 +49,7 @@ The browser fetches the response as a Blob, so the image is local data and never
 - **Dependencies point one way.** Tools use `core/` helpers and never import each other; `core/` never imports a tool.
 - **A Worker instead of calling an AI API from the browser.** Any key placed in client code can be read by every visitor. The Worker reaches Workers AI through a binding, so no secret exists in the repository or in the browser.
 - **The image service sits behind one function.** The browser code that talks to the service is `requestImage` in `js/tools/ai.js`. The first free image provider's current API started requiring a key, and its older keyless endpoint blocked browser requests with a human check (Cloudflare Turnstile). Only `requestImage()` had to change when I moved to my own Cloudflare Worker.
-- **Per-IP daily limit.** Each IP may generate 8 images per UTC day (`DAILY_LIMIT` in `worker/src/index.js`). A SQLite-backed Durable Object checks and counts in one synchronous step before the model is called, so two simultaneous requests cannot both take the last slot. A failed model call gives the slot back. Only a SHA-256 hash of the IP and the date are stored (the hash is not salted), and rows of earlier days are deleted. If the Durable Object fails, the request goes through and the error is logged. This is a deliberate choice of availability over protection.
+- **Per-IP daily limit.** Implemented but currently switched off (`LIMIT_ENABLED = false` in `worker/src/index.js`); flip that constant and redeploy to re-enable it. When it is on, each IP may generate 8 images per UTC day (`DAILY_LIMIT` in `worker/src/index.js`). A SQLite-backed Durable Object checks and counts in one synchronous step before the model is called, so two simultaneous requests cannot both take the last slot. A failed model call gives the slot back. Only a SHA-256 hash of the IP and the date are stored (the hash is not salted), and rows of earlier days are deleted. If the Durable Object fails, the request goes through and the error is logged. This is a deliberate choice of availability over protection.
 - **Worker origin allow-list.** The Worker answers only requests whose `Origin` is the live site or `http://localhost:8000`, and accepts only a prompt of 1 to 300 characters. The model and its settings are fixed on the server.
 - **Uploads are checked by content.** JPG, PNG and WebP only, verified by MIME type and file signature (magic bytes), with 10 MB and 40 megapixel limits. SVG is rejected.
 - **Strict Content Security Policy.** No inline scripts, no `unsafe-*`. User and network text is set with `textContent`.
@@ -61,7 +61,8 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/PRD.md](docs
 ## Known limitations
 
 - The Worker uses the Workers Free plan, and its daily AI quota is shared by all visitors. When it is used up, generation fails until 00:00 UTC.
-- The origin check only stops browsers on other sites. A script can send a fake `Origin` header, so the per-IP limit only reduces abuse. It does not stop someone with many IP addresses, and people who share an IP address share its 8 images.
+- The origin check only stops browsers on other sites. A script can send a fake `Origin` header, so the per-IP limit (when switched on) only reduces abuse. It does not stop someone with many IP addresses, and people who share an IP address share its 8 images.
+- The per-IP limit is currently switched off. With the limit off, any visitor or script can use up the shared free daily AI quota, and everyone then sees an error until 00:00 UTC.
 - An AI edit uses roughly twice as much free quota as a generation (an estimate from the Workers AI pricing page), and the edited background is similar but redrawn, not pixel-identical.
 - Autosave waits 1 second after the last change. If a new image loads less than 1 second after an edit, that last edit can be lost; the project and its image survive. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the proposed fix.
 - No testing on real devices or in real Safari yet.
