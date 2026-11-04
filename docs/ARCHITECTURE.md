@@ -1,6 +1,6 @@
 # PixelKit Architecture
 
-PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and JavaScript (ES modules), no backend, no build step, no external JS dependencies. It runs from any static host (Vercel).
+PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and JavaScript (ES modules), no build step, no external JS dependencies. The pages run from any static host (Vercel). The only server-side part is one small Cloudflare Worker for AI Studio (see "AI Worker").
 
 ## Pages
 
@@ -29,7 +29,7 @@ js/
     meme.js         captions, presets, export
     logo.js         elements, selection, dragging, layers, export
     catalog.js      Picsum list, infinite scroll, "Use this image"
-    ai.js           AI Studio: prompt to image via our Cloudflare Worker (no key in the browser), download, "Open in" Editor, Compressor or Meme
+    ai.js           AI Studio: prompt to image via our Cloudflare Worker (no key in the browser), edits in words that always start from the generated original, Reset to original, download, "Open in" Editor, Compressor or Meme
   ui/
     sidebar.js      tools list, recents list, activity log
     animations.js   landing reveal on scroll
@@ -40,6 +40,9 @@ css/
   workspace.css     workspace
 assets/             logo, icon and the landing sample image
 docs/               PRD, architecture and engineering rules
+worker/             separate Cloudflare Worker for AI Studio (see "AI Worker")
+  src/index.js      /generate (FLUX.1 schnell) and /edit (FLUX.2 klein 4B) endpoints, origin check, one per-IP daily limit of 8 shared by both (Durable Object), Workers AI calls
+  wrangler.jsonc    Worker name, AI and Durable Object bindings, migration
 ```
 
 ## Dependency rules
@@ -75,9 +78,9 @@ The DOM is never the source of truth. Each tool reads and writes only its own se
 
 ## AI Worker
 
-`worker/` is a separate Cloudflare Worker (own `wrangler.jsonc`, no build step, nothing installed at the repo root). `POST /generate` takes `{ prompt }` (1 to 300 characters) and nothing else; the server sets the model (`@cf/black-forest-labs/flux-1-schnell`) and `steps` (4). It calls Workers AI through the `AI` binding, so no key exists anywhere, then sniffs the real image type from the first bytes (JPEG or PNG) and returns the image. Errors are JSON: 400 bad input, 403 origin not allowed, 429 daily limit reached, 502 upstream failure. CORS allows only `https://pixelkit-wheat.vercel.app` and `http://localhost:8000`. The free allowance is 10,000 neurons per day (resets 00:00 UTC). Deploy from `worker/` with `npx wrangler deploy`; watch real errors with `npx wrangler tail`.
+`worker/` is a separate Cloudflare Worker (own `wrangler.jsonc`, no build step, nothing installed at the repo root). `POST /generate` takes `{ prompt }` (1 to 300 characters) and nothing else; the server sets the model (`@cf/black-forest-labs/flux-1-schnell`) and `steps` (4). It calls Workers AI through the `AI` binding, so no key exists anywhere, then sniffs the real image type from the first bytes (JPEG or PNG) and returns the image. `POST /edit` takes a multipart form with `prompt` (1 to 300 characters: the user's edit instructions, joined by the browser) and `image` (the original generated image, scaled by the browser to at most 512x512 JPEG; JPEG or PNG by signature, at most `MAX_EDIT_IMAGE` = 256 KB). The image bytes are passed through unchanged. The server adds a fixed "keep everything else the same" instruction and sets the model (`@cf/black-forest-labs/flux-2-klein-4b`) and the output size (1024x1024). Every edit starts from the original image, not the previous edit, so repeated edits do not drift. Both routes share `runLimited()` (daily slot, model call, slot release) and `createImage()` (decode and type check). Errors are JSON: 400 bad input, 403 origin not allowed, 429 daily limit reached, 502 upstream failure. CORS allows only `https://pixelkit-wheat.vercel.app` and `http://localhost:8000`. The free allowance is 10,000 neurons per day (resets 00:00 UTC). Deploy from `worker/` with `npx wrangler deploy`; watch real errors with `npx wrangler tail`.
 
-Daily limit: each IP may generate `DAILY_LIMIT` images (8) per UTC day. A SQLite-backed Durable Object (`RateLimiter`, binding `LIMITER`) checks and counts in one synchronous step, before the model is called, so two simultaneous requests cannot both take the last slot. If the model call fails (502), the slot is given back. The IP from `CF-Connecting-IP` is never stored: only its SHA-256 hash and the UTC date are, and rows of earlier days are deleted on each check. The hash is not salted, so it protects against casual reading of the data, not against a determined guess of an IPv4 address. If the Durable Object fails (or the header is missing), the request goes through and the error is logged with `console.error`. This is a deliberate choice of availability over protection. The 429 answer reuses the frontend's existing "limit reached" message.
+Daily limit: each IP may make `DAILY_LIMIT` images (8) per UTC day; generations and edits share it, one slot each. A SQLite-backed Durable Object (`RateLimiter`, binding `LIMITER`) checks and counts in one synchronous step, before the model is called, so two simultaneous requests cannot both take the last slot. If the model call fails (502), the slot is given back. The IP from `CF-Connecting-IP` is never stored: only its SHA-256 hash and the UTC date are, and rows of earlier days are deleted on each check. The hash is not salted, so it protects against casual reading of the data, not against a determined guess of an IPv4 address. If the Durable Object fails (or the header is missing), the request goes through and the error is logged with `console.error`. This is a deliberate choice of availability over protection. The 429 answer reuses the frontend's existing "limit reached" message.
 
 ## Storage
 

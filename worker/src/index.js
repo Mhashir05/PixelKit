@@ -6,6 +6,10 @@ const MAX_PROMPT = 300; // stricter than the model's own 2048
 const MAX_BODY = 4096; // bytes; a valid request is far smaller
 const STEPS = 4; // the documented default; never taken from the client
 const DAILY_LIMIT = 8; // images per IP per UTC day
+const EDIT_MODEL = "@cf/black-forest-labs/flux-2-klein-4b"; // takes a reference image; flux-1-schnell cannot
+const EDIT_SIZE = "1024"; // output width and height, as tested in the spike
+const MAX_EDIT_IMAGE = 256 * 1024; // bytes; the browser sends a JPEG of at most 512x512, usually under 150 KB
+const EDIT_INSTRUCTION = "Keep the background and everything else in the image exactly the same. Only make these changes: ";
 
 const IMAGE_SIGNATURES = [
   { type: "image/jpeg", bytes: [0xff, 0xd8, 0xff] },
@@ -48,6 +52,23 @@ async function readPrompt(request) {
     return clean.length <= MAX_PROMPT ? clean : "";
   } catch {
     return "";
+  }
+}
+
+// Returns { prompt, image } from the multipart form, or null if a field is missing, too long or not an image.
+async function readEdit(request) {
+  if (Number(request.headers.get("Content-Length")) > MAX_EDIT_IMAGE + MAX_BODY) return null; // do not parse a huge body
+  try {
+    const form = await request.formData();
+    const prompt = form.get("prompt");
+    const image = form.get("image");
+    const clean = typeof prompt === "string" ? prompt.trim() : "";
+    if (!clean || clean.length > MAX_PROMPT) return null;
+    if (!(image instanceof File) || image.size > MAX_EDIT_IMAGE) return null; // also needed: Content-Length can be missing
+    const head = new Uint8Array(await image.slice(0, 4).arrayBuffer());
+    return detectType(head) ? { prompt: clean, image } : null;
+  } catch {
+    return null;
   }
 }
 
@@ -101,7 +122,24 @@ async function releaseSlot(env, slot) {
 async function generate(request, env, origin) {
   const prompt = await readPrompt(request);
   if (!prompt) return fail(400, `Send JSON like { "prompt": "..." } with 1 to ${MAX_PROMPT} characters.`, origin);
+  return runLimited(request, env, origin, MODEL, { prompt, steps: STEPS });
+}
 
+// The image bytes are passed through to the model unchanged; the fixed instruction is added here, not in the browser.
+async function edit(request, env, origin) {
+  const input = await readEdit(request);
+  if (!input) return fail(400, `Send a form with prompt (1 to ${MAX_PROMPT} characters) and image (JPEG or PNG, up to ${MAX_EDIT_IMAGE / 1024} KB).`, origin);
+  const form = new FormData();
+  form.append("prompt", EDIT_INSTRUCTION + input.prompt);
+  form.append("input_image_0", input.image);
+  form.append("width", EDIT_SIZE);
+  form.append("height", EDIT_SIZE);
+  const multipart = new Response(form); // serializes the form and creates the boundary header, as the Cloudflare docs show
+  return runLimited(request, env, origin, EDIT_MODEL, { multipart: { body: multipart.body, contentType: multipart.headers.get("content-type") } });
+}
+
+// Shared by every route: takes one daily slot, runs the model, and gives the slot back if it failed.
+async function runLimited(request, env, origin, model, inputs) {
   let slot = null;
   try {
     slot = await claimSlot(env, request.headers.get("CF-Connecting-IP"));
@@ -111,15 +149,15 @@ async function generate(request, env, origin) {
   }
   if (slot && !slot.allowed) return fail(429, "Daily limit reached. Try again tomorrow.", origin);
 
-  const response = await createImage(env, prompt, origin);
+  const response = await createImage(env, model, inputs, origin);
   if (slot && !response.ok) await releaseSlot(env, slot); // a failed request does not cost a credit
   return response;
 }
 
-async function createImage(env, prompt, origin) {
+async function createImage(env, model, inputs, origin) {
   let result;
   try {
-    result = await env.AI.run(MODEL, { prompt, steps: STEPS });
+    result = await env.AI.run(model, inputs);
   } catch (err) {
     // The raw text is kept so real quota errors can be read with `npx wrangler tail`.
     console.error("workers ai error:", err && err.message ? err.message : String(err), err && err.status);
@@ -145,9 +183,11 @@ export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin");
     if (!ALLOWED_ORIGINS.includes(origin)) return fail(403, "Origin not allowed.");
-    if (new URL(request.url).pathname !== "/generate") return fail(404, "Not found.", origin);
+    const path = new URL(request.url).pathname;
+    if (path !== "/generate" && path !== "/edit") return fail(404, "Not found.", origin);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(origin) });
     if (request.method !== "POST") return fail(405, "Use POST.", origin);
+    if (path === "/edit") return edit(request, env, origin);
     return generate(request, env, origin);
   },
 };

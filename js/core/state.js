@@ -38,7 +38,9 @@ const state = {
     useError: "",
   },
   ai: {
-    result: null, // the generated image as a File
+    result: null, // the image shown: the generated File, or its latest edit
+    original: null, // the generated File; every edit starts from it, so edits do not drift
+    edits: [], // edit instructions applied so far, sent together in one prompt
     busy: false, // a request is running
     cooling: false, // short wait after a request, so the button cannot be spammed
     error: "",
