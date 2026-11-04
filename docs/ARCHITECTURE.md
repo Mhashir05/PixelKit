@@ -5,7 +5,7 @@ PixelKit is a static, guest-only photo toolkit: two HTML pages, vanilla CSS and 
 ## Pages
 
 - `index.html` + `js/landing.js`: landing page (hero compare slider, feature reveal).
-- `app.html` + `js/app.js`: workspace with a left console (tools, controls, recents, activity log), a top strip (project name, Undo, Export) and the canvas area.
+- `app.html` + `js/app.js`: workspace with a left console (tools, controls, recents), a top strip (project name, Undo, Export) and the canvas area.
 
 ## Folder map
 
@@ -31,7 +31,7 @@ js/
     catalog.js      Picsum list, infinite scroll, "Use this image"
     ai.js           AI Studio: prompt to image via our Cloudflare Worker (no key in the browser), one prompt box that generates or edits depending on whether an image exists (edits always start from the generated original), Reset to original, New image, download, "Open in" Editor, Compressor or Meme
   ui/
-    sidebar.js      tools list, recents list, activity log
+    sidebar.js      tools list, recents list
     animations.js   landing reveal on scroll
 css/
   tokens.css        colour, font and spacing tokens (locked visual identity)
@@ -97,7 +97,7 @@ Daily limit: implemented but currently switched off. `LIMIT_ENABLED = false` in 
 
 ## Logging
 
-All logs go through `core/logger.js` with the `[PixelKit]` prefix; `logActivity` (in `state.js`) logs and also shows the message in the Activity Log. Frequent events (sliders, typing, keyboard moves) use `logAfterPause`; the Compressor quality slider has its own timer because it also delays the state update. Logs stay in the code permanently. Never log image data or base64. Never log what the user types into Meme or Logo text (log its length only). File names and project names may be logged.
+All logs go through `core/logger.js` with the `[PixelKit]` prefix; `logActivity` (in `state.js`) logs user actions to the browser console only; there is no in-app log panel. Frequent events (sliders, typing, keyboard moves) use `logAfterPause`; the Compressor quality slider has its own timer because it also delays the state update. Logs stay in the code permanently. Never log image data or base64. Never log what the user types into Meme or Logo text (log its length only). File names and project names may be logged.
 
 ## Known limitations
 

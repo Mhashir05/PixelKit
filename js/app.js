@@ -69,6 +69,7 @@ projectName.addEventListener("keydown", (event) => {
 
 // Dropping a file anywhere: the image tools load it. The browser must never open it itself.
 const acceptsImages = () => ["editor", "compressor", "meme"].includes(getState().tool);
+const DROP_REJECTED = "Images can be dropped into the Editor, Compressor or Meme tool.";
 document.addEventListener("dragover", (event) => {
   event.preventDefault();
   const accepts = acceptsImages();
@@ -83,7 +84,13 @@ document.addEventListener("drop", async (event) => {
   document.body.classList.remove("is-dragging");
   const files = event.dataTransfer?.files;
   if (!files?.length) return;
-  if (!acceptsImages()) return logActivity("File drop ignored: only the Editor, Compressor and Meme tools accept images");
+  if (!acceptsImages()) {
+    const state = getState(); // each tool shows the message in its own area, so it never appears in another tool
+    if (state.tool === "ai") setState({ ai: { ...state.ai, error: DROP_REJECTED } });
+    if (state.tool === "logo") setState({ logo: { ...state.logo, message: DROP_REJECTED } });
+    if (state.tool === "catalog") setState({ catalog: { ...state.catalog, useError: DROP_REJECTED } });
+    return logActivity("File drop ignored: only the Editor, Compressor and Meme tools accept images");
+  }
   await loadImage(files[0]);
   if (files.length > 1 && !getState().error) { // a rejected first file already shows its own message
     setState({ error: "Only the first file was used." });

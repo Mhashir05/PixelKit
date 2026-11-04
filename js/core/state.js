@@ -1,8 +1,6 @@
 import { logger } from "./logger.js";
 import { defaultEdits } from "./edits.js";
 
-const MAX_ACTIVITY = 20;
-
 // The single source of truth. The UI is drawn from this object.
 const state = {
   tool: "editor", // editor | compressor | meme | logo | catalog | ai
@@ -58,7 +56,6 @@ const state = {
   saveStatus: { text: "", failed: false }, // shown under Recents
   loading: false,
   error: "", // message shown above the editor canvas
-  activity: [], // newest first: { time: Date, message: string }
 };
 
 const listeners = [];
@@ -74,8 +71,7 @@ export function setState(patch) {
   for (const listener of listeners) listener(state);
 }
 
-// Writes to the console (via the logger) and to the Activity Log panel.
+// Logs a user action to the browser console (via the logger).
 export function logActivity(message) {
   logger.info(message);
-  setState({ activity: [{ time: new Date(), message }, ...state.activity].slice(0, MAX_ACTIVITY) });
 }

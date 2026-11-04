@@ -1,7 +1,6 @@
-// Left console: tool buttons, contextual controls and the activity log.
+// Left console: tool buttons, contextual controls and recents.
 const toolButtons = document.querySelectorAll("[data-tool]");
 const controlPanels = document.querySelectorAll("[data-controls]");
-const logList = document.querySelector("#activity-log");
 const recentsList = document.querySelector("#recents-list");
 const MAX_RECENTS_SHOWN = 10;
 
@@ -87,12 +86,4 @@ export function renderSidebar(state) {
   }
   for (const panel of controlPanels) panel.hidden = panel.dataset.controls !== state.tool;
   renderRecents(state);
-
-  logList.replaceChildren(...state.activity.map(({ time, message }) => {
-    const item = document.createElement("li");
-    const stamp = document.createElement("time");
-    stamp.textContent = time.toLocaleTimeString([], { hour12: false });
-    item.append(stamp, message); // append(string) inserts text, never HTML
-    return item;
-  }));
 }
