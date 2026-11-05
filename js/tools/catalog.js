@@ -112,8 +112,8 @@ async function downloadPhoto(photo) {
 
 function describeUseError(err) {
   if (err.name === "TimeoutError") return "The download took too long. Try again.";
-  if (err instanceof TypeError) return "Could not download the photo. The network, a browser security rule (CORS or the Content Security Policy) or Picsum is blocking it.";
-  return `Could not use this photo: ${err.message}.`;
+  if (err instanceof TypeError) return "Could not download the photo. Check your connection and try again.";
+  return "Could not use this photo. Try again or choose another one."; // the details are logged by useImage
 }
 
 async function useImage(photo) {

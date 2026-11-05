@@ -1,5 +1,6 @@
 import { logger } from "./logger.js";
 import { decodeImage } from "./image.js";
+import { setState } from "./state.js";
 
 // Small helpers shared by every tool that exports, downloads or shares a file.
 
@@ -69,7 +70,14 @@ export async function shareToFacebook(makeFile, show) {
   show(UPLOADING);
   let message = OPENED;
   try {
-    const url = await uploadCopy(await shareCopy(await makeFile()));
+    const file = await makeFile();
+    if (!file) { // the tool could not make the file and already showed its own message
+      popup.close();
+      sharing = false;
+      setState({}); // draw again, so the Share buttons are enabled
+      return;
+    }
+    const url = await uploadCopy(await shareCopy(file));
     popup.opener = null; // Facebook's page must not reach back into PixelKit
     popup.location.href = facebookShareUrl(url);
   } catch (err) {
@@ -85,6 +93,7 @@ export async function shareToFacebook(makeFile, show) {
 export async function shareWithApp(makeFile, show) {
   try {
     const file = await makeFile();
+    if (!file) return; // the tool already showed its own message
     await navigator.share({ files: [file] });
     logger.info("shared with an app", { type: file.type, bytes: file.size });
   } catch (err) {

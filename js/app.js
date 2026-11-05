@@ -33,6 +33,11 @@ function render(state) {
   renderLogo(state); // after renderEditor, because both decide whether the shared Export button is enabled
   shareFacebook.disabled = exportButton.disabled || isSharing(); // the strip's Share buttons follow Export exactly
   shareApp.disabled = exportButton.disabled;
+  const usesStrip = ["editor", "meme", "logo"].includes(state.tool); // the only tools that ever enable Export (editor.js, logo.js)
+  exportButton.hidden = !usesStrip;
+  shareFacebook.hidden = !usesStrip;
+  shareApp.hidden = !usesStrip || !canShareFiles;
+  undoButton.hidden = state.tool !== "editor"; // see canUndo
   for (const stage of stages) stage.hidden = stage.dataset.stage !== state.tool;
   projectName.disabled = !state.image;
   undoButton.disabled = !canUndo(state);
@@ -44,11 +49,9 @@ subscribe(render);
 
 initSidebar((tool, name) => {
   if (tool === getState().tool) return;
-  setState({ tool });
+  setState({ tool, error: "" }); // the shared message belongs to the tool that showed it
   logActivity(`Switched to ${name}`);
 }, resumeProject, deleteProject);
-
-shareApp.hidden = !canShareFiles;
 
 undoButton.addEventListener("click", () => {
   undo();

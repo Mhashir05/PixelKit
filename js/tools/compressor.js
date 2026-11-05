@@ -71,7 +71,7 @@ async function runCompression(image, type, quality) {
     if (!blob) throw new Error("toBlob returned null");
     if (blob.type !== type) {
       logger.error("export format not supported", { wanted: type, got: blob.type });
-      return { result: null, error: `${label} export is not supported by this browser (it produced ${blob.type || "an unknown format"}). Choose another format.` };
+      return { result: null, error: `${label} export is not supported by this browser. Choose another format.` };
     }
     logger.info("compressed", {
       format: label,
@@ -175,7 +175,7 @@ export function renderCompressor(state) {
   $("c-quality").disabled = !hasImage || isPng || !c.formats.length;
   if (document.activeElement !== $("c-quality")) { // while dragging, the slider shows its own newer value
     $("c-quality").value = c.quality;
-    $("out-quality").textContent = isPng ? "n/a" : String(c.quality);
+    $("out-quality").textContent = isPng ? "Not used" : String(c.quality);
   }
   for (const button of formatButtons) {
     const supported = c.formats.includes(button.dataset.format);
