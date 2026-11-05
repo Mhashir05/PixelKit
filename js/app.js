@@ -10,10 +10,14 @@ import { initCatalog, renderCatalog } from "./tools/catalog.js";
 import { initLogo, renderLogo } from "./tools/logo.js";
 import { initAi, renderAi } from "./tools/ai.js";
 import { initProjects, resumeProject, renameProject, deleteProject } from "./core/projects.js";
+import { isSharing, canShareFiles } from "./core/export.js";
 
 const stages = document.querySelectorAll("[data-stage]");
 const projectName = document.querySelector("#project-name");
 const undoButton = document.querySelector("#undo");
+const exportButton = document.querySelector("#export");
+const shareFacebook = document.querySelector("#share-facebook");
+const shareApp = document.querySelector("#share-app");
 
 // Undo only works for the Editor, and only when there is a step to go back to.
 const canUndo = (state) => state.tool === "editor" && state.undoSteps.length > 0;
@@ -27,6 +31,8 @@ function render(state) {
   renderCatalog(state);
   renderAi(state);
   renderLogo(state); // after renderEditor, because both decide whether the shared Export button is enabled
+  shareFacebook.disabled = exportButton.disabled || isSharing(); // the strip's Share buttons follow Export exactly
+  shareApp.disabled = exportButton.disabled;
   for (const stage of stages) stage.hidden = stage.dataset.stage !== state.tool;
   projectName.disabled = !state.image;
   undoButton.disabled = !canUndo(state);
@@ -41,6 +47,8 @@ initSidebar((tool, name) => {
   setState({ tool });
   logActivity(`Switched to ${name}`);
 }, resumeProject, deleteProject);
+
+shareApp.hidden = !canShareFiles;
 
 undoButton.addEventListener("click", () => {
   undo();

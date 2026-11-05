@@ -1,6 +1,98 @@
 import { logger } from "./logger.js";
+import { decodeImage } from "./image.js";
 
-// Small helpers shared by every tool that exports or downloads a file.
+// Small helpers shared by every tool that exports, downloads or shares a file.
+
+const SHARE_URL = "https://pixelkit-ai.hashir-dev.workers.dev/share"; // our Cloudflare Worker (see worker/)
+const SHARE_MAX_SIDE = 1600; // longest side of the uploaded copy
+const SHARE_MIN_SIDE = 200; // the Worker needs at least 200 x 200; smaller images are padded, not enlarged
+const SHARE_MAX_BYTES = 1.4 * 1024 * 1024; // the Worker accepts up to 1.5 MB
+const SHARE_QUALITIES = [0.85, 0.7, 0.55]; // JPEG qualities tried in order until the copy is small enough
+const SHARE_TIMEOUT = 30000;
+const TOO_LARGE = "This image is too large to share.";
+const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
+const UPLOADING = "Uploading a copy of this image so Facebook can show it. The link works for 7 days.";
+const OPENED = "Facebook opened in a new tab. Nothing is posted until you click Post there.";
+let sharing = false; // one upload at a time
+
+export const isSharing = () => sharing;
+export const isShareNotice = (message) => message === UPLOADING || message === OPENED; // shown in a neutral style, not as an error
+// "Share with an app" is only shown where the browser can share image files.
+export const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
+
+// The one place that decides how Facebook is opened. sharer.php is not documented by Facebook and may change.
+export function facebookShareUrl(url) {
+  return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+}
+
+// A JPEG copy for the public link: at most SHARE_MAX_SIDE, white behind transparent parts, at most SHARE_MAX_BYTES.
+async function shareCopy(file) {
+  const element = await decodeImage(file);
+  const scale = Math.min(1, SHARE_MAX_SIDE / Math.max(element.naturalWidth, element.naturalHeight));
+  const width = Math.round(element.naturalWidth * scale);
+  const height = Math.round(element.naturalHeight * scale);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(width, SHARE_MIN_SIDE);
+  canvas.height = Math.max(height, SHARE_MIN_SIDE);
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#fff"; // JPG has no transparency; without this, transparent areas (and the padding) turn black
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(element, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+  for (const quality of SHARE_QUALITIES) {
+    const blob = await canvasToBlob(canvas, "image/jpeg", quality);
+    if (blob && blob.size <= SHARE_MAX_BYTES) return { blob, width: canvas.width, height: canvas.height };
+  }
+  throw new Error(TOO_LARGE);
+}
+
+// Uploads the copy and returns the address of its public share page.
+async function uploadCopy(copy) {
+  const body = new FormData();
+  body.append("image", copy.blob, "share.jpg");
+  body.append("width", String(copy.width));
+  body.append("height", String(copy.height));
+  const response = await fetch(SHARE_URL, { method: "POST", body, signal: AbortSignal.timeout(SHARE_TIMEOUT) });
+  if (response.status === 429) throw new Error(LIMIT_REACHED);
+  if (!response.ok) throw new Error(`share upload failed with ${response.status}`);
+  const { url } = await response.json();
+  if (typeof url !== "string" || new URL(url).origin !== new URL(SHARE_URL).origin) throw new Error("share upload returned a bad url");
+  logger.info("share copy uploaded", { bytes: copy.blob.size, width: copy.width, height: copy.height }); // never the link itself
+  return url;
+}
+
+// makeFile returns the file the tool would export; show puts a message in the tool's own message area.
+export async function shareToFacebook(makeFile, show) {
+  if (sharing) return; // a double click starts only one upload
+  const popup = window.open("", "_blank"); // opened inside the click, so pop-up blockers allow it
+  if (!popup) return show("Allow pop-ups for this site and try again.");
+  sharing = true;
+  show(UPLOADING);
+  let message = OPENED;
+  try {
+    const url = await uploadCopy(await shareCopy(await makeFile()));
+    popup.opener = null; // Facebook's page must not reach back into PixelKit
+    popup.location.href = facebookShareUrl(url);
+  } catch (err) {
+    popup.close();
+    logger.error("share to facebook failed", err);
+    message = [TOO_LARGE, LIMIT_REACHED].includes(err.message) ? err.message : "Could not upload the image. Try again later.";
+  }
+  sharing = false; // before show(), so the render that follows enables the buttons again
+  show(message);
+}
+
+// Shares the exact exported file through the device's share sheet. Nothing is uploaded to PixelKit.
+export async function shareWithApp(makeFile, show) {
+  try {
+    const file = await makeFile();
+    await navigator.share({ files: [file] });
+    logger.info("shared with an app", { type: file.type, bytes: file.size });
+  } catch (err) {
+    if (err.name === "AbortError") return; // the user closed the share sheet
+    logger.error("share with an app failed", err);
+    show("Sharing is not available on this device.");
+  }
+}
 
 export function canvasToBlob(canvas, type, quality) {
   return new Promise((resolve) => canvas.toBlob(resolve, type, quality));

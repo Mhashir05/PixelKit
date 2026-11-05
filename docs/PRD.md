@@ -6,7 +6,7 @@ People often need a quick image edit (filter, compress, caption, simple logo) wi
 
 ## Product
 
-A static, guest-only browser toolkit. Your images stay on the device and are never uploaded. Catalog photos are downloaded from Picsum, and AI Studio sends the prompt text to a Cloudflare Worker and receives a generated image. The one exception: for an AI edit, a downscaled copy (at most 512x512) of the image AI Studio generated is sent to the Worker and Workers AI.
+A static, guest-only browser toolkit. Your images stay on the device, with these exceptions: Catalog photos are downloaded from Picsum; AI Studio sends the prompt text to a Cloudflare Worker and receives a generated image, and for an AI edit a downscaled copy (at most 512x512) of the generated image is sent to the Worker and Workers AI; "Share on Facebook" uploads a JPEG copy (at most 1600px) that becomes a public link for 7 days (anyone with the link can open it).
 
 ## Goals
 
@@ -16,7 +16,8 @@ A static, guest-only browser toolkit. Your images stay on the device and are nev
 
 ## Non-goals
 
-- No accounts, sync or sharing. The only server-side part is the small AI Worker; there is no user content store and no login. The Worker's rate limiter keeps only a hashed IP and a daily count.
+- No accounts, login or sync. The only server-side part is the small Worker. It stores nothing from the user except share copies, which the user creates with "Share on Facebook" and which are deleted after 7 days; its limiters keep only a hashed IP and a daily count.
+- No posting through the Facebook API, no other social networks, no history of shared links and no early delete of a shared image.
 - No frameworks, build tools or external JS libraries.
 - Not a full image editor (no layers in the Editor, no RAW files, no batch processing).
 
@@ -37,6 +38,7 @@ A static, guest-only browser toolkit. Your images stay on the device and are nev
 | AI Studio | Prompt of up to 300 characters, one generated image at the model's default size (1024x1024 in tests), one prompt box that generates when there is no image and edits once one exists (edits in words, up to 300 characters together, always start from the generated original), Reset to original and New image, download or open in the Editor, Compressor or Meme, a per-IP daily limit with a friendly message when it is reached (implemented but currently switched off: `LIMIT_ENABLED = false` in `worker/src/index.js`; flip it and redeploy to re-enable); needs a network | Built |
 | Projects | Autosave, recents (newest 10), resume, rename (max 40 characters), delete with confirmation | Built |
 | Editor | Undo (all Editor edits and Reset; 50 steps), by button or Ctrl/Cmd+Z | Built |
+| Sharing | "Share on Facebook" (uploads a copy, opens Facebook's share page) and "Share with an app" (the device's share sheet, exact exported file) in Editor, Compressor, Meme, Logo Maker and AI Studio | Built |
 
 ## Constraints
 
@@ -71,3 +73,8 @@ A static, guest-only browser toolkit. Your images stay on the device and are nev
 - Resize only shrinks, and only the exported file changes size; the preview keeps its size.
 - The text overlay is one line in a fixed font (Arial bold). It is placed with sliders, not by dragging, and it is not wrapped.
 - No testing on real devices or in real Safari yet. Firefox and WebKit are covered only by smoke tests through Playwright.
+- A Share on Facebook link and its preview image stop working after 7 days.
+- Share on Facebook opens `facebook.com/sharer/sharer.php`, which Facebook does not document and may change.
+- Share on Facebook needs pop-ups to be allowed for the site.
+- Each IP may make 20 share uploads per UTC day, and the free storage for shared images is shared by all visitors.
+- Sharing was not tested on real phones or with a real Facebook post.

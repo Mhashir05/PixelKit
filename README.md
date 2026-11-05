@@ -13,7 +13,9 @@ Live: https://pixelkit-wheat.vercel.app
 - **Catalog**: free photos from Picsum with infinite scroll; "Use this image" opens one in the Editor.
 - **AI Studio**: describe an image (up to 300 characters) and a Cloudflare Worker generates it with Workers AI (FLUX.1 schnell, route `/generate`). AI Studio has one prompt box: once an image exists, the same box takes a change in words ("make the shirt red") and the Worker edits the image with FLUX.2 klein 4B (route `/edit`), always starting from the original. Reset to original undoes the edits, and New image starts over. Both routes share one daily limit of 8 images per IP, which is implemented but currently switched off (`LIMIT_ENABLED = false` in `worker/src/index.js`); flip that constant and redeploy to re-enable it. Download the result or open it in the Editor, Compressor or Meme.
 
-There is no login and no backend for your photos. Image processing runs in the browser, and photos you upload never leave your device. The exceptions are Catalog photos, which are downloaded from Picsum, and AI Studio, which sends your prompt text to the Worker. For an AI edit, a downscaled copy (at most 512x512) of the image AI Studio generated is also sent to the Worker and Workers AI; your own photos are never sent. Your work is saved automatically in the browser. Recents lists your newest 10 projects, and you can resume, rename or delete them.
+- **Sharing**: every tool that exports an image (Editor, Compressor, Meme, Logo Maker, AI Studio) has **Share on Facebook** and, where the browser supports sharing files, **Share with an app** (the device's own share sheet, with the exact exported file).
+
+There is no login. Image processing runs in the browser, and your images stay on your device, with these exceptions. Catalog photos are downloaded from Picsum. AI Studio sends your prompt text to the Worker, and for an AI edit a downscaled copy (at most 512x512) of the image AI Studio generated is also sent to the Worker and Workers AI. **Share on Facebook** uploads a JPEG copy of the image (at most 1600 pixels on the longest side) to the Worker, which stores it for 7 days under a public link: anyone who has the link can open it during that time. Facebook keeps its own copy of the preview when you post. **Share with an app** uploads nothing to PixelKit. Your work is saved automatically in the browser. Recents lists your newest 10 projects, and you can resume, rename or delete them.
 
 ## Tech stack
 
@@ -66,6 +68,11 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/PRD.md](docs
 - An AI edit uses roughly twice as much free quota as a generation (an estimate from the Workers AI pricing page), and the edited background is similar but redrawn, not pixel-identical.
 - Autosave waits 1 second after the last change. If a new image loads less than 1 second after an edit, that last edit can be lost; the project and its image survive. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the proposed fix.
 - No testing on real devices or in real Safari yet.
+- A Share on Facebook link and its preview image stop working after 7 days.
+- Share on Facebook opens `facebook.com/sharer/sharer.php`, which Facebook does not document and may change.
+- Share on Facebook needs pop-ups to be allowed for the site.
+- Each IP may make 20 share uploads per UTC day, and the free storage for shared images is shared by all visitors.
+- Sharing was not tested on real phones or with a real Facebook post.
 - Meme settings and logos are not saved with a project.
 - Compress and export are slow on very large photos (4000px and above).
 - Delete uses the browser's plain confirm dialog.

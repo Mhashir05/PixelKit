@@ -7,7 +7,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 248px 1fr;
-  grid-template-rows: 44px 1fr;
+  grid-template-rows: minmax(44px, auto) 1fr; /* the strip grows when its buttons wrap */
   grid-template-areas: "console strip" "console canvas";
 }
 
@@ -65,7 +65,7 @@
 .btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
 
 /* Top strip */
-.strip { grid-area: strip; display: flex; align-items: center; gap: 8px; padding: 0 16px; border-bottom: 1px solid var(--border); }
+.strip { grid-area: strip; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 2px 16px; border-bottom: 1px solid var(--border); }
 .project-name { flex: 0 1 320px; min-width: 0; height: 28px; margin-right: auto; padding: 0 8px; border: 1px solid transparent; border-radius: var(--radius); background: transparent; color: var(--text); font: 500 14px var(--font-ui); text-overflow: ellipsis; transition: border-color var(--t-fast); }
 .project-name:hover:not(:disabled) { border-color: var(--border); }
 .project-name:disabled { opacity: 1; -webkit-text-fill-color: var(--text); }
@@ -78,6 +78,7 @@
 body.is-dragging .dropzone { border-color: var(--accent); }
 body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4px; }
 .error { margin: 0; padding: 8px 12px; border: 1px solid var(--danger); border-radius: var(--radius); color: var(--danger); font-size: 13px; }
+.error--notice { border-color: var(--border); color: var(--muted); } /* share progress shown in an error box, but not an error */
 .preview { display: flex; flex: 1 1 0; flex-direction: column; gap: 8px; min-height: 0; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 #logo-canvas { touch-action: none; } /* dragging on the canvas must not scroll the page */
@@ -108,7 +109,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .recent-delete { width: 40px; height: 40px; }
   .tool { min-height: 40px; }
   .fields summary { padding: 11px 0; } /* keeps the open/close arrow */
-  .console .btn, .strip .btn, #ai-generate, #ai-download, #ai-reset, #ai-new, [data-ai-open], .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
+  .console .btn, .strip .btn, #ai-generate, #ai-download, #ai-reset, #ai-new, [data-ai-open], #share-facebook, #share-app, #c-share-facebook, #c-share-app, #ai-share-facebook, #ai-share-app, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
 }
 
 /* Narrow screens: tools become a scrolling row, other panels move below the canvas. */
@@ -117,7 +118,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .workspace {
     height: auto; min-height: 100vh;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto 44px auto minmax(320px, 55vh) auto auto;
+    grid-template-rows: auto minmax(44px, auto) auto minmax(320px, 55vh) auto auto;
     grid-template-areas: "brand" "strip" "tools" "canvas" "controls" "recents";
   }
   .console { display: contents; }

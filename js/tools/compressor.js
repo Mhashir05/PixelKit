@@ -1,6 +1,6 @@
 import { logger } from "../core/logger.js";
 import { getState, setState, subscribe, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareWithApp, isSharing, canShareFiles } from "../core/export.js";
 
 const FORMATS = {
   "image/jpeg": { label: "JPG", extension: "jpg" },
@@ -204,18 +204,27 @@ export function renderCompressor(state) {
   $("compressor-message").textContent = describeMessage(c, before);
   $("compressor-message").classList.toggle("note--error", Boolean(c.error));
   $("c-download").disabled = !c.result;
+  $("c-share-facebook").disabled = !c.result || isSharing();
+  $("c-share-app").disabled = !c.result;
 }
 
 // ---------- Actions ----------
 
-function downloadResult() {
+// The compressed result as the file Download saves. Used by Download and both Share buttons.
+function resultFile() {
   const { image, compressor } = getState();
   const { result } = compressor;
-  if (!result) return;
-  const filename = `${cleanFileName(image.name)}-compressed.${FORMATS[result.type].extension}`;
-  downloadBlob(result.blob, filename);
-  logActivity(`Downloaded ${filename} (${formatSize(result.size)})`);
+  return new File([result.blob], `${cleanFileName(image.name)}-compressed.${FORMATS[result.type].extension}`, { type: result.type });
 }
+
+function downloadResult() {
+  if (!getState().compressor.result) return;
+  const file = resultFile();
+  downloadBlob(file, file.name);
+  logActivity(`Downloaded ${file.name} (${formatSize(file.size)})`);
+}
+
+const showError = (error) => setState({ error });
 
 export function initCompressor() {
   // Keep this handler tiny: update the readout and start a timer. The state update (which redraws
@@ -236,6 +245,9 @@ export function initCompressor() {
     });
   }
   $("c-download").addEventListener("click", downloadResult);
+  $("c-share-facebook").addEventListener("click", () => shareToFacebook(resultFile, showError));
+  $("c-share-app").addEventListener("click", () => shareWithApp(resultFile, showError));
+  $("c-share-app").hidden = !canShareFiles;
 
   subscribe(onStateChange);
   detectFormats().catch((err) => {

@@ -11,6 +11,18 @@ const EDIT_MODEL = "@cf/black-forest-labs/flux-2-klein-4b"; // takes a reference
 const EDIT_SIZE = "1024"; // output width and height, as tested in the spike
 const MAX_EDIT_IMAGE = 256 * 1024; // bytes; the browser sends a JPEG of at most 512x512, usually under 150 KB
 const EDIT_INSTRUCTION = "Keep the background and everything else in the image exactly the same. Only make these changes: ";
+const SHARE_ENABLED = true; // kill switch: false answers exactly as before the share feature (ShareStore and its migration stay)
+const SHARE_TTL_DAYS = 7; // a share link and its image live this long
+const SHARE_TTL_MS = SHARE_TTL_DAYS * 24 * 60 * 60 * 1000;
+const MAX_SHARE_IMAGE = 1536 * 1024; // bytes; safely below the 2 MB Durable Object value limit
+const MIN_SIDE = 200; // allowed width and height, only used for the og:image tags
+const MAX_SIDE = 2000;
+const SHARE_DAILY_LIMIT = 20; // uploads per IP per UTC day
+const SHARE_LIMIT_ENABLED = true;
+const SHARE_ROUTE = /^\/([si])\/([0-9a-f]{32})$/; // "s" is the page, "i" the image
+const SITE_URL = "https://pixelkit-wheat.vercel.app";
+const PAGE_STYLE = "img{max-width:100%;height:auto}";
+const PAGE_CSP = "default-src 'none'; img-src 'self'; style-src 'sha256-f2ZvFbDSqbquk/eElmCtkXSy/FNVHA3q/k/tpBYPBx0='"; // the hash of PAGE_STYLE
 
 const IMAGE_SIGNATURES = [
   { type: "image/jpeg", bytes: [0xff, 0xd8, 0xff] },
@@ -181,15 +193,151 @@ async function createImage(env, model, inputs, origin) {
   return new Response(bytes, { headers: { ...corsHeaders(origin), "Content-Type": type, "Cache-Control": "no-store" } });
 }
 
+// ---------- Shared images ----------
+
+// Stores shared images and counts uploads per IP hash per UTC day. One instance serves everything.
+// Each method is synchronous, so the limit check and the writes can never interleave.
+export class ShareStore extends DurableObject {
+  constructor(ctx, env) {
+    super(ctx, env);
+    this.sql = ctx.storage.sql;
+    this.sql.exec("CREATE TABLE IF NOT EXISTS shares (id TEXT PRIMARY KEY, image BLOB NOT NULL, width INTEGER NOT NULL, height INTEGER NOT NULL, created INTEGER NOT NULL)");
+    this.sql.exec("CREATE TABLE IF NOT EXISTS uploads (day TEXT NOT NULL, hash TEXT NOT NULL, count INTEGER NOT NULL, PRIMARY KEY (day, hash))");
+  }
+
+  // Counts the upload and saves the image together: if the save fails, the count is rolled back.
+  // Returns false when the limit is reached. An empty hash means the limit is switched off.
+  save(share, hash, day) {
+    return this.ctx.storage.transactionSync(() => {
+      this.sql.exec("DELETE FROM shares WHERE created <= ?", share.created - SHARE_TTL_MS);
+      this.sql.exec("DELETE FROM uploads WHERE day != ?", day); // rows of earlier days are not needed
+      if (hash) {
+        const row = this.sql.exec("SELECT count FROM uploads WHERE day = ? AND hash = ?", day, hash).toArray()[0];
+        if (row && row.count >= SHARE_DAILY_LIMIT) return false;
+        this.sql.exec("INSERT INTO uploads (day, hash, count) VALUES (?, ?, 1) ON CONFLICT (day, hash) DO UPDATE SET count = count + 1", day, hash);
+      }
+      this.sql.exec("INSERT INTO shares (id, image, width, height, created) VALUES (?, ?, ?, ?, ?)", share.id, share.image, share.width, share.height, share.created);
+      return true;
+    });
+  }
+
+  // Returns the row, or null when it is missing or expired. Expired rows are deleted first.
+  read(id, now, withImage) {
+    this.sql.exec("DELETE FROM shares WHERE created <= ?", now - SHARE_TTL_MS);
+    const query = withImage ? "SELECT image, width, height, created FROM shares WHERE id = ?" : "SELECT width, height, created FROM shares WHERE id = ?";
+    return this.sql.exec(query, id).toArray()[0] || null;
+  }
+}
+
+// A whole number from MIN_SIDE to MAX_SIDE, or 0.
+function readSide(value) {
+  const side = typeof value === "string" && /^\d{1,4}$/.test(value) ? Number(value) : 0;
+  return side >= MIN_SIDE && side <= MAX_SIDE ? side : 0;
+}
+
+// Returns { image, width, height } from the multipart form, or null if a field is missing, too large or not a JPEG.
+async function readShare(request) {
+  if (Number(request.headers.get("Content-Length")) > MAX_SHARE_IMAGE + MAX_BODY) return null; // do not parse a huge body
+  try {
+    const form = await request.formData();
+    const image = form.get("image");
+    const width = readSide(form.get("width"));
+    const height = readSide(form.get("height"));
+    if (!(image instanceof File) || image.size > MAX_SHARE_IMAGE || !width || !height) return null;
+    const bytes = await image.arrayBuffer();
+    return detectType(new Uint8Array(bytes)) === "image/jpeg" ? { image: bytes, width, height } : null;
+  } catch {
+    return null;
+  }
+}
+
+// 128 random bits as 32 hex characters: the link is unlisted and cannot be guessed.
+function randomId() {
+  return Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+// The hashed IP for the daily limit, or "" when the limit is off. Throws without an IP, so the upload fails closed.
+async function uploaderHash(request) {
+  if (!SHARE_LIMIT_ENABLED) return "";
+  const ip = request.headers.get("CF-Connecting-IP");
+  if (!ip) throw new Error("CF-Connecting-IP is missing");
+  return hashIp(ip);
+}
+
+async function share(request, env, origin) {
+  const input = await readShare(request);
+  if (!input) return fail(400, `Send a form with image (JPEG, up to ${MAX_SHARE_IMAGE / 1024} KB), width and height (whole numbers from ${MIN_SIDE} to ${MAX_SIDE}).`, origin);
+  const id = randomId();
+  const now = Date.now();
+  let saved;
+  try {
+    const hash = await uploaderHash(request);
+    saved = await env.SHARES.getByName("shares").save({ id, ...input, created: now }, hash, new Date(now).toISOString().slice(0, 10));
+  } catch (err) {
+    // Deliberate: unlike the AI limiter, uploads fail closed.
+    console.error("share store failed:", String(err));
+    return fail(502, "Could not save the image. Try again later.", origin);
+  }
+  if (!saved) return fail(429, "Daily share limit reached. Try again tomorrow.", origin);
+  return Response.json({ id, url: `${new URL(request.url).origin}/s/${id}` }, { headers: corsHeaders(origin) });
+}
+
+// Only the hex id and validated integers go into the page, never text from a user.
+function sharePage(base, id, width, height) {
+  const image = `${base}/i/${id}`;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Made with PixelKit</title>
+<meta property="og:title" content="Made with PixelKit">
+<meta property="og:description" content="An image made with PixelKit, a free photo toolkit that runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${base}/s/${id}">
+<meta property="og:image" content="${image}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="${width}">
+<meta property="og:image:height" content="${height}">
+<style>${PAGE_STYLE}</style>
+</head>
+<body>
+<img src="${image}" width="${width}" height="${height}" alt="Image made with PixelKit">
+<p><a href="${SITE_URL}">Made with PixelKit</a></p>
+</body>
+</html>
+`;
+}
+
+// Public GET routes: the share page ("s") and its image ("i"). No Origin check, because crawlers send none.
+async function showShare(request, env, kind, id) {
+  const now = Date.now();
+  let row;
+  try {
+    row = await env.SHARES.getByName("shares").read(id, now, kind === "i");
+  } catch (err) {
+    console.error("share store failed:", String(err));
+    return fail(502, "Could not load the image. Try again later.");
+  }
+  if (!row) return fail(404, "Not found.");
+  const cache = `public, max-age=${Math.floor((row.created + SHARE_TTL_MS - now) / 1000)}`; // never past the expiry
+  if (kind === "i") return new Response(row.image, { headers: { "Content-Type": "image/jpeg", "X-Content-Type-Options": "nosniff", "Cache-Control": cache } });
+  const page = sharePage(new URL(request.url).origin, id, row.width, row.height);
+  return new Response(page, { headers: { "Content-Type": "text/html; charset=utf-8", "Content-Security-Policy": PAGE_CSP, "Cache-Control": cache } });
+}
+
 export default {
   async fetch(request, env) {
+    const path = new URL(request.url).pathname;
+    const shared = SHARE_ENABLED && request.method === "GET" && path.match(SHARE_ROUTE);
+    if (shared) return showShare(request, env, shared[1], shared[2]);
     const origin = request.headers.get("Origin");
     if (!ALLOWED_ORIGINS.includes(origin)) return fail(403, "Origin not allowed.");
-    const path = new URL(request.url).pathname;
-    if (path !== "/generate" && path !== "/edit") return fail(404, "Not found.", origin);
+    if (path !== "/generate" && path !== "/edit" && !(SHARE_ENABLED && path === "/share")) return fail(404, "Not found.", origin);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(origin) });
     if (request.method !== "POST") return fail(405, "Use POST.", origin);
     if (path === "/edit") return edit(request, env, origin);
+    if (path === "/share") return share(request, env, origin);
     return generate(request, env, origin);
   },
 };

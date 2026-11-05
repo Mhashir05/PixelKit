@@ -1,6 +1,6 @@
 import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareWithApp } from "../core/export.js";
 import { FONTS, outlineColor } from "../core/fonts.js";
 
 // Common sizes: 1080 px wide is what Instagram and WhatsApp display; the heights give the usual ratios.
@@ -179,29 +179,32 @@ export function renderMeme(state) {
 
 // ---------- Actions ----------
 
-// Draws at the full preset size, from the original image (not the small preview).
-async function exportMeme() {
+// Draws at the full preset size, from the original image (not the small preview). Used by Export and both Share buttons.
+async function memeFile() {
   const { image, meme } = getState();
-  if (!image) return;
   const preset = PRESETS[meme.preset];
   const type = meme.exportType;
+  const out = document.createElement("canvas");
+  out.width = preset.width;
+  out.height = preset.height;
+  const ctx = out.getContext("2d");
+  if (type === "image/jpeg") {
+    ctx.fillStyle = "#fff"; // JPG has no transparency; without this, transparent areas turn black
+    ctx.fillRect(0, 0, out.width, out.height);
+  }
+  drawMeme(ctx, out.width, out.height, image.element, meme);
+  const blob = await canvasToBlob(out, type, 0.92);
+  if (!blob || blob.type !== type) throw new Error(`export gave ${blob ? blob.type : "null"}`);
+  return new File([blob], `${cleanFileName(image.name)}-meme-${preset.width}x${preset.height}.${EXPORT_TYPES[type].extension}`, { type });
+}
+
+async function exportMeme() {
+  if (!getState().image) return;
   update({ error: "" });
   try {
-    const out = document.createElement("canvas");
-    out.width = preset.width;
-    out.height = preset.height;
-    const ctx = out.getContext("2d");
-    if (type === "image/jpeg") {
-      ctx.fillStyle = "#fff"; // JPG has no transparency; without this, transparent areas turn black
-      ctx.fillRect(0, 0, out.width, out.height);
-    }
-    drawMeme(ctx, out.width, out.height, image.element, meme);
-    const blob = await canvasToBlob(out, type, 0.92);
-    if (!blob || blob.type !== type) throw new Error(`export gave ${blob ? blob.type : "null"}`);
-
-    const filename = `${cleanFileName(image.name)}-meme-${preset.width}x${preset.height}.${EXPORT_TYPES[type].extension}`;
-    downloadBlob(blob, filename);
-    logActivity(`Exported ${filename} (${Math.round(blob.size / 1024)} KB)`);
+    const file = await memeFile();
+    downloadBlob(file, file.name);
+    logActivity(`Exported ${file.name} (${Math.round(file.size / 1024)} KB)`);
   } catch (err) {
     logger.error("meme export failed", err);
     update({ error: "Export failed. Try the other format or a smaller preset." });
@@ -255,5 +258,12 @@ export function initMeme() {
   }
   $("export").addEventListener("click", () => {
     if (getState().tool === "meme") setTimeout(exportMeme, 0); // keep the heavy work out of the click handler
+  });
+  const showError = (error) => setState({ error });
+  $("share-facebook").addEventListener("click", () => {
+    if (getState().tool === "meme") shareToFacebook(memeFile, showError);
+  });
+  $("share-app").addEventListener("click", () => {
+    if (getState().tool === "meme") shareWithApp(memeFile, showError);
   });
 }

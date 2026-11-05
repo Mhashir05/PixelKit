@@ -1,6 +1,6 @@
 import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob } from "../core/export.js";
+import { canvasToBlob, downloadBlob, shareToFacebook, shareWithApp, isShareNotice } from "../core/export.js";
 import { FONTS } from "../core/fonts.js";
 
 const CANVAS_SIZE = 1000; // the logo is always 1000 x 1000 px
@@ -194,7 +194,7 @@ export function renderLogo(state) {
 
   $("logo-meta").textContent = `${CANVAS_SIZE} × ${CANVAS_SIZE} px · PNG · ${logo.backgroundOn ? "solid background" : "transparent background (the grey squares are only a preview)"}`;
   $("logo-message").textContent = logo.message;
-  $("logo-message").classList.toggle("note--error", Boolean(logo.message));
+  $("logo-message").classList.toggle("note--error", Boolean(logo.message) && !isShareNotice(logo.message));
 
   if (state.tool === "logo") {
     $("export").disabled = logo.elements.length === 0; // the shared Export button
@@ -341,22 +341,25 @@ function moveLayer(change) {
   logger.info("logo layer move", { id: logo.selectedId, from, to });
 }
 
-// Draws again on a fresh canvas without the preview extras, at the full size.
+// Draws again on a fresh canvas without the preview extras, at the full size. Used by Export and both Share buttons.
+async function logoFile() {
+  const out = document.createElement("canvas");
+  out.width = CANVAS_SIZE;
+  out.height = CANVAS_SIZE;
+  drawScene(out.getContext("2d"), getState().logo, false);
+  const blob = await canvasToBlob(out, "image/png");
+  if (!blob || blob.type !== "image/png") throw new Error(`export gave ${blob ? blob.type : "null"}`);
+  return new File([blob], `logo-${CANVAS_SIZE}x${CANVAS_SIZE}.png`, { type: "image/png" });
+}
+
 async function exportLogo() {
   const { logo } = getState();
   if (!logo.elements.length) return;
   update({ message: "" });
   try {
-    const out = document.createElement("canvas");
-    out.width = CANVAS_SIZE;
-    out.height = CANVAS_SIZE;
-    drawScene(out.getContext("2d"), logo, false);
-    const blob = await canvasToBlob(out, "image/png");
-    if (!blob || blob.type !== "image/png") throw new Error(`export gave ${blob ? blob.type : "null"}`);
-
-    const filename = `logo-${CANVAS_SIZE}x${CANVAS_SIZE}.png`;
-    downloadBlob(blob, filename);
-    logActivity(`Exported ${filename} (${Math.round(blob.size / 1024)} KB, ${logo.backgroundOn ? "solid" : "transparent"} background)`);
+    const file = await logoFile();
+    downloadBlob(file, file.name);
+    logActivity(`Exported ${file.name} (${Math.round(file.size / 1024)} KB, ${logo.backgroundOn ? "solid" : "transparent"} background)`);
   } catch (err) {
     logger.error("logo export failed", err);
     update({ message: "Export failed. Try again." });
@@ -404,5 +407,12 @@ export function initLogo() {
 
   $("export").addEventListener("click", () => {
     if (getState().tool === "logo") setTimeout(exportLogo, 0); // keep the heavy work out of the click handler
+  });
+  const showMessage = (message) => update({ message });
+  $("share-facebook").addEventListener("click", () => {
+    if (getState().tool === "logo") shareToFacebook(logoFile, showMessage);
+  });
+  $("share-app").addEventListener("click", () => {
+    if (getState().tool === "logo") shareWithApp(logoFile, showMessage);
   });
 }

@@ -2,7 +2,7 @@ import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
 import { MAX_TRIM, MAX_TEXT, cutText, defaultEdits, editedSize, exportSize, drawEdited } from "../core/edits.js";
 import { beginChange, endChange } from "../core/history.js";
-import { canvasToBlob, downloadBlob, cleanFileName } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareWithApp, isShareNotice } from "../core/export.js";
 import { loadImage } from "../core/image.js";
 
 const PREVIEW_MAX = 1200; // longest side of the preview canvas; export uses the full size
@@ -58,6 +58,7 @@ export function renderEditor(state) {
   for (const id of ["editor-error", "compressor-error", "meme-error"]) { // the same upload error, shown in whichever tool is open
     $(id).hidden = !state.error;
     $(id).textContent = state.error;
+    $(id).classList.toggle("error--notice", isShareNotice(state.error));
   }
   $("editor-dropzone").hidden = hasImage;
   $("editor-preview").hidden = !hasImage;
@@ -173,7 +174,8 @@ function resetEdits() {
   logActivity("Reset all edits to the original image");
 }
 
-async function exportImage() {
+// The exported file, or null (with a message) when the browser cannot make it. Used by Export and both Share buttons.
+async function exportFile() {
   const { image, edits } = getState();
   const isPng = image.type === "image/png";
   const type = isPng ? "image/png" : "image/jpeg"; // WebP sources are saved as JPG for now
@@ -193,12 +195,19 @@ async function exportImage() {
   if (!blob) {
     logger.error("export failed", { name: image.name, type });
     setState({ error: "Export failed. The image may be too large for this browser." });
-    return;
+    return null;
   }
-  const filename = `${cleanFileName(image.name)}-edited.${isPng ? "png" : "jpg"}`;
-  downloadBlob(blob, filename);
-  logActivity(`Exported ${filename} (${Math.round(blob.size / 1024)} KB)`);
+  return new File([blob], `${cleanFileName(image.name)}-edited.${isPng ? "png" : "jpg"}`, { type });
 }
+
+async function exportImage() {
+  const file = await exportFile();
+  if (!file) return;
+  downloadBlob(file, file.name);
+  logActivity(`Exported ${file.name} (${Math.round(file.size / 1024)} KB)`);
+}
+
+const showError = (error) => setState({ error });
 
 export function initEditor() {
   for (const button of chooseButtons) button.addEventListener("click", () => $("file-input").click());
@@ -234,5 +243,11 @@ export function initEditor() {
   $("reset").addEventListener("click", resetEdits);
   $("export").addEventListener("click", () => {
     if (getState().tool === "editor") exportImage();
+  });
+  $("share-facebook").addEventListener("click", () => {
+    if (getState().tool === "editor") shareToFacebook(exportFile, showError);
+  });
+  $("share-app").addEventListener("click", () => {
+    if (getState().tool === "editor") shareWithApp(exportFile, showError);
   });
 }
