@@ -133,6 +133,16 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .panel--recents { grid-area: recents; }
   .canvas { padding: 16px; }
   .dropzone h2 { font-size: 18px; }
+  /* AI Studio without an image: a one-line hint instead of a tall empty box, so Generate is on the first screen. */
+  .workspace:has([data-stage="ai"]:not([hidden]) > #ai-empty:not([hidden])) {
+    grid-template-rows: auto minmax(44px, auto) auto auto auto 1fr;
+  }
+  #ai-empty { flex: none; padding: 12px 16px; }
+  #ai-empty svg, #ai-empty h2 { display: none; }
+  #ai-empty p { margin: 0; }
+  #ai-prompt { height: 64px; }
+  [data-controls="ai"] { display: flex; flex-direction: column; }
+  [data-controls="ai"] > .note { order: 1; margin-top: 12px; }
 }
 @media (max-width: 359px) {
   .tools ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
