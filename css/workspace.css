@@ -133,7 +133,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .panel--recents { grid-area: recents; }
   .canvas { padding: 16px; }
   .dropzone h2 { font-size: 18px; }
-  /* AI Studio without an image: a one-line hint instead of a tall empty box, so Generate is on the first screen. */
+  /* AI Studio on phones: without an image, a one-line hint replaces the tall empty box. In every state the prompt box is 64px and the privacy note comes after the buttons, so Generate is on the first screen when there is no image. */
   .workspace:has([data-stage="ai"]:not([hidden]) > #ai-empty:not([hidden])) {
     grid-template-rows: auto minmax(44px, auto) auto auto auto 1fr;
   }
@@ -143,6 +143,12 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   #ai-prompt { height: 64px; }
   [data-controls="ai"] { display: flex; flex-direction: column; }
   [data-controls="ai"] > .note { order: 1; margin-top: 12px; }
+  /* AI Studio with an image: the image keeps its own shape and the actions sit below it instead of shrinking it. */
+  .workspace:has([data-stage="ai"]:not([hidden]) > #ai-result:not([hidden])) {
+    grid-template-rows: auto minmax(44px, auto) auto auto auto 1fr;
+  }
+  #ai-result { flex: none; }
+  #ai-image { flex: none; height: auto; max-height: 60vh; }
 }
 @media (max-width: 359px) {
   .tools ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
