@@ -1,6 +1,6 @@
 # Share on Facebook: research and design
 
-Status: built, with changes from this proposal: links last 7 days (not 3), Facebook is opened with `sharer.php`, the upload is a multipart form, and the copy is padded to at least 200x200. `docs/ARCHITECTURE.md` describes what was built.
+Status: built, with changes from this proposal: links last 30 days (not 3), Facebook is opened with `sharer.php`, the upload is a multipart form, and the copy is padded to at least 200x200. `docs/ARCHITECTURE.md` describes what was built.
 Date of research: 2026-11-05. Every platform fact below links to the official page it came from. Facts I could not confirm are listed at the end, not guessed.
 
 ## 1. Goal and non-goals

@@ -15,7 +15,7 @@ Live: https://pixelkit-wheat.vercel.app
 
 - **Sharing**: every tool that exports an image (Editor, Compressor, Meme, Logo Maker, AI Studio) has **Share on Facebook** and, where the browser supports sharing files, **Share with an app** (the device's own share sheet, with the exact exported file).
 
-There is no login. Image processing runs in the browser, and your images stay on your device, with these exceptions. Catalog photos are downloaded from Picsum. AI Studio sends your prompt text to the Worker, and for an AI edit a downscaled copy (at most 512x512) of the image AI Studio generated is also sent to the Worker and Workers AI. **Share on Facebook** uploads a JPEG copy of the image (at most 1600 pixels on the longest side) to the Worker, which stores it for 7 days under a public link: anyone who has the link can open it during that time. Facebook keeps its own copy of the preview when you post. **Share with an app** uploads nothing to PixelKit. Your work is saved automatically in the browser. Recents lists your newest 10 projects, and you can resume, rename or delete them.
+There is no login. Image processing runs in the browser, and your images stay on your device, with these exceptions. Catalog photos are downloaded from Picsum. AI Studio sends your prompt text to the Worker, and for an AI edit a downscaled copy (at most 512x512) of the image AI Studio generated is also sent to the Worker and Workers AI. **Share on Facebook** uploads a JPEG copy of the image (at most 1600 pixels on the longest side) to the Worker, which stores it for 30 days under a public link: anyone who has the link can open it during that time. Facebook keeps its own copy of the preview when you post. **Share with an app** uploads nothing to PixelKit. Your work is saved automatically in the browser. Recents lists your newest 10 projects, and you can resume, rename or delete them.
 
 ## Tech stack
 
@@ -68,7 +68,7 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/PRD.md](docs
 - An AI edit uses roughly twice as much free quota as a generation (an estimate from the Workers AI pricing page), and the edited background is similar but redrawn, not pixel-identical.
 - Autosave waits 1 second after the last change. If a new image loads less than 1 second after an edit, that last edit can be lost; the project and its image survive. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the proposed fix.
 - No testing on real devices or in real Safari yet.
-- A Share on Facebook link and its preview image stop working after 7 days.
+- A Share on Facebook link and its preview image stop working after 30 days.
 - Share on Facebook opens Facebook's official Share Dialog with our Meta app id (`FB_APP_ID` in `js/core/export.js`). If `FB_APP_ID` is emptied, it falls back to the older `facebook.com/sharer/sharer.php` link, which Facebook does not document and may change.
 - The Share Dialog needs a Meta app. While that app is in Development mode, only people with a role on it may be able to use the dialog (unverified until tested).
 - The Share Dialog shares a link, not an image file, so the Facebook post is a link card with our preview image.

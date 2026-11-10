@@ -6,7 +6,7 @@ People often need a quick image edit (filter, compress, caption, simple logo) wi
 
 ## Product
 
-A static, guest-only browser toolkit. Your images stay on the device, with these exceptions: Catalog photos are downloaded from Picsum; AI Studio sends the prompt text to a Cloudflare Worker and receives a generated image, and for an AI edit a downscaled copy (at most 512x512) of the generated image is sent to the Worker and Workers AI; "Share on Facebook" uploads a JPEG copy (at most 1600px) that becomes a public link for 7 days (anyone with the link can open it).
+A static, guest-only browser toolkit. Your images stay on the device, with these exceptions: Catalog photos are downloaded from Picsum; AI Studio sends the prompt text to a Cloudflare Worker and receives a generated image, and for an AI edit a downscaled copy (at most 512x512) of the generated image is sent to the Worker and Workers AI; "Share on Facebook" uploads a JPEG copy (at most 1600px) that becomes a public link for 30 days (anyone with the link can open it).
 
 ## Goals
 
@@ -16,7 +16,7 @@ A static, guest-only browser toolkit. Your images stay on the device, with these
 
 ## Non-goals
 
-- No accounts, login or sync. The only server-side part is the small Worker. It stores nothing from the user except share copies, which the user creates with "Share on Facebook" and which are deleted after 7 days; its limiters keep only a hashed IP and a daily count.
+- No accounts, login or sync. The only server-side part is the small Worker. It stores nothing from the user except share copies, which the user creates with "Share on Facebook" and which are deleted after 30 days; its limiters keep only a hashed IP and a daily count.
 - No posting through the Facebook API, no other social networks, no history of shared links and no early delete of a shared image.
 - No frameworks, build tools or external JS libraries.
 - Not a full image editor (no layers in the Editor, no RAW files, no batch processing).
@@ -73,7 +73,7 @@ A static, guest-only browser toolkit. Your images stay on the device, with these
 - Resize only shrinks, and only the exported file changes size; the preview keeps its size.
 - The text overlay is one line in a fixed font (Arial bold). It is placed with sliders, not by dragging, and it is not wrapped.
 - No testing on real devices or in real Safari yet. Firefox and WebKit are covered only by smoke tests through Playwright.
-- A Share on Facebook link and its preview image stop working after 7 days.
+- A Share on Facebook link and its preview image stop working after 30 days.
 - Share on Facebook opens Facebook's official Share Dialog with our Meta app id (`FB_APP_ID` in `js/core/export.js`). If `FB_APP_ID` is emptied, it falls back to the older `facebook.com/sharer/sharer.php` link, which Facebook does not document and may change.
 - The Share Dialog needs a Meta app. While that app is in Development mode, only people with a role on it may be able to use the dialog (unverified until tested).
 - The Share Dialog shares a link, not an image file, so the Facebook post is a link card with our preview image.
