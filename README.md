@@ -69,7 +69,9 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/PRD.md](docs
 - Autosave waits 1 second after the last change. If a new image loads less than 1 second after an edit, that last edit can be lost; the project and its image survive. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the proposed fix.
 - No testing on real devices or in real Safari yet.
 - A Share on Facebook link and its preview image stop working after 7 days.
-- Share on Facebook opens `facebook.com/sharer/sharer.php`, which Facebook does not document and may change.
+- Share on Facebook opens Facebook's official Share Dialog with our Meta app id (`FB_APP_ID` in `js/core/export.js`). If `FB_APP_ID` is emptied, it falls back to the older `facebook.com/sharer/sharer.php` link, which Facebook does not document and may change.
+- The Share Dialog needs a Meta app. While that app is in Development mode, only people with a role on it may be able to use the dialog (unverified until tested).
+- The Share Dialog shares a link, not an image file, so the Facebook post is a link card with our preview image.
 - Share on Facebook needs pop-ups to be allowed for the site.
 - Each IP may make 20 share uploads per UTC day, and the free storage for shared images is shared by all visitors.
 - Sharing was not tested on real phones or with a real Facebook post.

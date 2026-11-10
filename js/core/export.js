@@ -10,6 +10,7 @@ const SHARE_MIN_SIDE = 200; // the Worker needs at least 200 x 200; smaller imag
 const SHARE_MAX_BYTES = 1.4 * 1024 * 1024; // the Worker accepts up to 1.5 MB
 const SHARE_QUALITIES = [0.85, 0.7, 0.55]; // JPEG qualities tried in order until the copy is small enough
 const SHARE_TIMEOUT = 30000;
+const FB_APP_ID = "1460147916314602"; // our Meta app id: a public value, not a secret. Empty keeps the older sharer.php link.
 const TOO_LARGE = "This image is too large to share.";
 const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
 const UPLOADING = "Uploading a copy of this image so Facebook can show it. The link works for 7 days.";
@@ -22,9 +23,13 @@ export const isShareNotice = (message) => message === UPLOADING || message === O
 // "Share with an app" is only shown where the browser can share image files.
 export const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
 
-// The one place that decides how Facebook is opened. sharer.php is not documented by Facebook and may change.
+// The one place that decides how Facebook is opened: the official Share Dialog when FB_APP_ID is set,
+// otherwise sharer.php, which Facebook does not document and may change.
 export function facebookShareUrl(url) {
-  return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  const link = encodeURIComponent(url);
+  if (!FB_APP_ID) return `https://www.facebook.com/sharer/sharer.php?u=${link}`;
+  // redirect_uri is our share page, so after Post or Cancel the tab shows the shared image
+  return `https://www.facebook.com/dialog/share?app_id=${encodeURIComponent(FB_APP_ID)}&display=popup&href=${link}&redirect_uri=${link}`;
 }
 
 // A JPEG copy for the public link: at most SHARE_MAX_SIDE, white behind transparent parts, at most SHARE_MAX_BYTES.

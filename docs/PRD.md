@@ -74,7 +74,9 @@ A static, guest-only browser toolkit. Your images stay on the device, with these
 - The text overlay is one line in a fixed font (Arial bold). It is placed with sliders, not by dragging, and it is not wrapped.
 - No testing on real devices or in real Safari yet. Firefox and WebKit are covered only by smoke tests through Playwright.
 - A Share on Facebook link and its preview image stop working after 7 days.
-- Share on Facebook opens `facebook.com/sharer/sharer.php`, which Facebook does not document and may change.
+- Share on Facebook opens Facebook's official Share Dialog with our Meta app id (`FB_APP_ID` in `js/core/export.js`). If `FB_APP_ID` is emptied, it falls back to the older `facebook.com/sharer/sharer.php` link, which Facebook does not document and may change.
+- The Share Dialog needs a Meta app. While that app is in Development mode, only people with a role on it may be able to use the dialog (unverified until tested).
+- The Share Dialog shares a link, not an image file, so the Facebook post is a link card with our preview image.
 - Share on Facebook needs pop-ups to be allowed for the site.
 - Each IP may make 20 share uploads per UTC day, and the free storage for shared images is shared by all visitors.
 - Sharing was not tested on real phones or with a real Facebook post.
