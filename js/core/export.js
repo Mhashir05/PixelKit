@@ -14,6 +14,7 @@ const TOO_LARGE = "This image is too large to share.";
 const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
 const UPLOADING = "Uploading a copy of this image so Facebook can show it. The link works for 7 days.";
 const OPENED = "Facebook opened in a new tab. Nothing is posted until you click Post there.";
+const PREPARE_FAILED = "Could not prepare the image to share. Try again.";
 let sharing = false; // one upload at a time
 
 export const isSharing = () => sharing;
@@ -69,8 +70,16 @@ export async function shareToFacebook(makeFile, show) {
   sharing = true;
   show(UPLOADING);
   let message = OPENED;
+  let file;
   try {
-    const file = await makeFile();
+    file = await makeFile();
+  } catch (err) { // the image could not be made, so nothing is uploaded
+    popup.close();
+    logger.error("share image could not be prepared", err);
+    sharing = false; // before show(), so the render that follows enables the buttons again
+    return show(PREPARE_FAILED);
+  }
+  try {
     if (!file) { // the tool could not make the file and already showed its own message
       popup.close();
       sharing = false;
@@ -91,9 +100,15 @@ export async function shareToFacebook(makeFile, show) {
 
 // Shares the exact exported file through the device's share sheet. Nothing is uploaded to PixelKit.
 export async function shareWithApp(makeFile, show) {
+  let file;
   try {
-    const file = await makeFile();
-    if (!file) return; // the tool already showed its own message
+    file = await makeFile();
+  } catch (err) { // the image could not be made, so the share sheet is not opened
+    logger.error("share image could not be prepared", err);
+    return show(PREPARE_FAILED);
+  }
+  if (!file) return; // the tool already showed its own message
+  try {
     await navigator.share({ files: [file] });
     logger.info("shared with an app", { type: file.type, bytes: file.size });
   } catch (err) {
