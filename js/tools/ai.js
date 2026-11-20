@@ -9,7 +9,7 @@ const EDIT_INPUT_MAX = 512; // longest side of the copy sent for an edit; the mo
 const EXTENSIONS = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 const MAX_PROMPT = 300; // same limit as the Worker
 const REQUEST_TIMEOUT = 90000; // generation can be slow
-const COOLDOWN = 5000; // the Generate button stays off this long after each request
+const COOLDOWN = 0; // pause after each request before Generate and Apply edit work again; 0 means no wait
 
 const $ = (id) => document.getElementById(id);
 const openButtons = document.querySelectorAll("[data-ai-open]");
