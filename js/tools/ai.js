@@ -26,7 +26,9 @@ function update(patch) {
 // The only function that talks to the Worker and reads its status codes.
 // Fetches the bytes with fetch(), so the image is a local Blob and never taints a canvas.
 async function requestImage(url, request) {
+  const started = performance.now();
   const response = await fetch(url, { method: "POST", ...request, signal: AbortSignal.timeout(REQUEST_TIMEOUT) });
+  logger.info("ai response received", { status: response.status, ms: Math.round(performance.now() - started) });
   if (response.status === 401 || response.status === 403) throw new Error("The image service is not available right now.");
   if (response.status === 402 || response.status === 429) throw new Error("Today's free AI limit has been reached. Try again tomorrow.");
   if (!response.ok) throw new Error("The image service had a problem. Try again in a moment.");
@@ -98,7 +100,9 @@ async function applyEdit() {
   try {
     const body = new FormData();
     body.append("prompt", prompt);
-    body.append("image", await shrink(original), "image.jpg");
+    const copy = await shrink(original);
+    logger.info("ai edit copy made", { bytes: copy?.size });
+    body.append("image", copy, "image.jpg");
     const file = await fetchImage(EDIT_URL, { body });
     update({ result: file, edits: next });
     $("ai-prompt").value = "";

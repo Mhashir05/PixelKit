@@ -1,6 +1,6 @@
 import { logger } from "./logger.js";
 import { decodeImage } from "./image.js";
-import { setState } from "./state.js";
+import { getState, setState } from "./state.js";
 
 // Small helpers shared by every tool that exports, downloads or shares a file.
 
@@ -22,6 +22,7 @@ export const isSharing = () => sharing;
 export const isShareNotice = (message) => message === UPLOADING || message === OPENED; // shown in a neutral style, not as an error
 // "Share with an app" is only shown where the browser can share image files.
 export const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
+logger.info("share with an app supported", { canShareFiles });
 
 // The one place that decides how Facebook is opened: the official Share Dialog when FB_APP_ID is set,
 // otherwise sharer.php, which Facebook does not document and may change.
@@ -34,6 +35,7 @@ export function facebookShareUrl(url) {
 
 // A JPEG copy for the public link: at most SHARE_MAX_SIDE, white behind transparent parts, at most SHARE_MAX_BYTES.
 async function shareCopy(file) {
+  const started = performance.now();
   const element = await decodeImage(file);
   const scale = Math.min(1, SHARE_MAX_SIDE / Math.max(element.naturalWidth, element.naturalHeight));
   const width = Math.round(element.naturalWidth * scale);
@@ -47,7 +49,10 @@ async function shareCopy(file) {
   ctx.drawImage(element, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
   for (const quality of SHARE_QUALITIES) {
     const blob = await canvasToBlob(canvas, "image/jpeg", quality);
-    if (blob && blob.size <= SHARE_MAX_BYTES) return { blob, width: canvas.width, height: canvas.height };
+    if (blob && blob.size <= SHARE_MAX_BYTES) {
+      logger.info("share copy made", { source: `${element.naturalWidth}x${element.naturalHeight}`, copy: `${canvas.width}x${canvas.height}`, quality, bytes: blob.size, ms: Math.round(performance.now() - started) });
+      return { blob, width: canvas.width, height: canvas.height };
+    }
   }
   throw new Error(TOO_LARGE);
 }
@@ -58,7 +63,10 @@ async function uploadCopy(copy) {
   body.append("image", copy.blob, "share.jpg");
   body.append("width", String(copy.width));
   body.append("height", String(copy.height));
+  logger.info("share upload started", { host: new URL(SHARE_URL).hostname });
+  const started = performance.now();
   const response = await fetch(SHARE_URL, { method: "POST", body, signal: AbortSignal.timeout(SHARE_TIMEOUT) });
+  logger.info("share upload finished", { status: response.status, ms: Math.round(performance.now() - started) });
   if (response.status === 429) throw new Error(LIMIT_REACHED);
   if (!response.ok) throw new Error(`share upload failed with ${response.status}`);
   const { url } = await response.json();
@@ -70,7 +78,10 @@ async function uploadCopy(copy) {
 // makeFile returns the file the tool would export; show puts a message in the tool's own message area.
 export async function shareToFacebook(makeFile, show) {
   if (sharing) return; // a double click starts only one upload
+  const started = performance.now();
+  logger.info("share to facebook started", { tool: getState().tool });
   const popup = window.open("", "_blank"); // opened inside the click, so pop-up blockers allow it
+  logger.info("share popup opened", { opened: Boolean(popup) });
   if (!popup) return show("Allow pop-ups for this site and try again.");
   sharing = true;
   show(UPLOADING);
@@ -91,9 +102,11 @@ export async function shareToFacebook(makeFile, show) {
       setState({}); // draw again, so the Share buttons are enabled
       return;
     }
+    logger.info("share file made", { type: file.type, bytes: file.size });
     const url = await uploadCopy(await shareCopy(file));
     popup.opener = null; // Facebook's page must not reach back into PixelKit
     popup.location.href = facebookShareUrl(url);
+    logger.info("share popup navigated", { mode: FB_APP_ID ? "share dialog with app id" : "sharer.php fallback", ms: Math.round(performance.now() - started) }); // never the address
   } catch (err) {
     popup.close();
     logger.error("share to facebook failed", err);
@@ -113,11 +126,12 @@ export async function shareWithApp(makeFile, show) {
     return show(PREPARE_FAILED);
   }
   if (!file) return; // the tool already showed its own message
+  logger.info("share with an app started", { type: file.type, bytes: file.size });
   try {
     await navigator.share({ files: [file] });
     logger.info("shared with an app", { type: file.type, bytes: file.size });
   } catch (err) {
-    if (err.name === "AbortError") return; // the user closed the share sheet
+    if (err.name === "AbortError") return logger.info("share with an app cancelled"); // the user closed the share sheet
     logger.error("share with an app failed", err);
     show("Sharing is not available on this device.");
   }
