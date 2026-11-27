@@ -22,6 +22,10 @@ export const isShareNotice = (message) => message === TIKTOK_SAVED || [FACEBOOK,
 // "Share with an app" is only shown where the browser can share image files.
 const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
 logger.info("share with an app supported", { canShareFiles });
+// Phones and tablets skip the menu and open the share sheet, so the chosen app opens directly. userAgentData.mobile is the
+// browser's own answer (Chromium); Safari and Firefox lack it, so a touch-only pointer stands in. Desktops always keep the menu.
+const isPhone = canShareFiles && (navigator.userAgentData?.mobile ?? window.matchMedia("(pointer: coarse)").matches);
+logger.info("share button mode", { mode: isPhone ? "device share sheet" : "menu" });
 
 // The one place that decides how Facebook is opened: the official Share Dialog when FB_APP_ID is set,
 // otherwise sharer.php, which Facebook does not document and may change.
@@ -194,6 +198,17 @@ export function initShareMenu(prefix, tool, makeFile, show) {
   menuTargets[prefix] = { ...menuTargets[prefix], [tool]: { makeFile, show } };
   if (known) return; // the menu's own listeners are added only once
   const { button, menu } = menuParts(prefix);
+  const choose = (item) => {
+    const target = menuTargets[prefix][getState().tool];
+    if (!target) return;
+    logger.info("share chosen", { path: isPhone ? "device share sheet" : "menu", item, tool: getState().tool });
+    SHARE_ACTIONS[item](target.makeFile, target.show);
+  };
+  if (isPhone) { // no menu on phones: the button opens the share sheet straight away
+    for (const name of ["aria-haspopup", "aria-expanded", "aria-controls"]) button.removeAttribute(name);
+    button.addEventListener("click", () => choose("app"));
+    return;
+  }
   const items = [...menu.querySelectorAll("[role=menuitem]")];
   menu.querySelector('[data-share="app"]').hidden = !canShareFiles;
   button.addEventListener("click", () => {
@@ -221,10 +236,7 @@ export function initShareMenu(prefix, tool, makeFile, show) {
     const item = event.target.closest("[data-share]");
     if (!item) return;
     setMenuOpen(prefix, false); // only hides the menu, so the pop-up below still opens inside this click
-    const target = menuTargets[prefix][getState().tool];
-    if (!target) return;
-    logger.info("share menu item chosen", { item: item.dataset.share, tool: getState().tool });
-    SHARE_ACTIONS[item.dataset.share](target.makeFile, target.show);
+    choose(item.dataset.share);
   });
 }
 
@@ -234,7 +246,7 @@ export function renderShareMenu(prefix, disabled, hidden = false) {
   button.disabled = disabled;
   button.parentElement.hidden = hidden;
   for (const item of menu.querySelectorAll("[role=menuitem]")) item.disabled = sharing;
-  if (disabled || hidden) setMenuOpen(prefix, false);
+  if (!isPhone && (disabled || hidden)) setMenuOpen(prefix, false); // phones never open the menu and have no aria-expanded
 }
 
 export function canvasToBlob(canvas, type, quality) {
