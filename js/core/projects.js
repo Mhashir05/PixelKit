@@ -4,6 +4,7 @@ import { defaultEdits, cleanEdits } from "./edits.js";
 import { clearHistory } from "./history.js";
 import * as db from "./db.js";
 import { checkFile, checkPixels, decodeImage, makeThumbnail } from "./image.js";
+import { confirmAction } from "./confirm.js";
 
 const SAVE_DELAY = 1000;
 const MAX_PROJECTS = 10; // older projects are removed, with their saved images
@@ -148,7 +149,8 @@ export function renameProject(raw) {
 export async function deleteProject(id) {
   const project = getState().projects.find((p) => p.id === id);
   if (!project) return;
-  if (!confirm(`Delete "${project.name}"? Its saved image is removed and this cannot be undone.`)) {
+  const confirmed = await confirmAction({ title: `Delete "${project.name}"?`, message: "Its saved image is removed and this cannot be undone.", confirmLabel: "Delete" });
+  if (!confirmed) {
     logger.info("delete cancelled", { id });
     return;
   }

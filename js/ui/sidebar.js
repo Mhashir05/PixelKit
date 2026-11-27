@@ -15,7 +15,7 @@ export function initSidebar(onSelectTool, onResume, onDelete) {
     const deleteButton = event.target.closest("[data-delete]");
     if (deleteButton) {
       await onDelete(deleteButton.dataset.delete);
-      recentsList.querySelector("button")?.focus(); // the clicked button may be gone; keep keyboard focus in the list
+      if (!deleteButton.isConnected) recentsList.querySelector("button")?.focus(); // the clicked button is gone; keep keyboard focus in the list
       return;
     }
     const item = event.target.closest("[data-project]");

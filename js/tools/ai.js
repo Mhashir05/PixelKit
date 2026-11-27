@@ -1,6 +1,7 @@
 import { logger } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
 import { checkFile, decodeImage, loadImage } from "../core/image.js";
+import { confirmAction } from "../core/confirm.js";
 import { canvasToBlob, downloadBlob, initShareMenu, renderShareMenu, isSharing, isShareNotice } from "../core/export.js";
 
 const WORKER_URL = "https://pixelkit-ai.hashir-dev.workers.dev/generate"; // our Cloudflare Worker (see worker/); no key in the browser
@@ -114,15 +115,18 @@ async function applyEdit() {
   coolDown();
 }
 
-function reset() {
-  const { busy, original } = getState().ai;
+async function reset() {
+  const { busy, original, edits } = getState().ai;
   if (busy || !original) return;
+  if (edits.length && !(await confirmAction({ title: "Reset to the original image?", message: "All edits to this image will be lost.", confirmLabel: "Reset" }))) return;
   update({ result: original, edits: [], error: "" });
   logActivity("AI Studio: reset to the original image");
 }
 
-function newImage() {
-  if (getState().ai.busy) return;
+async function newImage() {
+  const { busy, result } = getState().ai;
+  if (busy) return;
+  if (result && !(await confirmAction({ title: "Start a new image?", message: "The current image and its edits will be lost. Download it first to keep it.", confirmLabel: "Start new" }))) return;
   update({ result: null, original: null, edits: [], error: "" });
   $("ai-prompt").value = "";
   logActivity("AI Studio: started a new image");

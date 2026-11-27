@@ -11,6 +11,7 @@ import { initLogo, renderLogo } from "./tools/logo.js";
 import { initAi, renderAi } from "./tools/ai.js";
 import { initProjects, resumeProject, renameProject, deleteProject } from "./core/projects.js";
 import { isSharing, renderShareMenu } from "./core/export.js";
+import { initConfirm } from "./core/confirm.js";
 
 const stages = document.querySelectorAll("[data-stage]");
 const projectName = document.querySelector("#project-name");
@@ -104,6 +105,7 @@ document.addEventListener("drop", async (event) => {
   }
 });
 
+initConfirm();
 initEditor();
 initCompressor();
 initMeme();

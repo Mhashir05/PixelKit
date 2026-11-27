@@ -314,6 +314,15 @@
   </section>
 </main>
 
+<dialog class="confirm" id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-message">
+  <h2 class="confirm__title" id="confirm-title"></h2>
+  <p class="confirm__message" id="confirm-message"></p>
+  <div class="fields confirm__actions">
+    <button class="btn" type="button" id="confirm-cancel">Cancel</button>
+    <button class="btn btn--danger" type="button" id="confirm-ok">Confirm</button>
+  </div>
+</dialog>
+
 <script type="module" src="js/app.js"></script>
 </body>
 </html>

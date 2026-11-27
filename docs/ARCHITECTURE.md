@@ -23,6 +23,7 @@ js/
     fonts.js        shared system-font stacks and the outline colour for text
     db.js           IndexedDB (original image Blobs) and localStorage (project list)
     projects.js     autosave, recents, resume, rename, delete (max 10 projects)
+    confirm.js      confirmAction: the one "Are you sure?" dialog (native <dialog> in app.html), used only for actions that cannot be undone (delete project, AI Reset and New image, delete logo element)
   tools/            one file per tool, each owns its own section of state
     editor.js       the Editor: filters, rotate, flip, crop, resize, text overlay, reset, export; also owns the shared file input, the "Choose image" buttons and the upload error box
     compressor.js   quality, format, before/after size, download
@@ -35,7 +36,7 @@ js/
     animations.js   landing reveal on scroll
 css/
   tokens.css        colour, font and spacing tokens (locked visual identity)
-  base.css          reset and shared elements
+  base.css          reset and shared elements; also the one block of interaction states (hover, focus-visible, pressed, disabled) for every clickable element
   landing.css       landing page
   workspace.css     workspace
 assets/             logo, icon and the landing sample image

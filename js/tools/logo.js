@@ -2,6 +2,7 @@ import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
 import { canvasToBlob, downloadBlob, initShareMenu, isShareNotice } from "../core/export.js";
 import { FONTS } from "../core/fonts.js";
+import { confirmAction } from "../core/confirm.js";
 
 const CANVAS_SIZE = 1000; // the logo is always 1000 x 1000 px
 const MAX_ELEMENTS = 30;
@@ -245,10 +246,11 @@ function updateSelected(patch) {
   logLater();
 }
 
-function deleteSelected() {
-  const logo = getState().logo;
-  const selected = selectedElement(logo);
+async function deleteSelected() {
+  const selected = selectedElement(getState().logo);
   if (!selected) return;
+  if (!(await confirmAction({ title: `Delete this ${LABELS[selected.type]}?`, message: "It will be removed from the logo. This cannot be undone.", confirmLabel: "Delete" }))) return;
+  const logo = getState().logo; // read again: the logo may have changed while the dialog was open
   update({ elements: logo.elements.filter((e) => e.id !== selected.id), selectedId: "", message: "" });
   logActivity(`Logo: deleted ${LABELS[selected.type]}`);
 }
