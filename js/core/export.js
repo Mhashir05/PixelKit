@@ -14,12 +14,15 @@ const FB_APP_ID = "1460147916314602"; // our Meta app id: a public value, not a 
 const TOO_LARGE = "This image is too large to share.";
 const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
 const PREPARE_FAILED = "Could not prepare the image to share. Try again.";
-const TIKTOK_SAVED = "TikTok has no web share link. Your image was saved. Open TikTok and upload it.";
+const INSTAGRAM_URL = "https://www.instagram.com"; // the home page only: Instagram has no web share address
+const INSTAGRAM_SAVED = "Your image was saved. In Instagram, click Create, then Post, and choose it from your downloads.";
+const INSTAGRAM_BLOCKED = "Your image was saved. Pop-ups are blocked, so open instagram.com yourself, click Create, then Post, and choose it from your downloads.";
+const APPS_SAVED = "Your image was saved. Open TikTok or any other app and upload it from your downloads.";
 let sharing = false; // one upload at a time
 
 export const isSharing = () => sharing;
-export const isShareNotice = (message) => message === TIKTOK_SAVED || [FACEBOOK, SNAPCHAT].some((site) => message === site.uploading || message === site.opened); // shown in a neutral style, not as an error
-// "Share with an app" is only shown where the browser can share image files.
+export const isShareNotice = (message) => [INSTAGRAM_SAVED, INSTAGRAM_BLOCKED, APPS_SAVED].includes(message) || [FACEBOOK, SNAPCHAT].some((site) => message === site.uploading || message === site.opened); // shown in a neutral style, not as an error
+// Only devices that can share image files can use the share sheet (see isPhone).
 const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
 logger.info("share with an app supported", { canShareFiles });
 // Phones and tablets skip the menu and open the share sheet, so the chosen app opens directly. userAgentData.mobile is the
@@ -164,9 +167,8 @@ export async function shareWithApp(makeFile, show) {
   }
 }
 
-// TikTok has no web share link: devices that can share files use the share sheet, others save the file to upload by hand.
-async function shareToTikTok(makeFile, show) {
-  if (canShareFiles) return shareWithApp(makeFile, show);
+// Instagram, TikTok and most apps have no web share address: save the file so the user can upload it there by hand.
+async function saveForUpload(makeFile, show, notice) {
   let file;
   try {
     file = await makeFile();
@@ -176,13 +178,27 @@ async function shareToTikTok(makeFile, show) {
   }
   if (!file) return; // the tool already showed its own message
   downloadBlob(file, file.name); // the same file and name as the tool's own download
-  logger.info("tiktok image saved", { type: file.type, bytes: file.size });
-  show(TIKTOK_SAVED);
+  logger.info("share image saved for upload", { type: file.type, bytes: file.size });
+  show(notice);
 }
 
-// ---------- Share menu: one Share button that lists Facebook, Snapchat, TikTok and More apps ----------
+// Opens instagram.com inside the click (before any await, so pop-up blockers allow it), then saves the image.
+function shareToInstagram(makeFile, show) {
+  const popup = window.open("", "_blank");
+  logger.info("share popup opened", { opened: Boolean(popup) });
+  if (popup) {
+    popup.opener = null; // Instagram's page must not reach back into PixelKit
+    popup.location.href = INSTAGRAM_URL;
+  }
+  return saveForUpload(makeFile, show, popup ? INSTAGRAM_SAVED : INSTAGRAM_BLOCKED);
+}
 
-const SHARE_ACTIONS = { facebook: shareToFacebook, snapchat: shareToSnapchat, tiktok: shareToTikTok, app: shareWithApp };
+// Desktop "More apps": the share sheet of desktop systems lists no social apps, so the image is saved instead.
+const saveForApps = (makeFile, show) => saveForUpload(makeFile, show, APPS_SAVED);
+
+// ---------- Share menu: one Share button that lists Facebook, Snapchat, Instagram and More apps ----------
+
+const SHARE_ACTIONS = { facebook: shareToFacebook, snapchat: shareToSnapchat, instagram: shareToInstagram, app: saveForApps };
 const menuTargets = {}; // menu id prefix -> { tool: { makeFile, show } }; the strip's one menu serves Editor, Meme and Logo
 const menuParts = (prefix) => ({ button: document.getElementById(`${prefix}-menu-btn`), menu: document.getElementById(`${prefix}-menu`) });
 
@@ -198,19 +214,18 @@ export function initShareMenu(prefix, tool, makeFile, show) {
   menuTargets[prefix] = { ...menuTargets[prefix], [tool]: { makeFile, show } };
   if (known) return; // the menu's own listeners are added only once
   const { button, menu } = menuParts(prefix);
-  const choose = (item) => {
+  const choose = (item, action = SHARE_ACTIONS[item]) => {
     const target = menuTargets[prefix][getState().tool];
     if (!target) return;
     logger.info("share chosen", { path: isPhone ? "device share sheet" : "menu", item, tool: getState().tool });
-    SHARE_ACTIONS[item](target.makeFile, target.show);
+    action(target.makeFile, target.show);
   };
   if (isPhone) { // no menu on phones: the button opens the share sheet straight away
     for (const name of ["aria-haspopup", "aria-expanded", "aria-controls"]) button.removeAttribute(name);
-    button.addEventListener("click", () => choose("app"));
+    button.addEventListener("click", () => choose("app", shareWithApp));
     return;
   }
   const items = [...menu.querySelectorAll("[role=menuitem]")];
-  menu.querySelector('[data-share="app"]').hidden = !canShareFiles;
   button.addEventListener("click", () => {
     setMenuOpen(prefix, menu.hidden);
     if (!menu.hidden) items[0].focus();

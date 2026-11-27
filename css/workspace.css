@@ -64,7 +64,7 @@
 /* Share menu: a small list that opens below its Share button, over the content, aligned to the button's right edge. */
 .share { position: relative; }
 .share__menu { position: absolute; top: calc(100% + 4px); right: 0; z-index: 10; display: flex; flex-direction: column; gap: 4px; min-width: 160px; padding: 4px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-.share__menu .btn { justify-content: flex-start; }
+.share__menu .btn { justify-content: flex-start; white-space: nowrap; } /* "More apps (TikTok…)" stays on one line; the menu grows instead */
 .fields .share__menu { top: auto; bottom: calc(100% + 4px); } /* the Compressor and AI Studio rows sit at the bottom of the canvas, so their menus open upward */
 
 /* Canvas */
@@ -118,6 +118,10 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
 /* Narrow screens: tools become a scrolling row, other panels move below the canvas. */
 @media (max-width: 720px) {
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* The strip's Share button can sit anywhere in the row here, so its menu is placed under the strip, at the strip's left padding. */
+  .strip { position: relative; }
+  .strip .share { position: static; }
+  .strip .share__menu { left: 16px; right: auto; }
   .workspace {
     height: auto; min-height: 100vh;
     grid-template-columns: minmax(0, 1fr);
