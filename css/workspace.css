@@ -70,6 +70,11 @@
 .project-name:hover:not(:disabled) { border-color: var(--border); }
 .project-name:disabled { opacity: 1; -webkit-text-fill-color: var(--text); }
 .strip .btn { height: 28px; padding: 0 12px; }
+/* Share menu: a small list that opens below its Share button, over the content, aligned to the button's right edge. */
+.share { position: relative; }
+.share__menu { position: absolute; top: calc(100% + 4px); right: 0; z-index: 10; display: flex; flex-direction: column; gap: 4px; min-width: 160px; padding: 4px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.share__menu .btn { justify-content: flex-start; }
+.fields .share__menu { top: auto; bottom: calc(100% + 4px); } /* the Compressor and AI Studio rows sit at the bottom of the canvas, so their menus open upward */
 
 /* Canvas */
 .canvas { grid-area: canvas; display: grid; padding: 24px; min-height: 0; }
@@ -109,7 +114,7 @@ body.is-dragging .preview { outline: 1px dashed var(--accent); outline-offset: 4
   .recent-delete { width: 40px; height: 40px; }
   .tool { min-height: 40px; }
   .fields summary { padding: 11px 0; } /* keeps the open/close arrow */
-  .console .btn, .strip .btn, #ai-generate, #ai-download, #ai-reset, #ai-new, [data-ai-open], #share-facebook, #share-app, #c-share-facebook, #c-share-app, #ai-share-facebook, #ai-share-app, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
+  .console .btn, .strip .btn, #ai-generate, #ai-download, #ai-reset, #ai-new, [data-ai-open], .share .btn, .project-name, .field input[type="text"], .field select, .element-item { min-height: 40px; }
 }
 
 /* Narrow screens: tools become a scrolling row, other panels move below the canvas. */

@@ -14,12 +14,13 @@ const FB_APP_ID = "1460147916314602"; // our Meta app id: a public value, not a 
 const TOO_LARGE = "This image is too large to share.";
 const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
 const PREPARE_FAILED = "Could not prepare the image to share. Try again.";
+const TIKTOK_SAVED = "TikTok has no web share link. Your image was saved. Open TikTok and upload it.";
 let sharing = false; // one upload at a time
 
 export const isSharing = () => sharing;
-export const isShareNotice = (message) => [FACEBOOK, SNAPCHAT].some((site) => message === site.uploading || message === site.opened); // shown in a neutral style, not as an error
+export const isShareNotice = (message) => message === TIKTOK_SAVED || [FACEBOOK, SNAPCHAT].some((site) => message === site.uploading || message === site.opened); // shown in a neutral style, not as an error
 // "Share with an app" is only shown where the browser can share image files.
-export const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
+const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
 logger.info("share with an app supported", { canShareFiles });
 
 // The one place that decides how Facebook is opened: the official Share Dialog when FB_APP_ID is set,
@@ -157,6 +158,83 @@ export async function shareWithApp(makeFile, show) {
     logger.error("share with an app failed", err);
     show("Sharing is not available on this device.");
   }
+}
+
+// TikTok has no web share link: devices that can share files use the share sheet, others save the file to upload by hand.
+async function shareToTikTok(makeFile, show) {
+  if (canShareFiles) return shareWithApp(makeFile, show);
+  let file;
+  try {
+    file = await makeFile();
+  } catch (err) { // the image could not be made, so nothing is saved
+    logger.error("share image could not be prepared", err);
+    return show(PREPARE_FAILED);
+  }
+  if (!file) return; // the tool already showed its own message
+  downloadBlob(file, file.name); // the same file and name as the tool's own download
+  logger.info("tiktok image saved", { type: file.type, bytes: file.size });
+  show(TIKTOK_SAVED);
+}
+
+// ---------- Share menu: one Share button that lists Facebook, Snapchat, TikTok and More apps ----------
+
+const SHARE_ACTIONS = { facebook: shareToFacebook, snapchat: shareToSnapchat, tiktok: shareToTikTok, app: shareWithApp };
+const menuTargets = {}; // menu id prefix -> { tool: { makeFile, show } }; the strip's one menu serves Editor, Meme and Logo
+const menuParts = (prefix) => ({ button: document.getElementById(`${prefix}-menu-btn`), menu: document.getElementById(`${prefix}-menu`) });
+
+function setMenuOpen(prefix, open) {
+  const { button, menu } = menuParts(prefix);
+  menu.hidden = !open;
+  button.setAttribute("aria-expanded", String(open));
+}
+
+// Connects a tool's file to the menu with the ids `${prefix}-menu-btn` and `${prefix}-menu`.
+export function initShareMenu(prefix, tool, makeFile, show) {
+  const known = prefix in menuTargets;
+  menuTargets[prefix] = { ...menuTargets[prefix], [tool]: { makeFile, show } };
+  if (known) return; // the menu's own listeners are added only once
+  const { button, menu } = menuParts(prefix);
+  const items = [...menu.querySelectorAll("[role=menuitem]")];
+  menu.querySelector('[data-share="app"]').hidden = !canShareFiles;
+  button.addEventListener("click", () => {
+    setMenuOpen(prefix, menu.hidden);
+    if (!menu.hidden) items[0].focus();
+  });
+  document.addEventListener("click", (event) => {
+    if (!menu.hidden && !button.parentElement.contains(event.target)) setMenuOpen(prefix, false);
+  });
+  button.parentElement.addEventListener("keydown", (event) => {
+    if (menu.hidden) return;
+    if (event.key === "Escape") {
+      setMenuOpen(prefix, false);
+      button.focus();
+    } else if (event.key === "ArrowDown" || event.key === "ArrowUp") { // moves between the visible items, wrapping around
+      event.preventDefault();
+      const visible = items.filter((item) => !item.hidden);
+      const index = visible.indexOf(document.activeElement);
+      const step = event.key === "ArrowDown" ? 1 : -1;
+      const next = index === -1 ? (step === 1 ? 0 : visible.length - 1) : (index + step + visible.length) % visible.length;
+      visible[next].focus();
+    }
+  });
+  menu.addEventListener("click", (event) => {
+    const item = event.target.closest("[data-share]");
+    if (!item) return;
+    setMenuOpen(prefix, false); // only hides the menu, so the pop-up below still opens inside this click
+    const target = menuTargets[prefix][getState().tool];
+    if (!target) return;
+    logger.info("share menu item chosen", { item: item.dataset.share, tool: getState().tool });
+    SHARE_ACTIONS[item.dataset.share](target.makeFile, target.show);
+  });
+}
+
+// Draws the Share button. While an upload runs, the button and every item are disabled.
+export function renderShareMenu(prefix, disabled, hidden = false) {
+  const { button, menu } = menuParts(prefix);
+  button.disabled = disabled;
+  button.parentElement.hidden = hidden;
+  for (const item of menu.querySelectorAll("[role=menuitem]")) item.disabled = sharing;
+  if (disabled || hidden) setMenuOpen(prefix, false);
 }
 
 export function canvasToBlob(canvas, type, quality) {

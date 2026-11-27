@@ -1,6 +1,6 @@
 import { logger } from "../core/logger.js";
 import { getState, setState, subscribe, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareToSnapchat, shareWithApp, isSharing, canShareFiles } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, initShareMenu, renderShareMenu, isSharing } from "../core/export.js";
 
 const FORMATS = {
   "image/jpeg": { label: "JPG", extension: "jpg" },
@@ -204,9 +204,7 @@ export function renderCompressor(state) {
   $("compressor-message").textContent = describeMessage(c, before);
   $("compressor-message").classList.toggle("note--error", Boolean(c.error));
   $("c-download").disabled = !c.result;
-  $("c-share-facebook").disabled = !c.result || isSharing();
-  $("c-share-snapchat").disabled = !c.result || isSharing();
-  $("c-share-app").disabled = !c.result;
+  renderShareMenu("c-share", !c.result || isSharing());
 }
 
 // ---------- Actions ----------
@@ -246,10 +244,7 @@ export function initCompressor() {
     });
   }
   $("c-download").addEventListener("click", downloadResult);
-  $("c-share-facebook").addEventListener("click", () => shareToFacebook(resultFile, showError));
-  $("c-share-snapchat").addEventListener("click", () => shareToSnapchat(resultFile, showError));
-  $("c-share-app").addEventListener("click", () => shareWithApp(resultFile, showError));
-  $("c-share-app").hidden = !canShareFiles;
+  initShareMenu("c-share", "compressor", resultFile, showError);
 
   subscribe(onStateChange);
   detectFormats().catch((err) => {

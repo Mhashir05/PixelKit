@@ -1,6 +1,6 @@
 import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob, shareToFacebook, shareToSnapchat, shareWithApp, isShareNotice } from "../core/export.js";
+import { canvasToBlob, downloadBlob, initShareMenu, isShareNotice } from "../core/export.js";
 import { FONTS } from "../core/fonts.js";
 
 const CANVAS_SIZE = 1000; // the logo is always 1000 x 1000 px
@@ -409,13 +409,5 @@ export function initLogo() {
     if (getState().tool === "logo") setTimeout(exportLogo, 0); // keep the heavy work out of the click handler
   });
   const showMessage = (message) => update({ message });
-  $("share-facebook").addEventListener("click", () => {
-    if (getState().tool === "logo") shareToFacebook(logoFile, showMessage);
-  });
-  $("share-snapchat").addEventListener("click", () => {
-    if (getState().tool === "logo") shareToSnapchat(logoFile, showMessage);
-  });
-  $("share-app").addEventListener("click", () => {
-    if (getState().tool === "logo") shareWithApp(logoFile, showMessage);
-  });
+  initShareMenu("share", "logo", logoFile, showMessage);
 }

@@ -10,15 +10,12 @@ import { initCatalog, renderCatalog } from "./tools/catalog.js";
 import { initLogo, renderLogo } from "./tools/logo.js";
 import { initAi, renderAi } from "./tools/ai.js";
 import { initProjects, resumeProject, renameProject, deleteProject } from "./core/projects.js";
-import { isSharing, canShareFiles } from "./core/export.js";
+import { isSharing, renderShareMenu } from "./core/export.js";
 
 const stages = document.querySelectorAll("[data-stage]");
 const projectName = document.querySelector("#project-name");
 const undoButton = document.querySelector("#undo");
 const exportButton = document.querySelector("#export");
-const shareFacebook = document.querySelector("#share-facebook");
-const shareSnapchat = document.querySelector("#share-snapchat");
-const shareApp = document.querySelector("#share-app");
 
 // Undo only works for the Editor, and only when there is a step to go back to.
 const canUndo = (state) => state.tool === "editor" && state.undoSteps.length > 0;
@@ -32,14 +29,9 @@ function render(state) {
   renderCatalog(state);
   renderAi(state);
   renderLogo(state); // after renderEditor, because both decide whether the shared Export button is enabled
-  shareFacebook.disabled = exportButton.disabled || isSharing(); // the strip's Share buttons follow Export exactly
-  shareSnapchat.disabled = shareFacebook.disabled;
-  shareApp.disabled = exportButton.disabled;
   const usesStrip = ["editor", "meme", "logo"].includes(state.tool); // the only tools that ever enable Export (editor.js, logo.js)
   exportButton.hidden = !usesStrip;
-  shareFacebook.hidden = !usesStrip;
-  shareSnapchat.hidden = !usesStrip;
-  shareApp.hidden = !usesStrip || !canShareFiles;
+  renderShareMenu("share", exportButton.disabled || isSharing(), !usesStrip); // the strip's Share button follows Export exactly
   undoButton.hidden = state.tool !== "editor"; // see canUndo
   for (const stage of stages) stage.hidden = stage.dataset.stage !== state.tool;
   projectName.disabled = !state.image;
