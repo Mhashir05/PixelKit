@@ -257,3 +257,9 @@ Build order, each step testable on its own:
 - **Durable Object storage per object on Free.** The limits page says 10 GB per object in its table and 1 GB on Free in its FAQ. This design assumes 1 GB.
 - **Durable Object alarms on Free.** Not stated; the design avoids alarms.
 - **When `publish_actions` was removed.** No changelog page I read gives the date. The current docs do confirm that posting to a personal feed is not possible.
+
+## 12. Snapchat, TikTok and Instagram
+
+- **Snapchat: link share.** Snapchat has an official share address, `https://www.snapchat.com/share?link=<our share page>`. It needs no app id, key or login on our side. "Share on Snapchat" uses the same flow as Facebook: open a blank pop-up inside the click, upload the copy, then send the pop-up to `snapchatShareUrl(link)` (`js/core/export.js`). It shares the same public `/s/<id>` page, so Snapchat reads the same og tags. No Worker change.
+- **TikTok and Instagram: Web Share on phones.** Neither has a web share address. On devices that can share files, "Share with an app" opens the system share sheet, which lists the TikTok, Instagram and Snapchat apps when they are installed. Nothing is uploaded to PixelKit. Desktop gets no TikTok or Instagram button, because there is nothing for it to open.
+- **Why direct posting is out of scope.** Posting from a website to TikTok needs a TikTok login and an approved app (an app audit). Posting to Instagram needs an Instagram Business or Creator account connected through Meta's API. Both mean user accounts, tokens and a review process, which PixelKit does not have (see the PRD).

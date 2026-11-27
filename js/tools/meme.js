@@ -1,6 +1,6 @@
 import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
-import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareWithApp } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareToSnapchat, shareWithApp } from "../core/export.js";
 import { FONTS, outlineColor } from "../core/fonts.js";
 
 // Common sizes: 1080 px wide is what Instagram and WhatsApp display; the heights give the usual ratios.
@@ -262,6 +262,9 @@ export function initMeme() {
   const showError = (error) => setState({ error });
   $("share-facebook").addEventListener("click", () => {
     if (getState().tool === "meme") shareToFacebook(memeFile, showError);
+  });
+  $("share-snapchat").addEventListener("click", () => {
+    if (getState().tool === "meme") shareToSnapchat(memeFile, showError);
   });
   $("share-app").addEventListener("click", () => {
     if (getState().tool === "meme") shareWithApp(memeFile, showError);

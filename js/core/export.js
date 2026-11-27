@@ -13,13 +13,11 @@ const SHARE_TIMEOUT = 30000;
 const FB_APP_ID = "1460147916314602"; // our Meta app id: a public value, not a secret. Empty keeps the older sharer.php link.
 const TOO_LARGE = "This image is too large to share.";
 const LIMIT_REACHED = "Daily share limit reached. Try again tomorrow.";
-const UPLOADING = "Uploading a copy of this image so Facebook can show it. The link works for up to a year.";
-const OPENED = "Facebook opened in a new tab. Nothing is posted until you click Post there.";
 const PREPARE_FAILED = "Could not prepare the image to share. Try again.";
 let sharing = false; // one upload at a time
 
 export const isSharing = () => sharing;
-export const isShareNotice = (message) => message === UPLOADING || message === OPENED; // shown in a neutral style, not as an error
+export const isShareNotice = (message) => [FACEBOOK, SNAPCHAT].some((site) => message === site.uploading || message === site.opened); // shown in a neutral style, not as an error
 // "Share with an app" is only shown where the browser can share image files.
 export const canShareFiles = typeof navigator.canShare === "function" && navigator.canShare({ files: [new File([""], "image.png", { type: "image/png" })] });
 logger.info("share with an app supported", { canShareFiles });
@@ -32,6 +30,26 @@ export function facebookShareUrl(url) {
   // redirect_uri is our share page, so after Post or Cancel the tab shows the shared image
   return `https://www.facebook.com/dialog/share?app_id=${encodeURIComponent(FB_APP_ID)}&display=popup&href=${link}&redirect_uri=${link}`;
 }
+
+// The one place that builds the Snapchat address: its official link share page, no app id needed.
+export function snapchatShareUrl(url) {
+  return `https://www.snapchat.com/share?link=${encodeURIComponent(url)}`;
+}
+
+// What differs between the sites that share our public link; everything else is shareByLink.
+const FACEBOOK = {
+  name: "facebook",
+  buildUrl: facebookShareUrl,
+  uploading: "Uploading a copy of this image so Facebook can show it. The link works for up to a year.",
+  opened: "Facebook opened in a new tab. Nothing is posted until you click Post there.",
+};
+const SNAPCHAT = {
+  name: "snapchat",
+  buildUrl: snapchatShareUrl,
+  uploading: "Uploading a copy of this image so Snapchat can show it. The link works for up to a year.",
+  opened: "Snapchat opened in a new tab. Nothing is sent until you send it there.",
+};
+logger.info("facebook share mode", { mode: FB_APP_ID ? "share dialog with app id" : "sharer.php fallback" });
 
 // A JPEG copy for the public link: at most SHARE_MAX_SIDE, white behind transparent parts, at most SHARE_MAX_BYTES.
 async function shareCopy(file) {
@@ -76,16 +94,20 @@ async function uploadCopy(copy) {
 }
 
 // makeFile returns the file the tool would export; show puts a message in the tool's own message area.
-export async function shareToFacebook(makeFile, show) {
+export const shareToFacebook = (makeFile, show) => shareByLink(FACEBOOK, makeFile, show);
+export const shareToSnapchat = (makeFile, show) => shareByLink(SNAPCHAT, makeFile, show);
+
+// Uploads a copy, then sends the already open pop-up to the site's share page for our public link.
+async function shareByLink(site, makeFile, show) {
   if (sharing) return; // a double click starts only one upload
   const started = performance.now();
-  logger.info("share to facebook started", { tool: getState().tool });
+  logger.info(`share to ${site.name} started`, { tool: getState().tool });
   const popup = window.open("", "_blank"); // opened inside the click, so pop-up blockers allow it
   logger.info("share popup opened", { opened: Boolean(popup) });
   if (!popup) return show("Allow pop-ups for this site and try again.");
   sharing = true;
-  show(UPLOADING);
-  let message = OPENED;
+  show(site.uploading);
+  let message = site.opened;
   let file;
   try {
     file = await makeFile();
@@ -104,12 +126,12 @@ export async function shareToFacebook(makeFile, show) {
     }
     logger.info("share file made", { type: file.type, bytes: file.size });
     const url = await uploadCopy(await shareCopy(file));
-    popup.opener = null; // Facebook's page must not reach back into PixelKit
-    popup.location.href = facebookShareUrl(url);
-    logger.info("share popup navigated", { mode: FB_APP_ID ? "share dialog with app id" : "sharer.php fallback", ms: Math.round(performance.now() - started) }); // never the address
+    popup.opener = null; // the site's page must not reach back into PixelKit
+    popup.location.href = site.buildUrl(url);
+    logger.info("share popup navigated", { site: site.name, ms: Math.round(performance.now() - started) }); // never the address
   } catch (err) {
     popup.close();
-    logger.error("share to facebook failed", err);
+    logger.error(`share to ${site.name} failed`, err);
     message = [TOO_LARGE, LIMIT_REACHED].includes(err.message) ? err.message : "Could not upload the image. Try again later.";
   }
   sharing = false; // before show(), so the render that follows enables the buttons again

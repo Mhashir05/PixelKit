@@ -2,7 +2,7 @@ import { logger, logAfterPause } from "../core/logger.js";
 import { getState, setState, logActivity } from "../core/state.js";
 import { MAX_TRIM, MAX_TEXT, cutText, defaultEdits, editedSize, exportSize, drawEdited } from "../core/edits.js";
 import { beginChange, endChange } from "../core/history.js";
-import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareWithApp, isShareNotice } from "../core/export.js";
+import { canvasToBlob, downloadBlob, cleanFileName, shareToFacebook, shareToSnapchat, shareWithApp, isShareNotice } from "../core/export.js";
 import { loadImage } from "../core/image.js";
 
 const PREVIEW_MAX = 1200; // longest side of the preview canvas; export uses the full size
@@ -246,6 +246,9 @@ export function initEditor() {
   });
   $("share-facebook").addEventListener("click", () => {
     if (getState().tool === "editor") shareToFacebook(exportFile, showError);
+  });
+  $("share-snapchat").addEventListener("click", () => {
+    if (getState().tool === "editor") shareToSnapchat(exportFile, showError);
   });
   $("share-app").addEventListener("click", () => {
     if (getState().tool === "editor") shareWithApp(exportFile, showError);
